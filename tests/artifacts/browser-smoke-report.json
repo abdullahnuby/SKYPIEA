@@ -1,0 +1,65 @@
+{
+  "viewports": {
+    "mobile-light": {
+      "hostCssUnchanged": true,
+      "apiRequestsBeforeOpen": 0,
+      "resultCoverage": 83,
+      "mainAmountHidden": true,
+      "sheetLines": 164,
+      "quantityEditorAvailable": true,
+      "quantityOverrideRoundTrip": true,
+      "comparisonCards": 4,
+      "dialogClosedByEscape": true,
+      "consoleErrors": 0
+    },
+    "desktop-light": {
+      "hostCssUnchanged": true,
+      "apiRequestsBeforeOpen": 0,
+      "resultCoverage": 83,
+      "mainAmountHidden": true,
+      "sheetLines": 164,
+      "quantityEditorAvailable": true,
+      "quantityOverrideRoundTrip": true,
+      "comparisonCards": 4,
+      "dialogClosedByEscape": true,
+      "consoleErrors": 0
+    },
+    "mobile-dark": {
+      "hostCssUnchanged": true,
+      "apiRequestsBeforeOpen": 0,
+      "resultCoverage": 83,
+      "mainAmountHidden": true,
+      "sheetLines": 164,
+      "quantityEditorAvailable": true,
+      "quantityOverrideRoundTrip": true,
+      "comparisonCards": 4,
+      "dialogClosedByEscape": true,
+      "consoleErrors": 0
+    },
+    "desktop-dark": {
+      "hostCssUnchanged": true,
+      "apiRequestsBeforeOpen": 0,
+      "resultCoverage": 83,
+      "mainAmountHidden": true,
+      "sheetLines": 164,
+      "quantityEditorAvailable": true,
+      "quantityOverrideRoundTrip": true,
+      "comparisonCards": 4,
+      "dialogClosedByEscape": true,
+      "consoleErrors": 0
+    }
+  },
+  "consoleErrors": [],
+  "apiRequestsBeforeOpen": 0,
+  "hostCssUnchanged": true,
+  "layoutShift": "not measured: set_content mode avoids forbidden localhost/file navigation in this runner",
+  "autoOpen": true,
+  "autoOpenSuppressedWhileTyping": true,
+  "leadRoundTrip": true,
+  "fallback": true,
+  "focusAndEscape": true,
+  "executionMode": "Chromium set_content + intercepted synthetic origin; real local Node API",
+  "whatsappUrlPrepared": true,
+  "whatsappBrowserNavigation": "blocked by test sandbox; URL construction captured",
+  "apiRequestCount": 14
+}

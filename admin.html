@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#0b1f44" />
+  <title>لوحة إدارة Beno | SKYPIEA</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin.css" />
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="العودة إلى SKYPIEA"><span class="brand-mark">B</span><span><b>Beno</b><small>SKYPIEA · لوحة الإدارة</small></span></a>
+    <div class="top-actions"><span class="private-pill"><i></i> منطقة خاصة</span><button id="logoutBtn" class="button button-ghost hidden" type="button">تسجيل الخروج</button></div>
+  </header>
+  <main class="shell">
+    <section id="loginView" class="login-wrap hidden">
+      <div class="login-card">
+        <div class="login-mark">B</div>
+        <p class="eyebrow">Beno Control Center</p>
+        <h1>إدارة Beno</h1>
+        <p class="muted">سجّل الدخول لتعديل كتالوج الأسعار وإعدادات التسعير. هذه المساحة لا تُستخدم لإدارة العملاء.</p>
+        <form id="loginForm">
+          <label for="adminPassword">كلمة مرور المدير</label>
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" minlength="12" required placeholder="أدخل كلمة المرور السرية" />
+          <button class="button button-primary button-wide" type="submit">دخول آمن <span>←</span></button>
+        </form>
+        <div id="configHint" class="hint hint-warning hidden"></div>
+        <p class="tiny muted">لا توجد كلمة مرور افتراضية داخل الكود. تُضبط من متغيرات البيئة.</p>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="hidden">
+      <div class="page-intro">
+        <div><p class="eyebrow">Beno Control Center</p><h1>إدارة الأسعار والتسعير</h1><p class="muted">عدّل مسودة الأسعار، راجع فجوات التغطية، ثم انشر إصدارًا معتمدًا ليستخدمه Beno في الحسابات الجديدة.</p></div>
+        <div class="intro-status"><span class="status-dot"></span><div><b id="publishedVersion">—</b><small id="publishedAt">جارٍ تحميل الإصدار…</small></div></div>
+      </div>
+
+      <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span>إجمالي البنود النشطة</span><b id="activeCount">—</b><small>البنود المستخدمة في الكتالوج</small></article>
+        <article class="stat-card"><span>بنود مسعّرة</span><b id="pricedCount">—</b><small>لها متوسط سعر صالح</small></article>
+        <article class="stat-card stat-missing"><span>بنود تحتاج سعرًا</span><b id="missingCount">—</b><small>اتركها ناقصة ولا تخمّن السعر</small></article>
+        <article class="stat-card"><span>تغطية سعر رقمي</span><b id="coverageCount">—</b><div class="progress"><span id="coverageBar"></span></div><small id="coverageHint">لا تقيس حداثة السعر أو اعتماده</small></article>
+      </div>
+
+      <section class="panel settings-panel">
+        <div class="panel-heading"><div><p class="eyebrow">CONTROL SETTINGS</p><h2>إعدادات Beno</h2><p class="muted">تُحفظ ضمن المسودة، ولا تتغير إعدادات الزوار إلا بعد نشر الإصدار.</p></div><span class="draft-pill" id="draftState">مسودة غير منشورة</span></div>
+        <div class="settings-grid">
+          <label>هامش التسعير (%)<input id="settingMargin" type="number" min="0" max="100" step="0.5" /></label>
+          <label>أقل تغطية للنشر (%)<input id="settingCoverage" type="number" min="0" max="100" step="1" /></label>
+          <label>طريقة التسعير<select id="settingMode"><option value="comprehensive">شامل</option><option value="supervision">إشراف</option></select></label>
+          <label>اعتبار السعر قديمًا بعد (يوم)<input id="settingStaleDays" type="number" min="1" max="3650" step="1" /></label>
+          <label>معدل حديد تخطيطي (كجم/م²)<input id="settingSteelFactor" type="number" min="0" max="500" step="0.1" /></label>
+          <label>معدل خرسانة تخطيطي (م³/م²)<input id="settingConcreteFactor" type="number" min="0" max="5" step="0.01" /></label>
+          <label>حديد البدروم (كجم/م²)<input id="settingBasementSteelFactor" type="number" min="0" max="500" step="0.1" /></label>
+          <label>خرسانة البدروم (م³/م²)<input id="settingBasementConcreteFactor" type="number" min="0" max="5" step="0.01" /></label>
+        </div>
+        <p class="warning-note"><b>تنبيه:</b> معاملات المعدلات التخطيطية تؤثر في الحصر التقديري. لا تغيّرها إلا إذا كنت فاهم أساس الحساب ومصدر المعدل.</p>
+      </section>
+
+      <section class="panel rates-panel">
+        <div class="panel-heading"><div><p class="eyebrow">TAKEOFF &amp; MATERIAL RATES</p><h2>معدلات الاستهلاك والحصر</h2><p class="muted">تعديل المعدل المركزي ونطاقه يؤثر في تقدير الكميات. القيم الأصلية للمحرك تظل كما هي ما لم تحفظ هذه الإعدادات في الكتالوج المنشور.</p></div><span class="draft-pill">إعدادات متقدمة</span></div>
+        <label class="rate-search">بحث في المعدلات<input id="rateSearch" type="search" placeholder="مثال: حديد، بلاط، خرسانة…" /></label>
+        <div id="rateList" class="rate-grid"></div>
+      </section>
+
+      <section class="panel rates-panel waste-panel">
+        <div class="panel-heading"><div><h2>نسب الهالك في التوريدات</h2><p>الافتراضات بداية قابلة للتعديل من المهندس، ولا تطبق على المصنعية. غيّر النسب ثم احفظ المسودة.</p></div></div>
+        <div id="wasteRateList" class="rate-grid"></div>
+      </section>
+
+      <section class="panel catalog-panel">
+        <div class="panel-heading catalog-heading"><div><p class="eyebrow">PRICE BOOK</p><h2>كتالوج الأسعار</h2><p class="muted">يمكنك تعديل السعر والمصدر والوحدة والتاريخ، أو تعطيل بند دون حذف تاريخه.</p></div><div class="heading-actions"><button id="importBtn" class="button button-outline" type="button">استيراد JSON</button><input id="importFile" type="file" accept="application/json,.json" class="hidden" /><button id="exportBtn" class="button button-outline" type="button">تصدير نسخة</button><button id="addItemBtn" class="button button-outline" type="button">+ إضافة بند</button></div></div>
+        <div class="filters">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث باسم الخامة أو الوحدة أو المصدر…" /></label>
+          <select id="categoryFilter" aria-label="تصفية حسب التصنيف"><option value="">كل التصنيفات</option></select>
+          <select id="statusFilter" aria-label="تصفية حسب حالة السعر"><option value="">كل الحالات</option><option value="missing">ناقص</option><option value="national">بديل وطني</option><option value="local">محلي</option><option value="priced">مسعّر</option></select>
+          <label class="check-filter"><input id="missingOnly" type="checkbox" /> الناقص فقط</label>
+        </div>
+        <div class="catalog-meta"><span id="resultsCount">—</span><span id="pageLabel">—</span></div>
+        <div id="priceList" class="price-grid" aria-live="polite"></div>
+        <div class="pagination"><button id="prevPage" class="button button-outline" type="button">السابق</button><button id="nextPage" class="button button-outline" type="button">التالي</button></div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-heading"><div><p class="eyebrow">RELEASE HISTORY</p><h2>إصدارات الأسعار</h2><p class="muted">كل إصدار منشور محفوظ كسجل مستقل.</p></div><div class="heading-actions"><button id="saveDraftBtn" class="button button-outline" type="button">حفظ المسودة</button><button id="publishBtn" class="button button-primary" type="button">نشر إصدار الأسعار</button></div></div>
+        <div id="publishWarning" class="hint hint-warning"></div>
+        <div class="history-table-wrap"><table><thead><tr><th>الإصدار</th><th>التاريخ</th><th>المدير</th><th>التغطية</th><th>البنود</th></tr></thead><tbody id="historyRows"><tr><td colspan="5" class="muted">جارٍ التحميل…</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel agent-learning-panel">
+        <div class="panel-heading"><div><p class="eyebrow">AGENT LEARNING</p><h2>فهم Beno — التعلم المستمر</h2><p class="muted">رسائل العملاء اللي ما فهمهاش المحلل تجتمع في عناقيد؛ راجعها واعتمدها كمرادفات تُدرج في معجم الفهم الذكي في كل طلب — بدون لمس الكتالوج ولا المحركات.</p></div><div class="heading-actions"><button id="learningRefreshBtn" class="button button-outline" type="button">تحديث</button><button id="learningAdoptBtn" class="button button-primary hidden" type="button">اعتماد المعجم المحدد</button></div></div>
+        <div class="catalog-meta"><span id="learningCounts">—</span><span id="learningBackend">—</span></div>
+        <div id="clusterList" class="rate-grid"><p class="muted">جارٍ التحميل…</p></div>
+        <div class="hint">المعجم المعتمد (يشتغل فوراً في طبقة الفهم الذكية)</div>
+        <div id="lexiconList" class="rate-grid"><p class="muted">—</p></div>
+      </section>
+      <footer class="admin-footer"><span>Beno لا يخترع أسعارًا مفقودة.</span><span>كل تعديل مؤثر يحتاج حفظًا، والنشر يعتمد على بوابة التغطية.</span></footer>
+    </section>
+  </main>
+  <dialog id="itemDialog" class="item-dialog">
+    <form id="newItemForm" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">NEW PRICE ITEM</p><h2>إضافة بند جديد</h2></div><button type="button" id="closeDialog" class="icon-button" aria-label="إغلاق">×</button></div>
+      <div class="settings-grid">
+        <label>اسم البند<input name="name" required maxlength="180" /></label>
+        <label>التصنيف<input name="category" required maxlength="120" /></label>
+        <label>الوحدة<input name="unit" required maxlength="40" placeholder="طن، م²، م³…" /></label>
+        <label>الحالة<select name="status"><option value="missing">ناقص</option><option value="local">محلي</option><option value="national">بديل وطني</option></select></label>
+        <label>أقل سعر (جنيه)<input name="low" type="number" min="0" step="0.01" /></label>
+        <label>متوسط السعر (جنيه)<input name="avg" type="number" min="0" step="0.01" /></label>
+        <label>أعلى سعر (جنيه)<input name="high" type="number" min="0" step="0.01" /></label>
+        <label>تاريخ السعر<input name="date" type="date" /></label>
+        <label class="full-field">مصدر السعر<input name="source" maxlength="300" /></label>
+      </div>
+      <p class="muted tiny">البند الجديد لا يدخل في الحساب إذا لم يكن له معرّف وقاعدة حساب مناسبة داخل محركات مِعيار. أضفه كسجل كتالوج ولا تعتبره مستخدمًا في الحصر تلقائيًا.</p>
+      <div class="dialog-actions"><button type="button" id="cancelNewItem" class="button button-outline">إلغاء</button><button type="submit" class="button button-primary">إضافة للمسودة</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

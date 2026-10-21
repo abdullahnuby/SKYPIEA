@@ -1,0 +1,2947 @@
+{
+  "generatedAt": "2026-10-21T20:36:10.042Z",
+  "today": "2026-10-21",
+  "book": {
+    "version": "v8",
+    "rows": 201,
+    "active": 183,
+    "priced": 165,
+    "missing": 18,
+    "coveragePercent": 90,
+    "stale": 37
+  },
+  "bulletin": {
+    "id": "jan-2026",
+    "title": "نشرة أسعار مواد البناء — يناير 2026",
+    "ageDays": 293,
+    "rows": 313,
+    "addedRows": 291,
+    "filledMissing": 8,
+    "keptNewer": 16,
+    "unknownUnitRows": 0,
+    "activeRowsFromBulletin": 8,
+    "archivedExtendedRows": 291,
+    "quotes": 52,
+    "note": "كل أسعار النشرة قديمة (يناير 2026)؛ تُستخدم كمرجع مؤرخ ولا تُستبدل بها الأسعار الأحدث."
+  },
+  "boq": {
+    "apartment": {
+      "label": "شقة 150م² — 3 غرف — 2 حمام — باقة متوسطة — تسليم مفتاح",
+      "coveragePercent": 96,
+      "lineCount": 31,
+      "pricedLineCount": 15,
+      "priceGapCount": 1,
+      "quantityGapCount": 11,
+      "totalGapCount": 12,
+      "readyToShowAmount": false,
+      "amount": null,
+      "byCategory": {
+        "الدراسات والرسوم": 1
+      },
+      "gaps": [
+        {
+          "code": "01.02",
+          "title": "رسوم الترخيص والإجراءات",
+          "category": "الدراسات والرسوم",
+          "unit": "مشروع",
+          "quantity": "1",
+          "hasQuantity": true,
+          "status": "missing",
+          "source": "الجهة الإدارية المختصة — تحقق رسمي مطلوب",
+          "date": "2026-10-19",
+          "warnings": [
+            "السعر غير مدخل"
+          ],
+          "priceRowName": "رسوم ترخيص وإجراءات بناء",
+          "priceId": "P058"
+        }
+      ]
+    },
+    "building": {
+      "label": "عمارة 200م² × 4 أدوار — وحدتان/دور — باقة متوسطة — تسليم مفتاح",
+      "coveragePercent": 96,
+      "lineCount": 32,
+      "pricedLineCount": 16,
+      "priceGapCount": 1,
+      "quantityGapCount": 11,
+      "totalGapCount": 12,
+      "readyToShowAmount": false,
+      "amount": null,
+      "byCategory": {
+        "الدراسات والرسوم": 1
+      },
+      "gaps": [
+        {
+          "code": "01.02",
+          "title": "رسوم الترخيص والإجراءات",
+          "category": "الدراسات والرسوم",
+          "unit": "مشروع",
+          "quantity": "1",
+          "hasQuantity": true,
+          "status": "missing",
+          "source": "الجهة الإدارية المختصة — تحقق رسمي مطلوب",
+          "date": "2026-10-19",
+          "warnings": [
+            "السعر غير مدخل"
+          ],
+          "priceRowName": "رسوم ترخيص وإجراءات بناء",
+          "priceId": "P058"
+        }
+      ]
+    }
+  },
+  "takeoff": {
+    "label": "حصر شقة 150م² — باقة متوسطة (نموذج الحصر الحالي)",
+    "lineCount": 76,
+    "priceCoverage": 79,
+    "quantityCoverage": 13,
+    "priceGapCount": 15,
+    "quantityGapCount": 63,
+    "byKind": {
+      "material": 9,
+      "labor": 4,
+      "equipment": 1,
+      "indirect": 1
+    },
+    "byTrade": {
+      "توريد خامات": 8,
+      "مصنعية / تنفيذ": 2,
+      "الحفر والنقل": 1,
+      "الردم والدك": 2,
+      "اختبارات واعتمادات": 1,
+      "التكاليف غير المباشرة": 1
+    },
+    "gaps": [
+      {
+        "title": "سلك ربط حديد",
+        "unit": "كجم",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "كراسي/فواصل بلاستيك للحديد",
+        "unit": "قطعة",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 3% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "مصنعية الهيكل الخرساني — حدادة ونجارة وشدة وصب",
+        "unit": "م³",
+        "trade": "مصنعية / تنفيذ",
+        "kind": "labor",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة."
+        ]
+      },
+      {
+        "title": "مصنعية طرطشة",
+        "unit": "م²",
+        "trade": "مصنعية / تنفيذ",
+        "kind": "labor",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة."
+        ]
+      },
+      {
+        "title": "سيلر داخلي",
+        "unit": "لتر",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "ألواح عزل حراري",
+        "unit": "م²",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "راجع معدل القص المعتمد قبل الطلب.",
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف."
+        ]
+      },
+      {
+        "title": "بروفايل معدني للجبس",
+        "unit": "متر طولي",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "وحدة السعر في الكتالوج لا تتوافق مع وحدة الحصر",
+        "unitMismatch": true,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "وحدة السعر في الكتالوج (م.ط) لا تتوافق مع وحدة الحصر (متر طولي)؛ لم يتم التحويل.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "مفاتيح وبريزات",
+        "unit": "قطعة",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "كابل نحاس 1.5 مم² — السويدي",
+        "unit": "متر",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "كابل نحاس 2.5 مم² — السويدي",
+        "unit": "متر",
+        "trade": "توريد خامات",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "الكمية تحتاج قياسًا من الرسومات أو إدخال حصر معتمد.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "حفر آلي ونقل ناتج الحفر — شامل الحفار والتحميل والنقل",
+        "unit": "م³",
+        "trade": "الحفر والنقل",
+        "kind": "equipment",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "يُستكمل من المخطط أو العرض/الجهة المختصة.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة."
+        ]
+      },
+      {
+        "title": "توريد رمل الردم",
+        "unit": "م³",
+        "trade": "الردم والدك",
+        "kind": "material",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "يُستكمل من المخطط أو العرض/الجهة المختصة.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة.",
+          "شمول النقل غير معروف.",
+          "نسبة هالك التوريد 5% مطبقة على الخامات فقط؛ المصنعية تظل على الكمية الصافية."
+        ]
+      },
+      {
+        "title": "مصنعية الردم والدك",
+        "unit": "م³",
+        "trade": "الردم والدك",
+        "kind": "labor",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "يُستكمل من المخطط أو العرض/الجهة المختصة.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة."
+        ]
+      },
+      {
+        "title": "اختبارات خرسانة وحديد",
+        "unit": "اختبار",
+        "trade": "اختبارات واعتمادات",
+        "kind": "labor",
+        "reason": "وحدة السعر في الكتالوج لا تتوافق مع وحدة الحصر",
+        "unitMismatch": true,
+        "priceStatus": "missing",
+        "warnings": [
+          "يُستكمل من المخطط أو العرض/الجهة المختصة.",
+          "وحدة السعر في الكتالوج (مشروع) لا تتوافق مع وحدة الحصر (اختبار)؛ لم يتم التحويل."
+        ]
+      },
+      {
+        "title": "رسوم ترخيص وإجراءات بناء",
+        "unit": "مشروع",
+        "trade": "التكاليف غير المباشرة",
+        "kind": "indirect",
+        "reason": "لا يوجد سعر وحدة قابل للاستخدام",
+        "unitMismatch": false,
+        "priceStatus": "missing",
+        "warnings": [
+          "يُستكمل من المخطط أو العرض/الجهة المختصة.",
+          "لا يوجد سعر وحدة قابل للاستخدام لهذا البند؛ أدخل سعر التوريد/المصنعية من لوحة الإدارة."
+        ]
+      }
+    ],
+    "usedPriceNames": [
+      "اختبار تربة",
+      "أسلاك كهرباء 4 مم",
+      "أسمنت رمادي عام",
+      "أطقم صحية — متوسط",
+      "ألواح جبس بورد",
+      "باب خشبي داخلي متوسط",
+      "بلاستيك خارجي",
+      "بلاستيك داخلي",
+      "بيتومين للعزل",
+      "تصميم معماري وإنشائي",
+      "حديد استثماري",
+      "خرسانة جاهزة C25",
+      "رخام / جرانيت للسلالم",
+      "رمل عادي / حرش",
+      "رولات عزل مائي",
+      "سيراميك أرضيات 60×60",
+      "سيراميك حوائط 25×50",
+      "شبابيك ألوميتال PS صغير",
+      "شبك فيبر جلاس",
+      "شدة خشبية / موسكي",
+      "طوب أحمر طفلي مثقب",
+      "كابل تكييف 6 مم²",
+      "لوحة Schneider 12 موضع + قواطع",
+      "مادة فواصل سيراميك",
+      "مسامير جبس بورد",
+      "مصنعية المحارة والبياض",
+      "مصنعية جبس بورد",
+      "مصنعية دهانات",
+      "مصنعية رخام",
+      "مصنعية سباكة",
+      "مصنعية سيراميك",
+      "مصنعية عزل مائي",
+      "مصنعية كهرباء",
+      "مصنعية مباني",
+      "مضخة خرسانة",
+      "معجون خارجي",
+      "معجون داخلي",
+      "مواسير PPR للمياه",
+      "مواسير PVC صرف 2 بوصة سمك 3 مم",
+      "مواسير PVC صرف 3 بوصة سمك 3 مم",
+      "مواسير PVC صرف 4 بوصة",
+      "مواسير PVC كهرباء 20 مم — السويدي"
+    ]
+  },
+  "usage": {
+    "usedBulletinRows": [
+      {
+        "id": "P017",
+        "name": "خرسانة جاهزة C25",
+        "unit": "م³",
+        "price": 3300,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P089",
+        "name": "رخام / جرانيت للسلالم",
+        "unit": "م²",
+        "price": 600,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P122",
+        "name": "مواسير PVC صرف 4 بوصة",
+        "unit": "م",
+        "price": 270,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P134",
+        "name": "معجون داخلي",
+        "unit": "كجم",
+        "price": 16,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P137",
+        "name": "معجون خارجي",
+        "unit": "كجم",
+        "price": 25,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P138",
+        "name": "رولات عزل مائي",
+        "unit": "م²",
+        "price": 160,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P139",
+        "name": "بيتومين للعزل",
+        "unit": "كجم",
+        "price": 25,
+        "date": "2026-01-01"
+      },
+      {
+        "id": "P141",
+        "name": "ألواح جبس بورد",
+        "unit": "م²",
+        "price": 88.89,
+        "date": "2026-01-01"
+      }
+    ],
+    "usedWithQuoteOnly": [
+      {
+        "id": "P004",
+        "name": "أسمنت رمادي عام",
+        "activePrice": 3990,
+        "activeDate": "2026-10-14",
+        "quoteCount": 1
+      },
+      {
+        "id": "P007",
+        "name": "حديد استثماري",
+        "activePrice": 38349,
+        "activeDate": "2026-10-14",
+        "quoteCount": 1
+      },
+      {
+        "id": "P011",
+        "name": "رمل عادي / حرش",
+        "activePrice": 170,
+        "activeDate": "2026-10-14",
+        "quoteCount": 1
+      },
+      {
+        "id": "P028",
+        "name": "طوب أحمر طفلي مثقب",
+        "activePrice": 1600,
+        "activeDate": "2026-10-14",
+        "quoteCount": 1
+      },
+      {
+        "id": "P043",
+        "name": "سيراميك حوائط 25×50",
+        "activePrice": 129,
+        "activeDate": "2026-08-20",
+        "quoteCount": 1
+      },
+      {
+        "id": "P044",
+        "name": "سيراميك أرضيات 60×60",
+        "activePrice": 174,
+        "activeDate": "2026-10-01",
+        "quoteCount": 1
+      },
+      {
+        "id": "P049",
+        "name": "دهانات داخلية",
+        "activePrice": 78.25,
+        "activeDate": "2026-10-21",
+        "quoteCount": 1
+      },
+      {
+        "id": "P120",
+        "name": "مواسير PVC صرف 2 بوصة سمك 3 مم",
+        "activePrice": 31.87,
+        "activeDate": "2026-02-01",
+        "quoteCount": 1
+      },
+      {
+        "id": "P121",
+        "name": "مواسير PVC صرف 3 بوصة سمك 3 مم",
+        "activePrice": 37.3,
+        "activeDate": "2026-02-01",
+        "quoteCount": 1
+      }
+    ],
+    "newBulletinRows": 291,
+    "archivedAsExtendedCatalog": true,
+    "unusedNewRows": 291,
+    "unusedByCategory": {
+      "الهيكل الخرساني": 65,
+      "المباني والمحارة": 22,
+      "التشطيبات": 123,
+      "الكهرباء والتيار الخفيف": 40,
+      "السباكة والصرف": 41
+    },
+    "examplesUnused": [
+      {
+        "id": "J26-001",
+        "name": "حديد بيانكو",
+        "unit": "طن",
+        "price": 38000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-002",
+        "name": "حديد العتال",
+        "unit": "طن",
+        "price": 37500,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-003",
+        "name": "حديد المعادي",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-004",
+        "name": "حديد الكومي",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-005",
+        "name": "حديد المراكبي",
+        "unit": "طن",
+        "price": 37500,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-006",
+        "name": "حديد عطية",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-007",
+        "name": "حديد العشري",
+        "unit": "طن",
+        "price": 34500,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-008",
+        "name": "حديد المصريين",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-009",
+        "name": "حديد سرحان",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-010",
+        "name": "حديد مصر ستيل",
+        "unit": "طن",
+        "price": 34000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-011",
+        "name": "حديد الجارحي",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-012",
+        "name": "حديد السويس للصلب",
+        "unit": "طن",
+        "price": 35000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-013",
+        "name": "حديد المدينة",
+        "unit": "طن",
+        "price": 34000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-014",
+        "name": "كمر ثقيل UPN/IPN/HEB/HEA 14/40",
+        "unit": "طن",
+        "price": 50000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-015",
+        "name": "كمر وسط 8/10/12 سم",
+        "unit": "طن",
+        "price": 41000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-016",
+        "name": "كمر سيجال 2:4 سم",
+        "unit": "طن",
+        "price": 40000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-017",
+        "name": "زوايا ثقيلة 120/200 مم",
+        "unit": "طن",
+        "price": 45500,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-018",
+        "name": "زوايا متوسطة 60/100 سم",
+        "unit": "طن",
+        "price": 40000,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-019",
+        "name": "زوايا خفيفة 40/50 سم",
+        "unit": "طن",
+        "price": 37500,
+        "category": "الهيكل الخرساني"
+      },
+      {
+        "id": "J26-020",
+        "name": "خوص طول 6 م",
+        "unit": "طن",
+        "price": 37500,
+        "category": "الهيكل الخرساني"
+      }
+    ]
+  },
+  "discrepancies": [
+    {
+      "id": "P110",
+      "name": "لوح جبس بورد",
+      "unit": "لوح",
+      "activePrice": 825,
+      "activeDate": "2026-10-19",
+      "bulletinPrice": 320,
+      "bulletinDate": "2026-01-01",
+      "diff": 505,
+      "diffPct": 157.8,
+      "derived": true,
+      "bulletinName": "لوح جبس بورد (نشرة يناير)",
+      "note": "لوح جبس عادي 12.5 مم 3×1.2 م؛ الكتالوج يحمل سعرًا أحدث (825) فلم يُستبدل."
+    },
+    {
+      "id": "P120",
+      "name": "مواسير PVC صرف 2 بوصة سمك 3 مم",
+      "unit": "م",
+      "activePrice": 31.87,
+      "activeDate": "2026-02-01",
+      "bulletinPrice": 150,
+      "bulletinDate": "2026-01-01",
+      "diff": -118.13,
+      "diffPct": -78.8,
+      "derived": false,
+      "bulletinName": "مواسير صرف مدعمة 2 بوصة",
+      "note": ""
+    },
+    {
+      "id": "P121",
+      "name": "مواسير PVC صرف 3 بوصة سمك 3 مم",
+      "unit": "م",
+      "activePrice": 37.3,
+      "activeDate": "2026-02-01",
+      "bulletinPrice": 170,
+      "bulletinDate": "2026-01-01",
+      "diff": -132.7,
+      "diffPct": -78.1,
+      "derived": false,
+      "bulletinName": "مواسير صرف مدعمة 3 بوصة",
+      "note": ""
+    },
+    {
+      "id": "P012",
+      "name": "رمل ناعم",
+      "unit": "م³",
+      "activePrice": 260,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 160,
+      "bulletinDate": "2026-01-01",
+      "diff": 100,
+      "diffPct": 62.5,
+      "derived": false,
+      "bulletinName": "رمل ناعم",
+      "note": "سعر متوسط؛ النقل غير مشمول."
+    },
+    {
+      "id": "P028",
+      "name": "طوب أحمر طفلي مثقب",
+      "unit": "ألف طوبة",
+      "activePrice": 1600,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 4025,
+      "bulletinDate": "2026-01-01",
+      "diff": -2425,
+      "diffPct": -60.2,
+      "derived": true,
+      "bulletinName": "طوب طفلي قياسي 12×12×25 (مقارنة)",
+      "note": "أقرب بند للطوب الأحمر الطفلي المثقب؛ المقاس مختلف، للمقارنة فقط."
+    },
+    {
+      "id": "P032",
+      "name": "جبس",
+      "unit": "طن",
+      "activePrice": 1975,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 1500,
+      "bulletinDate": "2026-01-01",
+      "diff": 475,
+      "diffPct": 31.7,
+      "derived": true,
+      "bulletinName": "جبس (نطاق ماركات النشرة)",
+      "note": "نطاق 9 ماركات جبس في النشرة؛ ليس سعر ماركة محددة."
+    },
+    {
+      "id": "P038",
+      "name": "مواسير PVC للصرف",
+      "unit": "م",
+      "activePrice": 150,
+      "activeDate": "2026-01-01",
+      "bulletinPrice": 210,
+      "bulletinDate": "2026-01-01",
+      "diff": -60,
+      "diffPct": -28.6,
+      "derived": true,
+      "bulletinName": "مواسير صرف مدعمة 1/2–6 بوصة — نطاق",
+      "note": "النطاق واسع لأنه يغطي ستة أقطار؛ السعر النشط 210 وسط النطاق وليس سعر قطر محدد."
+    },
+    {
+      "id": "P043",
+      "name": "سيراميك حوائط 25×50",
+      "unit": "م²",
+      "activePrice": 129,
+      "activeDate": "2026-08-20",
+      "bulletinPrice": 160,
+      "bulletinDate": "2026-01-01",
+      "diff": -31,
+      "diffPct": -19.4,
+      "derived": false,
+      "bulletinName": "سيراميك حوائط 50×25 سم",
+      "note": ""
+    },
+    {
+      "id": "P015",
+      "name": "زلط فينو",
+      "unit": "م³",
+      "activePrice": 352,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 435,
+      "bulletinDate": "2026-01-01",
+      "diff": -83,
+      "diffPct": -19.1,
+      "derived": false,
+      "bulletinName": "زلط فينو",
+      "note": "شامل ضرائب؛ التوريد/التفريغ غير مذكور في النشرة."
+    },
+    {
+      "id": "P068",
+      "name": "طوب أسمنتي مفرغ 40×20×12",
+      "unit": "ألف طوبة",
+      "activePrice": 9850,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 12000,
+      "bulletinDate": "2026-01-01",
+      "diff": -2150,
+      "diffPct": -17.9,
+      "derived": false,
+      "bulletinName": "أسمنتي مفرغ 12×20×40 سم",
+      "note": ""
+    },
+    {
+      "id": "P045",
+      "name": "سيراميك أرضيات 50×50",
+      "unit": "م²",
+      "activePrice": 163,
+      "activeDate": "2026-10-01",
+      "bulletinPrice": 190,
+      "bulletinDate": "2026-01-01",
+      "diff": -27,
+      "diffPct": -14.2,
+      "derived": false,
+      "bulletinName": "سيراميك أرضيات 50×50 سم",
+      "note": ""
+    },
+    {
+      "id": "P011",
+      "name": "رمل عادي / حرش",
+      "unit": "م³",
+      "activePrice": 170,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 150,
+      "bulletinDate": "2026-01-01",
+      "diff": 20,
+      "diffPct": 13.3,
+      "derived": false,
+      "bulletinName": "رمل حرش",
+      "note": "سعر متوسط؛ النقل غير مشمول."
+    },
+    {
+      "id": "P044",
+      "name": "سيراميك أرضيات 60×60",
+      "unit": "م²",
+      "activePrice": 174,
+      "activeDate": "2026-10-01",
+      "bulletinPrice": 200,
+      "bulletinDate": "2026-01-01",
+      "diff": -26,
+      "diffPct": -13,
+      "derived": false,
+      "bulletinName": "سيراميك أرضيات 60×60 سم",
+      "note": ""
+    },
+    {
+      "id": "P009",
+      "name": "حديد المصريين / المراكبي",
+      "unit": "طن",
+      "activePrice": 39400,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 36250,
+      "bulletinDate": "2026-01-01",
+      "diff": 3150,
+      "diffPct": 8.7,
+      "derived": true,
+      "bulletinName": "حديد المصريين / المراكبي (نطاق)",
+      "note": "المصريين 35,000 والمراكبي 37,500 في النشرة؛ الصف المدمج يحمل النطاق."
+    },
+    {
+      "id": "P002",
+      "name": "أسمنت سيناء",
+      "unit": "طن",
+      "activePrice": 4065,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 3750,
+      "bulletinDate": "2026-01-01",
+      "diff": 315,
+      "diffPct": 8.4,
+      "derived": false,
+      "bulletinName": "سيناء 42.5",
+      "note": ""
+    },
+    {
+      "id": "P007",
+      "name": "حديد استثماري",
+      "unit": "طن",
+      "activePrice": 38349,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 36100,
+      "bulletinDate": "2026-01-01",
+      "diff": 2249,
+      "diffPct": 6.2,
+      "derived": true,
+      "bulletinName": "حديد استثماري (نطاق حديد التسليح)",
+      "note": "نطاق 15 ماركة حديد في النشرة؛ «حديد استثماري» غير مذكور بالاسم، فالقيمة استرشادية للمقارنة."
+    },
+    {
+      "id": "P006",
+      "name": "حديد عز",
+      "unit": "طن",
+      "activePrice": 40290,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 38200,
+      "bulletinDate": "2026-01-01",
+      "diff": 2090,
+      "diffPct": 5.5,
+      "derived": false,
+      "bulletinName": "حديد عز",
+      "note": ""
+    },
+    {
+      "id": "P004",
+      "name": "أسمنت رمادي عام",
+      "unit": "طن",
+      "activePrice": 3990,
+      "activeDate": "2026-10-14",
+      "bulletinPrice": 3800,
+      "bulletinDate": "2026-01-01",
+      "diff": 190,
+      "diffPct": 5,
+      "derived": true,
+      "bulletinName": "أسمنت رمادي عام (وسيط الأسمنت العادي 42.5)",
+      "note": "وسيط 13 ماركة أسمنت عادي 42.5 في النشرة؛ ليس سعر ماركة محددة."
+    }
+  ],
+  "unknownUnits": [],
+  "anomalies": [
+    {
+      "name": "أسلاك ألومنيوم 120/150/185/240 مم",
+      "issue": "الأسعار (195–300) تبدو منخفضة جدًا لكل لفة 100 م لهذه المقاسات؛ غالبًا الوحدة في المصدر لكل متر. لم تُصحّح تلقائيًا."
+    },
+    {
+      "name": "أسلاك ألومنيوم 240 مم",
+      "issue": "سعر 280 أقل من 185 مم (300) — تعارض داخلي في النشرة."
+    },
+    {
+      "name": "كابل ضغط متوسط نحاس 150×3 مم",
+      "issue": "سعر 3,560 أقل من 120×3 مم (5,150) — تعارض داخلي."
+    },
+    {
+      "name": "كابل ضغط متوسط ألومنيوم 140×3 مم",
+      "issue": "مقاس 140 مم غير قياسي في كابلات الضغط المتوسط؛ راجع المقاس."
+    },
+    {
+      "name": "مط أبيض داخلي",
+      "issue": "الاسم مكرر بسعرين 135 و225؛ سُجل نطاق 135–225 بدل اختيار أحدهما."
+    },
+    {
+      "name": "وردي 6×12×25 سم",
+      "issue": "الوحدة غير مذكورة؛ لم تُفترض ألف طوبة رغم ترجيحها."
+    },
+    {
+      "name": "إضافات الخرسانة (8 بنود)",
+      "issue": "الوحدة غير مذكورة في النشرة لمعظم الإضافات؛ سُجل السعر مع وحدة «غير مذكورة» ولم تُستخدم في الحساب."
+    },
+    {
+      "name": "بلاطات جبسية 9.5 مم",
+      "issue": "وردت «حبسية» في النص المستخرج؛ أُبقيت كمرادف للبحث."
+    },
+    {
+      "name": "مواسير بولي بروبلين 1.8 مم",
+      "issue": "1.8 مم قد تكون سماكة وليست قطرًا؛ راجع البند قبل الاستخدام."
+    }
+  ],
+  "stale": {
+    "activeStale": 37,
+    "activeFromBulletin": 8,
+    "preExistingStale": 29,
+    "note": "8 صف نشرة فقط ما زال داخل الكتالوج التشغيلي؛ 291 صفًا من النشرة نُقل إلى الأرشيف الموسع خارج المطابقة الافتراضية؛ 29 صفًا تشغيليًا قديمًا أو غير مؤرخ."
+  },
+  "labor": {
+    "id": "labor-2026-10",
+    "title": "قائمة مصنعيات التشطيبات والخرسانات والمباني — أكتوبر 2026",
+    "date": "2026-10-21",
+    "note": "الأسعار مصنعيات فقط: تشمل أجرة العمالة والصنايعية، ولا تشمل الخامات مثل الحديد والأسمنت والرمل والزلط والبلاط والدهانات إلا إذا ذُكر عكس ذلك. لم يحدد المستخدم شمول الضريبة؛ لذلك taxIncluded=false.",
+    "suppliedItems": 31,
+    "suppliedRows": 32,
+    "addedRows": 27,
+    "filledMissing": 4,
+    "updatedActive": 2,
+    "comparisons": 2,
+    "coverage": {
+      "before": {
+        "total": 437,
+        "priced": 356,
+        "missing": 81,
+        "percent": 81.5,
+        "stale": 315
+      },
+      "after": {
+        "total": 464,
+        "priced": 387,
+        "missing": 77,
+        "percent": 83.4,
+        "stale": 314
+      }
+    },
+    "mapping": [
+      {
+        "item": "تأسيس الكهرباء",
+        "unit": "م²",
+        "low": 150,
+        "high": 300,
+        "mappedTo": "L26-001",
+        "mappedRowName": "تأسيس الكهرباء",
+        "action": "added"
+      },
+      {
+        "item": "نقطة كهرباء",
+        "unit": "نقطة",
+        "low": 70,
+        "high": 120,
+        "mappedTo": "P037",
+        "mappedRowName": "مصنعية كهرباء",
+        "action": "updated-active"
+      },
+      {
+        "item": "تأسيس وتشطيب السباكة",
+        "unit": "م²",
+        "low": 200,
+        "high": 400,
+        "mappedTo": "L26-002",
+        "mappedRowName": "تأسيس وتشطيب السباكة",
+        "action": "added"
+      },
+      {
+        "item": "سباكة حمام أو مطبخ",
+        "unit": "قطعة",
+        "low": 2500,
+        "high": 4500,
+        "mappedTo": "L26-003",
+        "mappedRowName": "سباكة حمام أو مطبخ",
+        "action": "added"
+      },
+      {
+        "item": "محارة / لياسة",
+        "unit": "م²",
+        "low": 50,
+        "high": 85,
+        "mappedTo": "P033",
+        "mappedRowName": "مصنعية المحارة والبياض",
+        "action": "filled"
+      },
+      {
+        "item": "تركيب سيراميك",
+        "unit": "م²",
+        "low": 150,
+        "high": 300,
+        "mappedTo": "P056",
+        "mappedRowName": "مصنعية سيراميك",
+        "action": "updated-active"
+      },
+      {
+        "item": "تركيب بورسلين",
+        "unit": "م²",
+        "low": 300,
+        "high": 600,
+        "mappedTo": "L26-004",
+        "mappedRowName": "تركيب بورسلين",
+        "action": "added"
+      },
+      {
+        "item": "تركيب باركيه / HDF",
+        "unit": "م²",
+        "low": 80,
+        "high": 150,
+        "mappedTo": "L26-005",
+        "mappedRowName": "تركيب باركيه / HDF",
+        "action": "added"
+      },
+      {
+        "item": "جبس بورد مودرن",
+        "unit": "م²",
+        "low": 180,
+        "high": 350,
+        "mappedTo": "P146",
+        "mappedRowName": "مصنعية جبس بورد",
+        "action": "filled"
+      },
+      {
+        "item": "جبس بورد مودرن — م.ط",
+        "unit": "م.ط",
+        "low": 180,
+        "high": 350,
+        "mappedTo": "L26-006",
+        "mappedRowName": "جبس بورد مودرن — م.ط",
+        "action": "added"
+      },
+      {
+        "item": "جبس بلدي كلاسيك",
+        "unit": "م.ط",
+        "low": 150,
+        "high": 250,
+        "mappedTo": "L26-007",
+        "mappedRowName": "جبس بلدي كلاسيك",
+        "action": "added"
+      },
+      {
+        "item": "نقاشة سادة",
+        "unit": "م²",
+        "low": 45,
+        "high": 75,
+        "mappedTo": "P090",
+        "mappedRowName": "مصنعية دهانات",
+        "action": "filled"
+      },
+      {
+        "item": "دهانات ديكورية",
+        "unit": "م²",
+        "low": 70,
+        "high": 120,
+        "mappedTo": "L26-008",
+        "mappedRowName": "دهانات ديكورية",
+        "action": "added"
+      },
+      {
+        "item": "دهان أبواب خشبية",
+        "unit": "باب",
+        "low": 250,
+        "high": 400,
+        "mappedTo": "L26-009",
+        "mappedRowName": "دهان أبواب خشبية",
+        "action": "added"
+      },
+      {
+        "item": "دهان باب الشقة الرئيسي",
+        "unit": "باب",
+        "low": 500,
+        "high": 700,
+        "mappedTo": "L26-010",
+        "mappedRowName": "دهان باب الشقة الرئيسي",
+        "action": "added"
+      },
+      {
+        "item": "حلوق أبواب وشبابيك",
+        "unit": "حلقة",
+        "low": 100,
+        "high": 150,
+        "mappedTo": "L26-011",
+        "mappedRowName": "حلوق أبواب وشبابيك",
+        "action": "added"
+      },
+      {
+        "item": "تركيب وتجميع أبواب داخلية",
+        "unit": "باب",
+        "low": 250,
+        "high": 450,
+        "mappedTo": "L26-012",
+        "mappedRowName": "تركيب وتجميع أبواب داخلية",
+        "action": "added"
+      },
+      {
+        "item": "تركيب شبابيك ألوميتال",
+        "unit": "قطعة",
+        "low": 150,
+        "high": 300,
+        "mappedTo": "L26-013",
+        "mappedRowName": "تركيب شبابيك ألوميتال",
+        "action": "added"
+      },
+      {
+        "item": "قواعد عادية / مسلحة / ميد",
+        "unit": "م³",
+        "low": 450,
+        "high": 700,
+        "mappedTo": "L26-014",
+        "mappedRowName": "قواعد عادية / مسلحة / ميد",
+        "action": "added"
+      },
+      {
+        "item": "أعمدة ورقاب",
+        "unit": "م³",
+        "low": 900,
+        "high": 1400,
+        "mappedTo": "L26-015",
+        "mappedRowName": "أعمدة ورقاب",
+        "action": "added"
+      },
+      {
+        "item": "سقف مصمت Solid Slab",
+        "unit": "م³",
+        "low": 550,
+        "high": 850,
+        "mappedTo": "L26-016",
+        "mappedRowName": "سقف مصمت Solid Slab",
+        "action": "added"
+      },
+      {
+        "item": "سقف هوردي / فلات سلاب",
+        "unit": "م³",
+        "low": 700,
+        "high": 1000,
+        "mappedTo": "L26-017",
+        "mappedRowName": "سقف هوردي / فلات سلاب",
+        "action": "added"
+      },
+      {
+        "item": "متر مسطح شامل أعمدة وسقف",
+        "unit": "م²",
+        "low": 450,
+        "high": 650,
+        "mappedTo": "L26-018",
+        "mappedRowName": "متر مسطح شامل أعمدة وسقف",
+        "action": "added"
+      },
+      {
+        "item": "خرسانة عادية للبشة",
+        "unit": "م³",
+        "low": 90,
+        "high": 180,
+        "mappedTo": "L26-019",
+        "mappedRowName": "خرسانة عادية للبشة",
+        "action": "added"
+      },
+      {
+        "item": "أساسات مسلحة",
+        "unit": "م³",
+        "low": 290,
+        "high": 310,
+        "mappedTo": "L26-020",
+        "mappedRowName": "أساسات مسلحة",
+        "action": "added"
+      },
+      {
+        "item": "أعمدة مسلحة",
+        "unit": "م³",
+        "low": 310,
+        "high": 310,
+        "mappedTo": "L26-021",
+        "mappedRowName": "أعمدة مسلحة",
+        "action": "added"
+      },
+      {
+        "item": "أسقف مسلحة",
+        "unit": "م³",
+        "low": 310,
+        "high": 310,
+        "mappedTo": "L26-022",
+        "mappedRowName": "أسقف مسلحة",
+        "action": "added"
+      },
+      {
+        "item": "طبانات السور",
+        "unit": "م.ط",
+        "low": 100,
+        "high": 100,
+        "mappedTo": "L26-023",
+        "mappedRowName": "طبانات السور",
+        "action": "added"
+      },
+      {
+        "item": "طوب أحمر قاطوع 12 سم",
+        "unit": "م²",
+        "low": 35,
+        "high": 55,
+        "mappedTo": "L26-024",
+        "mappedRowName": "طوب أحمر قاطوع 12 سم",
+        "action": "added"
+      },
+      {
+        "item": "طوب أحمر جدار 25 سم",
+        "unit": "م³",
+        "low": 180,
+        "high": 260,
+        "mappedTo": "L26-025",
+        "mappedRowName": "طوب أحمر جدار 25 سم",
+        "action": "added"
+      },
+      {
+        "item": "مباني بالألف طوبة",
+        "unit": "1,000 طوبة",
+        "low": 1200,
+        "high": 1800,
+        "mappedTo": "L26-026",
+        "mappedRowName": "مباني بالألف طوبة",
+        "action": "added"
+      },
+      {
+        "item": "تركيب رخام أرضيات أو درج",
+        "unit": "م²",
+        "low": 350,
+        "high": 700,
+        "mappedTo": "L26-027",
+        "mappedRowName": "مصنعية رخام",
+        "action": "added"
+      }
+    ],
+    "derivedBridges": [
+      {
+        "rowId": "P130",
+        "name": "مصنعية مباني — نطاق جامع",
+        "unit": "م²",
+        "low": 35,
+        "high": 65,
+        "avg": 50,
+        "sourceItems": [
+          "طوب أحمر قاطوع 12 سم",
+          "طوب أحمر جدار 25 سم"
+        ],
+        "aliases": [
+          "مصنعية مباني",
+          "مباني 12 سم",
+          "مباني 25 سم",
+          "طوب أحمر قاطوع 12 سم",
+          "طوب أحمر جدار 25 سم"
+        ],
+        "note": "نصف طوبة 12 سم: 35–55/م². طوبة كاملة 25 سم: 180–260/م³ × 0.25 م = 45–65/م². النطاق الجامع 35–65/م² والقيمة الوسطية 50 للبنود العامة فقط؛ راجع سماكة الحائط قبل الاعتماد.",
+        "rowName": "مصنعية مباني",
+        "activePrice": 50,
+        "activeDate": "2026-10-21"
+      }
+    ],
+    "comparisonsDetail": [
+      {
+        "rowId": "P126",
+        "rowName": "مصنعية سباكة بدون دفن (حمام + مطبخ)",
+        "laborName": "سباكة حمام أو مطبخ",
+        "laborLow": 2500,
+        "laborPrice": 3500,
+        "laborHigh": 4500,
+        "laborUnit": "قطعة",
+        "activePrice": 6500,
+        "activeUnit": "مشروع حمام + مطبخ",
+        "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 6,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+      },
+      {
+        "rowId": "P127",
+        "rowName": "مصنعية سباكة مع دفن في الحائط (حمام + مطبخ)",
+        "laborName": "سباكة حمام أو مطبخ",
+        "laborLow": 2500,
+        "laborPrice": 3500,
+        "laborHigh": 4500,
+        "laborUnit": "قطعة",
+        "activePrice": 7500,
+        "activeUnit": "مشروع حمام + مطبخ",
+        "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 7,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+      }
+    ],
+    "factors": [
+      {
+        "key": "floor4_no_hoist",
+        "label": "الدور الرابع فأعلى بدون أوناش",
+        "effect": "+10–20%",
+        "appliesTo": "labor"
+      },
+      {
+        "key": "pump_pour",
+        "label": "الصب بالبمب",
+        "effect": "يقلل مصنعية الصب قليلًا",
+        "appliesTo": "concrete-labor"
+      },
+      {
+        "key": "manual_mixer",
+        "label": "الصب اليدوي بالخلاطة النحلة",
+        "effect": "يرفع السعر",
+        "appliesTo": "concrete-labor"
+      },
+      {
+        "key": "distance_permits_gates",
+        "label": "المسافات والتصاريح والبوابات",
+        "effect": "قد يرفع السعر",
+        "appliesTo": "all-labor"
+      },
+      {
+        "key": "large_areas",
+        "label": "المساحات الكبيرة",
+        "effect": "تسمح بخصم بسيط",
+        "appliesTo": "all-labor"
+      },
+      {
+        "key": "slab_type",
+        "label": "نوع السقف والتسليح",
+        "effect": "الفلات سلاب والهوردي أعلى من المصمت",
+        "appliesTo": "concrete-labor"
+      }
+    ],
+    "decisions": [
+      {
+        "key": "p090_paint",
+        "decision": "P090 مصنعية دهانات filled with standard paint labor 45–75/م² (نقاشة سادة).",
+        "rationale": "The frozen takeoff uses one row for both interior and exterior paint. The standard rate is the direct match for plain paint; decorative paint 70–120/م² is stored as a separate lookup row rather than inflating the generic row."
+      },
+      {
+        "key": "p093_concrete",
+        "decision": "P093 مصنعية صب خرسانة left open.",
+        "rationale": "The supplied concrete rates are element-specific (قواعد 450–700, أعمدة 900–1,400, أسقف 550–1,000/م³) and include a conflicting second set (أساسات/أعمدة/أسقف 290–310). A single m³ average would invent a number and misprice at least one element. Element rows are added for lookup only.",
+        "supersededBy": "v4",
+        "supersededNote": "v4 أغلق هذا البند بقيمة مشتقة معلنة؛ راجع قسم v4."
+      },
+      {
+        "key": "p130_masonry",
+        "decision": "P130 مصنعية مباني filled with a derived 35–65/م² bridge.",
+        "rationale": "The single frozen row serves both half-brick and full-brick walls. 12 cm is 35–55/م²; 25 cm is 180–260/م³, which is 45–65/م² at 0.25 m thickness. The bridge stores the union, not a hidden average."
+      },
+      {
+        "key": "p041_p131_plumbing",
+        "decision": "P041/P131 plumbing per point left open.",
+        "rationale": "The supplied plumbing rates are per م² (200–400) and per bathroom/kitchen piece (2,500–4,500). There is no per-point rate and no supplied points-per-bathroom count, so converting either would be an assumption.",
+        "supersededBy": "v4",
+        "supersededNote": "v4 أغلق هذا البند بقيمة مشتقة معلنة؛ راجع قسم v4."
+      },
+      {
+        "key": "p126_p127_plumbing",
+        "decision": "P126/P127 lump sums kept; supplied per-piece rate attached as comparison only.",
+        "rationale": "The units differ (مشروع حمام + مطبخ vs قطعة). Overwriting would compare unlike scopes."
+      },
+      {
+        "key": "p037_p056_updates",
+        "decision": "P037 and P056 updated to the dated local labor rate, with previous values preserved.",
+        "rationale": "The user list is dated 2026-10-21, newer than P037 (2026-07-01) and P056 (2026-10-19), and is explicitly labor-only. The old values remain in previousPrice for audit."
+      }
+    ],
+    "unresolved": [
+      {
+        "rowId": "P093",
+        "rowName": "مصنعية صب خرسانة",
+        "unit": "م³",
+        "reason": "الأسعار الموردة خاصة بالعنصر (قواعد 450–700، أعمدة 900–1,400، أسقف 550–1,000/م³) وتوجد مجموعة ثانية متعارضة (أساسات/أعمدة/أسقف 290–310). لا يوجد سعر م³ واحد صالح لكل العناصر.",
+        "options": [
+          "إضافة بنود حصر/BOQ لكل عنصر",
+          "اعتماد متوسط مرجح بمعاملات عناصر محددة",
+          "استخدام نطاق القواعد 450–700 مع تحذير واضح"
+        ]
+      },
+      {
+        "rowId": "P041",
+        "rowName": "مصنعية سباكة",
+        "unit": "نقطة",
+        "reason": "المورد قدّم سعرًا لكل م² (200–400) ولكل حمام/مطبخ (2,500–4,500)، وليس لكل نقطة. لا يوجد عدد نقاط لكل حمام في البيانات.",
+        "options": [
+          "تزويد سعر النقطة",
+          "اعتماد عدد نقاط قياسي لكل حمام/مطبخ",
+          "استخدام سعر المقطوعية بدل سعر النقطة"
+        ]
+      },
+      {
+        "rowId": "P131",
+        "rowName": "مصنعية تأسيس سباكة — نقطة",
+        "unit": "نقطة",
+        "reason": "نفس مشكلة P041: لا يوجد سعر نقطة صريح.",
+        "options": [
+          "تزويد سعر النقطة",
+          "اعتماد عدد نقاط قياسي",
+          "استخدام سعر المقطوعية"
+        ]
+      },
+      {
+        "rowId": "P091",
+        "rowName": "مصنعية نجارة مسلحة",
+        "unit": "م²",
+        "reason": "لم ترد مصنعية شدة/نجارة مسلحة في القائمة الموردة.",
+        "options": [
+          "تزويد سعر الشدة",
+          "الاحتفاظ بها كفجوة"
+        ]
+      },
+      {
+        "rowId": "P092",
+        "rowName": "مصنعية حدادة مسلحة",
+        "unit": "طن",
+        "reason": "لم ترد مصنعية حدادة/تسليح في القائمة الموردة.",
+        "options": [
+          "تزويد سعر الطن",
+          "الاحتفاظ بها كفجوة"
+        ]
+      },
+      {
+        "rowId": "P145",
+        "rowName": "مصنعية عزل مائي",
+        "unit": "م²",
+        "reason": "لم ترد مصنعية عزل مائي في القائمة الموردة.",
+        "options": [
+          "تزويد سعر العزل حسب النظام والطبقات",
+          "الاحتفاظ بها كفجوة"
+        ]
+      },
+      {
+        "rowId": "P090",
+        "rowName": "مصنعية دهانات",
+        "unit": "م²",
+        "reason": "تم تفعيل الدهان السادة 45–75/م². الدهان الديكوري 70–120/م² في صف منفصل، والدهان الخارجي قد يحتاج سقالات. المحرك يستخدم P090 للداخل والخارج معًا.",
+        "options": [
+          "الاحتفاظ بالسعر السادة مع تحذير",
+          "استخدام 45–120 للبند العام",
+          "فصل الداخلي عن الخارجي في محرك الحصر (يتطلب تعديل المحرك المجمد)"
+        ]
+      },
+      {
+        "rowId": "P130",
+        "rowName": "مصنعية مباني",
+        "unit": "م²",
+        "reason": "السعر الجامع 35–65/م² مشتق: 12 سم 35–55/م²، و25 سم 180–260/م³ × 0.25 م = 45–65/م². يحتاج تأكيد سماكة الحائط وشمول السقالات.",
+        "options": [
+          "تأكيد سماكة 25 سم",
+          "استخدام سعر منفصل لكل سماكة (يتطلب تعديل المحرك المجمد)",
+          "الاحتفاظ بالنطاق الجامع"
+        ]
+      },
+      {
+        "rowId": "P126/P127",
+        "rowName": "مصنعية سباكة بدون/مع دفن",
+        "unit": "مشروع حمام + مطبخ",
+        "reason": "السعر المورد 2,500–4,500 لكل قطعة (حمام أو مطبخ)، بينما الصف النشط 6,500/7,500 لمشروع حمام + مطبخ. الوحدات مختلفة ولم يُستبدل السعر النشط.",
+        "options": [
+          "تأكيد أن 2,500–4,500 لكل قطعة",
+          "تحويل السعر إلى مشروع بضرب عدد القطع",
+          "الاحتفاظ بالمقارنة فقط"
+        ]
+      }
+    ],
+    "conflicts": [
+      {
+        "area": "الخرسانة",
+        "detail": "قواعد 450–700 وأعمدة 900–1,400 وأسقف 550–1,000/م³، مقابل أساسات 290–310 وأعمدة 310 وأسقف 310/م³. الفارق كبير ولا يمكن دمجه دون معرفة ما إذا كانت المجموعة الثانية تشمل الشدة والحدادة أم لا."
+      },
+      {
+        "area": "الجبس بورد",
+        "detail": "السعر 180–350 ورد لوحدة م² أو م.ط. تم حفظ صفين منفصلين بنفس النطاق، واستخدام صف المتر المسطح فقط في P146."
+      },
+      {
+        "area": "الدهانات",
+        "detail": "نقاشة سادة 45–75/م²، دهانات ديكورية 70–120/م². المحرك يستخدم صفًا واحدًا للدهان الداخلي والخارجي؛ تم تفعيل السادة فقط."
+      },
+      {
+        "area": "المباني",
+        "detail": "12 سم 35–55/م²، 25 سم 180–260/م³، والألف طوبة 1,200–1,800. تحويل 25 سم إلى م² استخدم سماكة 0.25 م، وهو افتراض هندسي موثق وليس سعرًا مورّدًا."
+      },
+      {
+        "area": "الضريبة",
+        "detail": "القائمة لم تحدد شمول الضريبة؛ كل الصفوف taxIncluded=false. لا تُضف ضريبة تلقائيًا قبل التأكيد."
+      }
+    ]
+  },
+  "v4": {
+    "batch": "missing-2026-10",
+    "generatedAt": "2026-10-21T10:51:08.546Z",
+    "counts": {
+      "addedRows": 6,
+      "filledRows": 11,
+      "filledDerivedRows": 5,
+      "unitCorrections": 3,
+      "totalRowsBefore": 464,
+      "totalRowsAfter": 470,
+      "activeBefore": 464,
+      "activeAfter": 470,
+      "pricedBefore": 387,
+      "pricedAfter": 409,
+      "missingBefore": 77,
+      "missingAfter": 61,
+      "staleBefore": 314,
+      "staleAfter": 328
+    },
+    "coverage": {
+      "before": {
+        "total": 464,
+        "priced": 387,
+        "missing": 77,
+        "percent": 83.4,
+        "stale": 314
+      },
+      "after": {
+        "total": 470,
+        "priced": 409,
+        "missing": 61,
+        "percent": 87,
+        "stale": 328
+      }
+    },
+    "clientEstimate": {
+      "project": "شقة 150 م² — 3 غرف — 2 حمام — باقة متوسطة — APT-BRICK — بدون مطبخ/جبس/تكييف",
+      "before": {
+        "lines": 25,
+        "priced": 13,
+        "gaps": 11,
+        "gapItems": [
+          {
+            "code": "apartment-PLASTER",
+            "item": "محارة داخلية",
+            "unit": "م²",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-WATER-POINTS",
+            "item": "نقاط مياه — حصر مبدئي",
+            "unit": "نقطة",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-DRAIN-POINTS",
+            "item": "نقاط صرف — حصر مبدئي",
+            "unit": "نقطة",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-ELEC-MAT",
+            "item": "خامات كهرباء — مؤشر مساحي",
+            "unit": "م²",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-FLOOR-TILE-LAB",
+            "item": "مصنعية تركيب سيراميك أرضيات",
+            "unit": "م²",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-WET-TILE-LAB",
+            "item": "مصنعية تركيب سيراميك مناطق رطبة",
+            "unit": "م²",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-SEALER",
+            "item": "سيلر",
+            "unit": "لتر",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-PAINT",
+            "item": "بلاستيك داخلي",
+            "unit": "لتر",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-DOORS",
+            "item": "أبواب داخلية — بدون باب المدخل",
+            "unit": "باب",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-SANITARY",
+            "item": "أطقم صحية وخلاطات",
+            "unit": "طقم حمام",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-CLEANING",
+            "item": "تنظيف وتسليم",
+            "unit": "وحدة",
+            "status": "missing"
+          }
+        ],
+        "totalCost": null
+      },
+      "after": {
+        "lines": 25,
+        "priced": 20,
+        "gaps": 4,
+        "gapItems": [
+          {
+            "code": "apartment-SEALER",
+            "item": "سيلر",
+            "unit": "لتر",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-DOORS",
+            "item": "أبواب داخلية — بدون باب المدخل",
+            "unit": "باب",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-SANITARY",
+            "item": "أطقم صحية وخلاطات",
+            "unit": "طقم حمام",
+            "status": "missing"
+          },
+          {
+            "code": "apartment-CLEANING",
+            "item": "تنظيف وتسليم",
+            "unit": "وحدة",
+            "status": "missing"
+          }
+        ],
+        "totalCost": null
+      },
+      "closedGaps": [
+        {
+          "code": "apartment-PLASTER",
+          "item": "محارة داخلية",
+          "unit": "م²",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-WATER-POINTS",
+          "item": "نقاط مياه — حصر مبدئي",
+          "unit": "نقطة",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-DRAIN-POINTS",
+          "item": "نقاط صرف — حصر مبدئي",
+          "unit": "نقطة",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-ELEC-MAT",
+          "item": "خامات كهرباء — مؤشر مساحي",
+          "unit": "م²",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-FLOOR-TILE-LAB",
+          "item": "مصنعية تركيب سيراميك أرضيات",
+          "unit": "م²",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-WET-TILE-LAB",
+          "item": "مصنعية تركيب سيراميك مناطق رطبة",
+          "unit": "م²",
+          "status": "closed",
+          "closedIn": "v4"
+        },
+        {
+          "code": "apartment-PAINT",
+          "item": "بلاستيك داخلي",
+          "unit": "لتر",
+          "status": "closed",
+          "closedIn": "v4"
+        }
+      ],
+      "remainingGaps": [
+        {
+          "code": "apartment-SEALER",
+          "item": "سيلر",
+          "unit": "لتر",
+          "status": "missing"
+        },
+        {
+          "code": "apartment-DOORS",
+          "item": "أبواب داخلية — بدون باب المدخل",
+          "unit": "باب",
+          "status": "missing"
+        },
+        {
+          "code": "apartment-SANITARY",
+          "item": "أطقم صحية وخلاطات",
+          "unit": "طقم حمام",
+          "status": "missing"
+        },
+        {
+          "code": "apartment-CLEANING",
+          "item": "تنظيف وتسليم",
+          "unit": "وحدة",
+          "status": "missing"
+        }
+      ]
+    },
+    "unitCorrections": [
+      {
+        "rowId": "P060",
+        "rowName": "بيتومين / رولات عزل",
+        "from": "م² / رول",
+        "to": "م²",
+        "reason": "الوحدة المركبة «م² / رول» لا تطابق وحدة BOQ/الحصر «م²»؛ السعر المورد للمتر المسطح.",
+        "preserved": null
+      },
+      {
+        "rowId": "P077",
+        "rowName": "أسلاك كهرباء 4 مم",
+        "from": "م / لفة",
+        "to": "م",
+        "reason": "الوحدة المركبة «م / لفة» لا تطابق وحدة الحصر «م»؛ السعر المورد للفة 100 م وحُوّل إلى سعر المتر بقسمة صحيحة.",
+        "preserved": {
+          "rollPrice": 3885,
+          "rollLength": 100
+        }
+      },
+      {
+        "rowId": "P078",
+        "rowName": "أسلاك كهرباء 6 مم",
+        "from": "م / لفة",
+        "to": "م",
+        "reason": "الوحدة المركبة «م / لفة» لا تطابق وحدة الحصر «م»؛ السعر المورد للفة 100 م وحُوّل إلى سعر المتر بقسمة صحيحة.",
+        "preserved": {
+          "rollPrice": 5850,
+          "rollLength": 100
+        }
+      }
+    ],
+    "newRows": [
+      {
+        "id": "B26-001",
+        "name": "مصنعية محارة",
+        "unit": "م²",
+        "low": 50,
+        "avg": 67.5,
+        "high": 85,
+        "status": "local",
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P033",
+        "derivedFrom": null,
+        "note": "مرادف تنفيذي لـ P033 (مصنعية المحارة والبياض) بنفس النطاق 50–85/م². لا تجمع مع P033 في نفس الحصر. لا تشمل مونة الأسمنت والرمل."
+      },
+      {
+        "id": "B26-002",
+        "name": "تركيب سيراميك",
+        "unit": "م²",
+        "low": 150,
+        "avg": 225,
+        "high": 300,
+        "status": "local",
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P056",
+        "derivedFrom": null,
+        "note": "مرادف تنفيذي لـ P056 (مصنعية سيراميك) بنفس النطاق 150–300/م². لا تجمع مع P056. تركيب فقط؛ لا يشمل السيراميك أو المواد."
+      },
+      {
+        "id": "B26-003",
+        "name": "خامات كهرباء للمتر",
+        "unit": "م²",
+        "low": 100,
+        "avg": 125,
+        "high": 150,
+        "status": "estimate",
+        "date": "2026-03-01",
+        "source": "P119 — خامات كهرباء لشقة 100 م² — مرجعي (10,000–15,000)",
+        "bridgeOf": null,
+        "derivedFrom": "P119",
+        "note": "مشتق من P119: 12,500 ÷ 100 م² = 125/م² (النطاق 10,000–15,000 -> 100–150). مرجع شقة 100 م² وليس جدول كابلات أو دوائر؛ لا تستخدمه لحصر كهرباء تنفيذي."
+      },
+      {
+        "id": "B26-004",
+        "name": "مصنعية محارة خارجية",
+        "unit": "م²",
+        "low": 50,
+        "avg": 67.5,
+        "high": 85,
+        "status": "local",
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P033",
+        "derivedFrom": null,
+        "note": "نفس سعر المحارة/اللياسة 50–85/م². لا تشمل السقالات الخارجية أو مونة الأسمنت والرمل؛ راجع الواجهة والسقالات منفصلة."
+      },
+      {
+        "id": "B26-005",
+        "name": "مصنعية جبس",
+        "unit": "م²",
+        "low": 180,
+        "avg": 265,
+        "high": 350,
+        "status": "local",
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P146",
+        "derivedFrom": null,
+        "note": "من صف جبس بورد مودرن 180–350/م² (النسخة المسطحة). لا تجمع مع P146 أو مع صف المتر الطولي. لا تشمل مواد الجبس."
+      },
+      {
+        "id": "B26-006",
+        "name": "مصنعية تركيب جبس بورد",
+        "unit": "م²",
+        "low": 180,
+        "avg": 265,
+        "high": 350,
+        "status": "local",
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P146",
+        "derivedFrom": null,
+        "note": "بديل P146 بنفس النطاق 180–350/م². لا تجمع مع P146 أو مع صف المتر الطولي. لا تشمل مواد الجبس."
+      }
+    ],
+    "derivedBridges": [
+      {
+        "rowId": "P049",
+        "rowName": "دهانات داخلية",
+        "unit": "م²",
+        "low": 63.25,
+        "avg": 78.25,
+        "high": 93.25,
+        "formula": "(سعر لتر الدهان × معدل الاستهلاك) + مصنعية الدهان",
+        "calculation": "125×0.146=18.25؛ 18.25+45=63.25؛ 18.25+75=93.25؛ 18.25+60=78.25",
+        "inputs": [
+          {
+            "name": "مط داخلي عالي الجودة أبيض",
+            "unit": "لتر",
+            "value": 125,
+            "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)"
+          },
+          {
+            "name": "معدل استهلاك الدهان",
+            "unit": "لتر/م²",
+            "value": 0.146,
+            "source": "محرك الحصر المجمد — interiorPaintLPerM2"
+          },
+          {
+            "name": "نقاشة سادة",
+            "unit": "م²",
+            "low": 45,
+            "high": 75,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          }
+        ],
+        "note": "مادة 125/لتر × 0.146 لتر/م² = 18.25 + مصنعية نقاشة سادة 45–75 = 63.25–93.25/م². السعر النشط 78.25. لا تجمع مع P090 أو P135 في نفس الحصر."
+      },
+      {
+        "rowId": "P111",
+        "rowName": "دهانات — سعر المتر",
+        "unit": "م²",
+        "low": 63.25,
+        "avg": 78.25,
+        "high": 93.25,
+        "formula": "(سعر لتر الدهان × معدل الاستهلاك) + مصنعية الدهان",
+        "calculation": "125×0.146=18.25؛ 18.25+45=63.25؛ 18.25+75=93.25؛ 18.25+60=78.25",
+        "inputs": [
+          {
+            "name": "مط داخلي عالي الجودة أبيض",
+            "unit": "لتر",
+            "value": 125,
+            "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)"
+          },
+          {
+            "name": "معدل استهلاك الدهان",
+            "unit": "لتر/م²",
+            "value": 0.146,
+            "source": "محرك الحصر المجمد — interiorPaintLPerM2"
+          },
+          {
+            "name": "نقاشة سادة",
+            "unit": "م²",
+            "low": 45,
+            "high": 75,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          }
+        ],
+        "note": "بديل P049 بنفس الصيغة: مادة 125/لتر × 0.146 لتر/م² + مصنعية 45–75/م². لا تجمع مع P049 أو P090 أو P135."
+      },
+      {
+        "rowId": "P041",
+        "rowName": "مصنعية سباكة",
+        "unit": "نقطة",
+        "low": 363.64,
+        "avg": 545.45,
+        "high": 727.27,
+        "formula": "سعر المتر ÷ كثافة النقاط لكل م²",
+        "calculation": "200÷0.55=363.64؛ 400÷0.55=727.27؛ 300÷0.55=545.45",
+        "inputs": [
+          {
+            "name": "تأسيس وتشطيب السباكة",
+            "unit": "م²",
+            "low": 200,
+            "high": 400,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "كثافة النقاط",
+            "unit": "نقطة/م²",
+            "value": 0.55,
+            "source": "محرك النماذج المجمد — 0.30 مياه + 0.25 صرف"
+          }
+        ],
+        "note": "200–400/م² ÷ 0.55 نقطة/م² (0.30 مياه + 0.25 صرف) = 363.64–727.27/نقطة. السعر النشط 545.45. قيمة مشتقة من سعر المتر وكثافة النقاط في النموذج، وليست سعر سوق لنقطة منفردة."
+      },
+      {
+        "rowId": "P131",
+        "rowName": "مصنعية تأسيس سباكة — نقطة",
+        "unit": "نقطة",
+        "low": 363.64,
+        "avg": 545.45,
+        "high": 727.27,
+        "formula": "سعر المتر ÷ كثافة النقاط لكل م²",
+        "calculation": "200÷0.55=363.64؛ 400÷0.55=727.27؛ 300÷0.55=545.45",
+        "inputs": [
+          {
+            "name": "تأسيس وتشطيب السباكة",
+            "unit": "م²",
+            "low": 200,
+            "high": 400,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "كثافة النقاط",
+            "unit": "نقطة/م²",
+            "value": 0.55,
+            "source": "محرك النماذج المجمد — 0.30 مياه + 0.25 صرف"
+          }
+        ],
+        "note": "بديل P041 بنفس الصيغة: 200–400/م² ÷ 0.55 نقطة/م². لا تجمع مع P041."
+      },
+      {
+        "rowId": "P093",
+        "rowName": "مصنعية صب خرسانة",
+        "unit": "م³",
+        "low": 290,
+        "avg": 845,
+        "high": 1400,
+        "formula": "أدنى وأعلى سعر م³ للعناصر الإنشائية (بدون الخرسانة العادية للبشة)",
+        "calculation": "min=290؛ max=1,400؛ avg=(290+1,400)÷2=845",
+        "inputs": [
+          {
+            "name": "قواعد عادية/مسلحة/ميد",
+            "unit": "م³",
+            "low": 450,
+            "high": 700,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "أعمدة ورقاب",
+            "unit": "م³",
+            "low": 900,
+            "high": 1400,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "سقف مصمت",
+            "unit": "م³",
+            "low": 550,
+            "high": 850,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "سقف هوردي/فلات",
+            "unit": "م³",
+            "low": 700,
+            "high": 1000,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          },
+          {
+            "name": "المجموعة الثانية المتعارضة",
+            "unit": "م³",
+            "low": 290,
+            "high": 310,
+            "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21"
+          }
+        ],
+        "note": "نطاق كل العناصر الإنشائية الموردة 290–1,400/م³: قواعد 450–700، أعمدة ورقاب 900–1,400، سقف مصمت 550–850، هوردي/فلات 700–1,000، ومجموعة ثانية متعارضة 290–310. السعر النشط 845 وسط النطاق. لا تستخدمه لتسعير عنصر محدد دون اختيار العنصر؛ الخرسانة العادية للبشة 90–180/م³ منفصلة."
+      },
+      {
+        "rowId": "B26-003",
+        "rowName": "خامات كهرباء للمتر",
+        "unit": "م²",
+        "low": 100,
+        "avg": 125,
+        "high": 150,
+        "formula": "مرجع شقة 100 م² ÷ 100 م²",
+        "calculation": "10,000÷100=100؛ 12,500÷100=125؛ 15,000÷100=150",
+        "inputs": [
+          {
+            "name": "P119 — خامات كهرباء لشقة 100 م²",
+            "unit": "مشروع شقة 100 م²",
+            "low": 10000,
+            "avg": 12500,
+            "high": 15000,
+            "source": "as eskahraba — مرجع وطني"
+          }
+        ],
+        "note": "مشتق من P119: 12,500 ÷ 100 م² = 125/م² (النطاق 10,000–15,000 -> 100–150). مرجع شقة 100 م² وليس جدول كابلات أو دوائر؛ لا تستخدمه لحصر كهرباء تنفيذي."
+      }
+    ],
+    "actions": [
+      {
+        "action": "filled",
+        "rowId": "P060",
+        "rowName": "بيتومين / رولات عزل",
+        "unit": "م²",
+        "low": 155,
+        "avg": 157.5,
+        "high": 160,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "بيتومين / رولات عزل",
+          "unit": "م² / رول",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حديث مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P069",
+        "rowName": "جبس / أسقف مستعارة",
+        "unit": "م²",
+        "low": 180,
+        "avg": 202.5,
+        "high": 225,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "جبس / أسقف مستعارة",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر خامة ومصنعية محلية مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P077",
+        "rowName": "أسلاك كهرباء 4 مم",
+        "unit": "م",
+        "low": 38.85,
+        "avg": 38.85,
+        "high": 38.85,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "أسلاك كهرباء 4 مم",
+          "unit": "م / لفة",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حسب الماركة مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P078",
+        "rowName": "أسلاك كهرباء 6 مم",
+        "unit": "م",
+        "low": 58.5,
+        "avg": 58.5,
+        "high": 58.5,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "أسلاك كهرباء 6 مم",
+          "unit": "م / لفة",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حسب الماركة مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P088",
+        "rowName": "واجهة حجر / هاي ستون",
+        "unit": "م²",
+        "low": 450,
+        "avg": 465,
+        "high": 480,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "واجهة حجر / هاي ستون",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "عرض مصنع / مقاول واجهات محلي مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P052",
+        "rowName": "رخام / جرانيت",
+        "unit": "م²",
+        "low": 440,
+        "avg": 682.5,
+        "high": 925,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "رخام / جرانيت",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حسب النوع والسماكة مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P038",
+        "rowName": "مواسير PVC للصرف",
+        "unit": "م",
+        "low": 40,
+        "avg": 210,
+        "high": 380,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "مواسير PVC للصرف",
+          "unit": "م",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حسب القطر والماركة مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P135",
+        "rowName": "بلاستيك داخلي",
+        "unit": "لتر",
+        "low": 45,
+        "avg": 125,
+        "high": 225,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "بلاستيك داخلي",
+          "unit": "لتر",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة — سعر الماركة/العبوة ومعدل التغطية مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P136",
+        "rowName": "بلاستيك خارجي",
+        "unit": "لتر",
+        "low": 115,
+        "avg": 190,
+        "high": 215,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+        "previous": {
+          "name": "بلاستيك خارجي",
+          "unit": "لتر",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة — سعر الماركة/العبوة ومعدل التغطية مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled-derived",
+        "rowId": "P049",
+        "rowName": "دهانات داخلية",
+        "unit": "م²",
+        "low": 63.25,
+        "avg": 78.25,
+        "high": 93.25,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd) + قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "previous": {
+          "name": "دهانات داخلية",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "سعر محلي حسب الماركة والعبوة مطلوب",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled-derived",
+        "rowId": "P111",
+        "rowName": "دهانات — سعر المتر",
+        "unit": "م²",
+        "low": 63.25,
+        "avg": 78.25,
+        "high": 93.25,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd) + قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "previous": {
+          "name": "دهانات — سعر المتر",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة: مطلوب سعر محلي مفصل حسب نوع الدهان وعدد الأوجه؛ لا تستخدم تخمينًا",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled-derived",
+        "rowId": "P041",
+        "rowName": "مصنعية سباكة",
+        "unit": "نقطة",
+        "low": 363.64,
+        "avg": 545.45,
+        "high": 727.27,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21 — قيمة مشتقة",
+        "previous": {
+          "name": "مصنعية سباكة",
+          "unit": "نقطة",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "مصنعية سباك محلي مطلوبة",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled-derived",
+        "rowId": "P131",
+        "rowName": "مصنعية تأسيس سباكة — نقطة",
+        "unit": "نقطة",
+        "low": 363.64,
+        "avg": 545.45,
+        "high": 727.27,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21 — قيمة مشتقة",
+        "previous": {
+          "name": "مصنعية تأسيس سباكة — نقطة",
+          "unit": "نقطة",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة — يلزم تسعير مقاول محلي",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P112",
+        "rowName": "رخام / جرانيت — عرض محلي مطلوب",
+        "unit": "م²",
+        "low": 440,
+        "avg": 682.5,
+        "high": 925,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd) — بديل P052",
+        "previous": {
+          "name": "رخام / جرانيت — عرض محلي مطلوب",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة: يلزم فصل النوع والسماكة والتشطيب والنقل",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled",
+        "rowId": "P114",
+        "rowName": "واجهة حجر / هاي ستون — عرض محلي مطلوب",
+        "unit": "م²",
+        "low": 450,
+        "avg": 465,
+        "high": 480,
+        "date": "2026-01-01",
+        "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd) — بديل P088",
+        "previous": {
+          "name": "واجهة حجر / هاي ستون — عرض محلي مطلوب",
+          "unit": "م²",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "فجوة محلية: يلزم تحديد نوع الحجر وطريقة التثبيت والسقالات",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "filled-derived",
+        "rowId": "P093",
+        "rowName": "مصنعية صب خرسانة",
+        "unit": "م³",
+        "low": 290,
+        "avg": 845,
+        "high": 1400,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21 — نطاق عناصر",
+        "previous": {
+          "name": "مصنعية صب خرسانة",
+          "unit": "م³",
+          "low": null,
+          "avg": null,
+          "high": null,
+          "date": "2026-10-19",
+          "source": "مصنعية محلية مطلوبة",
+          "status": "missing"
+        }
+      },
+      {
+        "action": "added",
+        "rowId": "B26-001",
+        "rowName": "مصنعية محارة",
+        "unit": "م²",
+        "low": 50,
+        "avg": 67.5,
+        "high": 85,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P033"
+      },
+      {
+        "action": "added",
+        "rowId": "B26-002",
+        "rowName": "تركيب سيراميك",
+        "unit": "م²",
+        "low": 150,
+        "avg": 225,
+        "high": 300,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P056"
+      },
+      {
+        "action": "added",
+        "rowId": "B26-003",
+        "rowName": "خامات كهرباء للمتر",
+        "unit": "م²",
+        "low": 100,
+        "avg": 125,
+        "high": 150,
+        "date": "2026-03-01",
+        "source": "P119 — خامات كهرباء لشقة 100 م² — مرجعي (10,000–15,000)",
+        "bridgeOf": null
+      },
+      {
+        "action": "added",
+        "rowId": "B26-004",
+        "rowName": "مصنعية محارة خارجية",
+        "unit": "م²",
+        "low": 50,
+        "avg": 67.5,
+        "high": 85,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P033"
+      },
+      {
+        "action": "added",
+        "rowId": "B26-005",
+        "rowName": "مصنعية جبس",
+        "unit": "م²",
+        "low": 180,
+        "avg": 265,
+        "high": 350,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P146"
+      },
+      {
+        "action": "added",
+        "rowId": "B26-006",
+        "rowName": "مصنعية تركيب جبس بورد",
+        "unit": "م²",
+        "low": 180,
+        "avg": 265,
+        "high": 350,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "bridgeOf": "P146"
+      }
+    ],
+    "remainingClientGaps": [
+      {
+        "code": "apartment-SEALER",
+        "item": "سيلر",
+        "unit": "لتر",
+        "status": "missing"
+      },
+      {
+        "code": "apartment-DOORS",
+        "item": "أبواب داخلية — بدون باب المدخل",
+        "unit": "باب",
+        "status": "missing"
+      },
+      {
+        "code": "apartment-SANITARY",
+        "item": "أطقم صحية وخلاطات",
+        "unit": "طقم حمام",
+        "status": "missing"
+      },
+      {
+        "code": "apartment-CLEANING",
+        "item": "تنظيف وتسليم",
+        "unit": "وحدة",
+        "status": "missing"
+      }
+    ],
+    "remainingGaps": [
+      {
+        "rowId": "P010",
+        "rowName": "فرق سعر أقطار الحديد 8–25 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "فرق سعر أقطار الحديد ليس سعرًا مطلقًا، والنشرة لا تفصل فروق الأقطار."
+      },
+      {
+        "rowId": "P018",
+        "rowName": "خرسانة جاهزة C30",
+        "unit": "م³",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تتضمن خرسانة جاهزة C30؛ لا يُشتق سعر المقاومة من C25."
+      },
+      {
+        "rowId": "P019",
+        "rowName": "خرسانة جاهزة C35",
+        "unit": "م³",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تتضمن خرسانة جاهزة C35؛ لا يُشتق سعر المقاومة من C25."
+      },
+      {
+        "rowId": "P020",
+        "rowName": "مضخة خرسانة",
+        "unit": "مشروع",
+        "category": "الهيكل الخرساني",
+        "reason": "لا يوجد سعر مضخة خرسانة في المصدرين."
+      },
+      {
+        "rowId": "P021",
+        "rowName": "شدة خشبية / موسكي",
+        "unit": "م³",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة تسعّر الخشب م³ وليس شدة خشبية/موسكي؛ لا تحويل بدون تصميم شدة."
+      },
+      {
+        "rowId": "P022",
+        "rowName": "شدة معدنية — إيجار",
+        "unit": "م²",
+        "category": "الهيكل الخرساني",
+        "reason": "لا يوجد سعر إيجار شدة معدنية في المصدرين."
+      },
+      {
+        "rowId": "P023",
+        "rowName": "حفر آلي بالحفار",
+        "unit": "م³",
+        "category": "الحفر والأساسات",
+        "reason": "لا يوجد سعر حفر آلي في المصدرين."
+      },
+      {
+        "rowId": "P024",
+        "rowName": "حفر يدوي",
+        "unit": "م³",
+        "category": "الحفر والأساسات",
+        "reason": "لا يوجد سعر حفر يدوي في المصدرين."
+      },
+      {
+        "rowId": "P025",
+        "rowName": "نقل ناتج الحفر",
+        "unit": "م³",
+        "category": "الحفر والأساسات",
+        "reason": "لا يوجد سعر نقل ناتج حفر في المصدرين."
+      },
+      {
+        "rowId": "P026",
+        "rowName": "ردم ودك",
+        "unit": "م³",
+        "category": "الحفر والأساسات",
+        "reason": "لا يوجد سعر ردم ودك في المصدرين."
+      },
+      {
+        "rowId": "P027",
+        "rowName": "اختبار تربة",
+        "unit": "مشروع",
+        "category": "الحفر والأساسات",
+        "reason": "لا يوجد سعر اختبار تربة في المصدرين."
+      },
+      {
+        "rowId": "P031",
+        "rowName": "مونة أسمنت ورمل",
+        "unit": "م³",
+        "category": "المباني والبياض",
+        "reason": "لا توجد خلطة مونة محددة؛ لا يُخترع سعر من الأسمنت والرمل فقط."
+      },
+      {
+        "rowId": "P036",
+        "rowName": "مواسير وعلب كهرباء",
+        "unit": "م / وحدة",
+        "category": "الكهرباء",
+        "reason": "النشرة لا تتضمن مواسير/علب كهرباء."
+      },
+      {
+        "rowId": "P040",
+        "rowName": "طقم صحي كامل للحمام",
+        "unit": "طقم",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر طقم صحي كامل في المصدرين."
+      },
+      {
+        "rowId": "P042",
+        "rowName": "توصيل صرف عام",
+        "unit": "وصلة",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر توصيل صرف عام؛ يلزم عرض الجهة المختصة."
+      },
+      {
+        "rowId": "P050",
+        "rowName": "أبواب داخلية",
+        "unit": "باب",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر باب داخلي في المصدرين؛ الخشب م³ لا يكفي لتسعير باب."
+      },
+      {
+        "rowId": "P051",
+        "rowName": "شبابيك ألوميتال",
+        "unit": "م²",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر شباك ألوميتال عام في المصدرين؛ توجد أسعار شبابيك محددة بأسماء أخرى وليست بديلًا مطابقًا."
+      },
+      {
+        "rowId": "P053",
+        "rowName": "مطبخ — وحدات وتجهيز",
+        "unit": "متر طولي",
+        "category": "خيارات إضافية",
+        "reason": "لا يوجد سعر مطبخ في المصدرين."
+      },
+      {
+        "rowId": "P054",
+        "rowName": "تأسيس تكييف",
+        "unit": "وحدة",
+        "category": "خيارات إضافية",
+        "reason": "لا يوجد سعر تكييف في المصدرين."
+      },
+      {
+        "rowId": "P055",
+        "rowName": "أسانسير توريد وتركيب",
+        "unit": "وحدة",
+        "category": "الأسانسير",
+        "reason": "لا يوجد سعر مصعد في المصدرين."
+      },
+      {
+        "rowId": "P057",
+        "rowName": "تصميم معماري وإنشائي",
+        "unit": "مشروع",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر ترخيص/تصميم في المصدرين."
+      },
+      {
+        "rowId": "P058",
+        "rowName": "رسوم ترخيص وإجراءات بناء",
+        "unit": "مشروع",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر رسوم عداد في المصدرين."
+      },
+      {
+        "rowId": "P059",
+        "rowName": "اختبارات خرسانة وحديد",
+        "unit": "مشروع",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر إشراف هندسي في المصدرين."
+      },
+      {
+        "rowId": "P061",
+        "rowName": "سلك ربط حديد",
+        "unit": "كجم",
+        "category": "الهيكل الخرساني",
+        "reason": "لا يوجد سعر سلك ربط حديد في المصدرين."
+      },
+      {
+        "rowId": "P062",
+        "rowName": "حديد تسليح قطر 8 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P063",
+        "rowName": "حديد تسليح قطر 10 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P064",
+        "rowName": "حديد تسليح قطر 12 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P065",
+        "rowName": "حديد تسليح قطر 16 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P066",
+        "rowName": "حديد تسليح قطر 18 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P067",
+        "rowName": "حديد تسليح قطر 25 مم",
+        "unit": "طن",
+        "category": "الهيكل الخرساني",
+        "reason": "النشرة لا تفصل سعر الحديد حسب القطر؛ لا يُنسب سعر الماركة إلى قطر محدد."
+      },
+      {
+        "rowId": "P070",
+        "rowName": "باب خشبي داخلي اقتصادي",
+        "unit": "باب",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر باب خشبي اقتصادي في المصدرين."
+      },
+      {
+        "rowId": "P071",
+        "rowName": "باب خشبي داخلي متوسط",
+        "unit": "باب",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر باب خشبي متوسط في المصدرين."
+      },
+      {
+        "rowId": "P072",
+        "rowName": "باب مصفح / فاخر",
+        "unit": "باب",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر باب مصفح/فاخر في المصدرين."
+      },
+      {
+        "rowId": "P073",
+        "rowName": "مفاتيح وبريزات كهرباء — اقتصادي",
+        "unit": "وحدة",
+        "category": "الكهرباء",
+        "reason": "لا يوجد سعر مفاتيح/بريزات في المصدرين."
+      },
+      {
+        "rowId": "P074",
+        "rowName": "مفاتيح وبريزات كهرباء — متوسط",
+        "unit": "وحدة",
+        "category": "الكهرباء",
+        "reason": "لا يوجد سعر لوحة كهرباء في المصدرين."
+      },
+      {
+        "rowId": "P075",
+        "rowName": "مفاتيح وبريزات كهرباء — فاخر",
+        "unit": "وحدة",
+        "category": "الكهرباء",
+        "reason": "لا يوجد سعر قواطع/مفاتيح رئيسية في المصدرين."
+      },
+      {
+        "rowId": "P076",
+        "rowName": "لوحة توزيع وقواطع",
+        "unit": "وحدة",
+        "category": "الكهرباء",
+        "reason": "لا يوجد سعر كابل/توصيلات رئيسية في المصدرين."
+      },
+      {
+        "rowId": "P079",
+        "rowName": "أطقم صحية — اقتصادي",
+        "unit": "طقم حمام",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر طقم صحي اقتصادي في المصدرين."
+      },
+      {
+        "rowId": "P080",
+        "rowName": "أطقم صحية — متوسط",
+        "unit": "طقم حمام",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر طقم صحي متوسط في المصدرين."
+      },
+      {
+        "rowId": "P081",
+        "rowName": "أطقم صحية — فاخر",
+        "unit": "طقم حمام",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر طقم صحي فاخر في المصدرين."
+      },
+      {
+        "rowId": "P082",
+        "rowName": "توصيل غاز طبيعي",
+        "unit": "وصلة",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر رسوم حكومية في المصدرين."
+      },
+      {
+        "rowId": "P083",
+        "rowName": "رسوم عداد كهرباء",
+        "unit": "عداد",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر ضرائب/تأمينات في المصدرين."
+      },
+      {
+        "rowId": "P084",
+        "rowName": "رسوم عداد مياه وصرف",
+        "unit": "طلب",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر إشراف/إدارة في المصدرين."
+      },
+      {
+        "rowId": "P085",
+        "rowName": "إشراف هندسي",
+        "unit": "مشروع",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر عمالة غير مباشرة في المصدرين."
+      },
+      {
+        "rowId": "P086",
+        "rowName": "مصنعية تركيب أسانسير",
+        "unit": "وحدة",
+        "category": "الأسانسير",
+        "reason": "لا يوجد سعر توصيل مرافق في المصدرين."
+      },
+      {
+        "rowId": "P087",
+        "rowName": "صيانة أسانسير سنوية",
+        "unit": "سنة",
+        "category": "الأسانسير",
+        "reason": "لا يوجد سعر رسوم عداد/مرافق في المصدرين."
+      },
+      {
+        "rowId": "P091",
+        "rowName": "مصنعية نجارة مسلحة",
+        "unit": "م²",
+        "category": "المصنعيات والعمالة",
+        "reason": "لا توجد مصنعية نجارة مسلحة في القائمة الموردة."
+      },
+      {
+        "rowId": "P092",
+        "rowName": "مصنعية حدادة مسلحة",
+        "unit": "طن",
+        "category": "المصنعيات والعمالة",
+        "reason": "لا توجد مصنعية حدادة مسلحة في القائمة الموردة."
+      },
+      {
+        "rowId": "P094",
+        "rowName": "أجر يومية صنايعي",
+        "unit": "يومية",
+        "category": "المصنعيات والعمالة",
+        "reason": "لا يوجد سعر يومية عمالة في المصدرين."
+      },
+      {
+        "rowId": "P095",
+        "rowName": "أجر يومية عامل / معاون",
+        "unit": "يومية",
+        "category": "المصنعيات والعمالة",
+        "reason": "لا يوجد سعر يومية فني في المصدرين."
+      },
+      {
+        "rowId": "P113",
+        "rowName": "توريد وتركيب أسانسير 6–8 وقفات",
+        "unit": "وحدة",
+        "category": "الأسانسير",
+        "reason": "لا يوجد سعر مصعد/تركيب في المصدرين."
+      },
+      {
+        "rowId": "P115",
+        "rowName": "سور وبوابة",
+        "unit": "م.ط / وحدة",
+        "category": "التكاليف غير المباشرة",
+        "reason": "لا يوجد سعر سور وبوابة في المصدرين."
+      },
+      {
+        "rowId": "P128",
+        "rowName": "خزان مياه",
+        "unit": "وحدة",
+        "category": "السباكة والصرف",
+        "reason": "لا يوجد سعر خزان مياه في المصدرين."
+      },
+      {
+        "rowId": "P129",
+        "rowName": "باب خشبي داخلي فاخر",
+        "unit": "باب",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر باب خشبي داخلي فاخر في المصدرين."
+      },
+      {
+        "rowId": "P132",
+        "rowName": "كراسي بلاستيك للحديد",
+        "unit": "قطعة",
+        "category": "الهيكل الخرساني",
+        "reason": "لا يوجد سعر كراسي حديد في المصدرين."
+      },
+      {
+        "rowId": "P133",
+        "rowName": "سيلر داخلي",
+        "unit": "لتر",
+        "category": "التشطيبات",
+        "reason": "النشرة تسعّر السيلر/الدهان التحضيري بالكيلوجرام (42–245/كجم)، والكتالوج يطلبه باللتر. لا توجد كثافة في المصدر، فلا تحويل. كما أن المحرك يبحث عن الاسم «سيلر» بينما الصف «سيلر داخلي»."
+      },
+      {
+        "rowId": "P140",
+        "rowName": "شبك فيبر جلاس",
+        "unit": "م²",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر شبك فيبر جلاس في المصدرين."
+      },
+      {
+        "rowId": "P142",
+        "rowName": "مسامير جبس بورد",
+        "unit": "قطعة",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر مسامير جبس بورد في المصدرين."
+      },
+      {
+        "rowId": "P143",
+        "rowName": "بروفايل معدني للجبس",
+        "unit": "متر طولي",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر بروفايل معدني للجبس في المصدرين."
+      },
+      {
+        "rowId": "P144",
+        "rowName": "مادة فواصل سيراميك",
+        "unit": "كجم",
+        "category": "التشطيبات",
+        "reason": "لا يوجد سعر مادة فواصل سيراميك في المصدرين."
+      },
+      {
+        "rowId": "P145",
+        "rowName": "مصنعية عزل مائي",
+        "unit": "م²",
+        "category": "المصنعيات والعمالة",
+        "reason": "لا توجد مصنعية عزل مائي في القائمة الموردة."
+      }
+    ],
+    "decisions": [
+      "الأسعار المباشرة من النشرة احتفظت بتاريخ يناير 2026، لذا تظهر قديمة (stale) ولا تُقدّم كسعر محلي حديث.",
+      "P060 وP077 وP078 صُححت وحداتها لأن الصيغة المركبة كانت تمنع مطابقة BOQ/الحصر؛ حُفظت الوحدة الأصلية وسعر اللفة.",
+      "الجسور الجديدة لا تعدل المحركات المجمدة؛ تضيف أسماء مطابقة فقط.",
+      "P041/P131 وP049/P111 وP093 وقيمة الكهرباء للمتر مشتقة بصيغة معلنة، وليست أسعارًا موردة مباشرة.",
+      "الأبواب والأطقم الصحية والتنظيف والسيلر بقيت مفتوحة لعدم وجود سعر/وحدة مطابقة في المصدرين."
+    ],
+    "conflicts": [
+      {
+        "area": "السيلر",
+        "detail": "المصدر يسعّر السيلر والدهان التحضيري بالكيلوجرام (42–245/كجم)، والكتالوج/المحرك يطلبان لترًا. لا كثافة في المصدر، فلا تحويل."
+      },
+      {
+        "area": "الخرسانة",
+        "detail": "P093 نطاق جامع 290–1,400/م³ بسبب تعارض مجموعتين؛ لا يغني عن اختيار العنصر. الخرسانة العادية للبشة 90–180/م³ منفصلة."
+      },
+      {
+        "area": "السباكة بالنقطة",
+        "detail": "P041/P131 قيمة مشتقة من 200–400/م² ÷ 0.55 نقطة/م²، وليست سعر نقطة صريحًا."
+      },
+      {
+        "area": "الدهان",
+        "detail": "P049/P111 قيمة مركبة (مادة يناير + مصنعية أكتوبر)؛ المادة قديمة والمصنعية حديثة، والضريبة غير محددة."
+      },
+      {
+        "area": "الأبواب",
+        "detail": "لا يوجد سعر باب في المصدرين؛ خشب المتر المكعب لا يكفي لتسعير باب دون مقاس وتصميم وقائمة مكونات."
+      }
+    ]
+  },
+  "recommendations": [
+    "لا تعتمد أسعار يناير 2026 كأسعار نشطة للبنود التي لها سعر أحدث؛ راجع الفروق الكبيرة (خصوصًا مواسير الصرف 2 و3 بوصة ولوح الجبس بورد).",
+    "أكمل وحدات البنود العشرة غير المذكورة في النشرة قبل استخدامها في أي حساب.",
+    "احسم منتج الدهانات (سيلر/بلاستيك داخلي/خارجي) ومعدل الاستهلاك لكل م²؛ النشرة تسعّر المادة فقط.",
+    "حدد سماكة العزل الحراري لتحويل سعر المتر المكعب إلى متر مربع، وحدد نوع الرخام/الجرانيت قبل تسعير البند العام.",
+    "v4 صحح P077/P078 إلى سعر المتر (لفة 100 م ÷ 100)؛ أكمل مقاسات 1.5 و2.5 مم² غير الموجودة في النشرة.",
+    "v4 أغلق 7 من فجوات تقدير الشقة (المحارة، نقاط المياه والصرف، خامات الكهرباء، مصنعية الأرضيات والمناطق الرطبة، والدهان). بقيت 4 فجوات حقيقية: السيلر، الأبواب، الأطقم الصحية، والتنظيف.",
+    "P093 (صب الخرسانة) مُلئ في v4 بنطاق جامع 290–1,400/م³ مع requiresElementSelection=true. لا تستخدمه لتسعير عنصر محدد دون اختيار العنصر؛ النطاق ليس سعرًا عامًا صالحًا لكل العناصر.",
+    "P041/P131 (سباكة بالنقطة) مُلئا في v4 بقيمة مشتقة 363.64–727.27/نقطة (متوسط 545.45) من 200–400/م² ÷ 0.55 نقطة/م². هي قيمة تقريبية معلنة، وليست سعر سوق لنقطة منفردة.",
+    "P049/P111 (دهان داخلي) مُلئا في v4 بقيمة مركبة 63.25–93.25/م² (متوسط 78.25): مادة يناير 125/لتر × 0.146 لتر/م² + مصنعية أكتوبر 45–75/م². المادة قديمة والمصنعية حديثة، والضريبة غير محددة.",
+    "P133 (سيلر) بقي مفتوحًا: النشرة تسعّره بالكيلوجرام والكتالوج يطلبه باللتر، ولا توجد كثافة في المصدر. لا تحويل بدون كثافة موثقة.",
+    "أبواب وأطقم صحية وتنظيف وتسليم ليست في المصدرين كأسعار مطابقة؛ لا تُملأ بأسعار مخترعة أو بتحويل غير مبرر.",
+    "راجع تعارض مصنعيات الخرسانة: 450–700/700–1,000 و900–1,400/م³ مقابل 290–310/م³. الفارق قد يكون بسبب شمول الشدة والحدادة من عدمه.",
+    "الصفوف الجديدة B26-001..B26-006 جسور أسماء للمحركات المجمدة؛ لا تعدل المحركات. لا تجمع صفًا جديدًا مع الصف الأصلي في نفس الحصر.",
+    "بعد اكتمال الأسعار، أعد نشر دفتر الأسعار وطبّق ترحيلات Supabase واختبر Vercel."
+  ]
+}

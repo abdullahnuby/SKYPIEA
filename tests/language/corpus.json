@@ -1,0 +1,1243 @@
+[
+  {
+    "text": "مساحة الدور ١٨٠ متر",
+    "pending": null,
+    "expected": {
+      "area": 180
+    }
+  },
+  {
+    "text": "عايز ابني عمارة مسطح الدور 220 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 220
+    }
+  },
+  {
+    "text": "مساحة الشقه حوالي 120 م2",
+    "pending": null,
+    "expected": {
+      "area": 120
+    }
+  },
+  {
+    "text": "مساحة الفيلا ٣٥٠ متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 350
+    }
+  },
+  {
+    "text": "الدور مساحته 175 متر",
+    "pending": null,
+    "expected": {
+      "area": 175
+    }
+  },
+  {
+    "text": "مسطح المبنى 640 م²",
+    "pending": null,
+    "expected": {
+      "area": 640
+    }
+  },
+  {
+    "text": "إجمالي مساحة المشروع 900 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 900
+    }
+  },
+  {
+    "text": "المساحة الكلية 1100 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 1100
+    }
+  },
+  {
+    "text": "الشقة ١٣٥ متر",
+    "pending": null,
+    "expected": {
+      "area": 135
+    }
+  },
+  {
+    "text": "شقة تشطيب 120 متر 3 غرف و2 حمام اقتصادي على المفتاح",
+    "pending": null,
+    "expected": {
+      "area": 120,
+      "rooms": 3,
+      "bathrooms": 2,
+      "pack": "economic"
+    }
+  },
+  {
+    "text": "شقه ١٤٠ متر تشطيب متوسط",
+    "pending": null,
+    "expected": {
+      "area": 140,
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "فيلا في الأقصر مساحتها 260 متر",
+    "pending": null,
+    "expected": {
+      "area": 260
+    }
+  },
+  {
+    "text": "عمارة جديدة، مساحة الدور الواحد ٢٠٠م",
+    "pending": null,
+    "expected": {
+      "area": 200
+    }
+  },
+  {
+    "text": "لو سمحت مساحة الطابق ١٨٥ متر",
+    "pending": null,
+    "expected": {
+      "area": 185
+    }
+  },
+  {
+    "text": "مساحه الدور تقريبا ١٦٠ متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 160
+    }
+  },
+  {
+    "text": "المبنى المبني مساحته 500 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 500
+    }
+  },
+  {
+    "text": "عندي شقة بمساحة ٩٨ متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 98
+    }
+  },
+  {
+    "text": "الدور الأرضي 210 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 210
+    }
+  },
+  {
+    "text": "الشقة ١٢٥ متر",
+    "pending": null,
+    "expected": {
+      "area": 125
+    }
+  },
+  {
+    "text": "للبيت مساحة 240 م مربع",
+    "pending": null,
+    "expected": {
+      "area": 240
+    }
+  },
+  {
+    "text": "المسطح 320 متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 320
+    }
+  },
+  {
+    "text": "محتاج مقايسة مساحة الدور 450 متر",
+    "pending": null,
+    "expected": {
+      "area": 450
+    }
+  },
+  {
+    "text": "المساحة حوالي ١٩٥ م²",
+    "pending": null,
+    "expected": {
+      "area": 195
+    }
+  },
+  {
+    "text": "عايز حساب مساحة الدور 260",
+    "pending": "area",
+    "expected": {
+      "area": 260
+    }
+  },
+  {
+    "text": "١٨٠",
+    "pending": "area",
+    "expected": {
+      "area": 180
+    }
+  },
+  {
+    "text": "مائة وعشرة متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 110
+    }
+  },
+  {
+    "text": "الف ومية متر",
+    "pending": null,
+    "expected": {
+      "area": 1100
+    }
+  },
+  {
+    "text": "١٠٠٠ و١٠٠ متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 1100
+    }
+  },
+  {
+    "text": "ألف ونص متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 1500
+    }
+  },
+  {
+    "text": "شقة تشطيب 85 متر",
+    "pending": null,
+    "expected": {
+      "area": 85
+    }
+  },
+  {
+    "text": "عمارة 4 ادوار",
+    "pending": null,
+    "expected": {
+      "floors": 4
+    }
+  },
+  {
+    "text": "عدد الأدوار ٦",
+    "pending": null,
+    "expected": {
+      "floors": 6
+    }
+  },
+  {
+    "text": "المبنى دورين",
+    "pending": null,
+    "expected": {
+      "floors": 2
+    }
+  },
+  {
+    "text": "عايز بيت من تلات ادوار",
+    "pending": null,
+    "expected": {
+      "floors": 3
+    }
+  },
+  {
+    "text": "خمسة أدوار سكنية",
+    "pending": null,
+    "expected": {
+      "floors": 5
+    }
+  },
+  {
+    "text": "الدور الأرضي وثلاث أدوار متكررة",
+    "pending": null,
+    "expected": {
+      "floors": 3
+    }
+  },
+  {
+    "text": "المبنى ١٢ دور",
+    "pending": null,
+    "expected": {
+      "floors": 12
+    }
+  },
+  {
+    "text": "خليها 8 أدوار",
+    "pending": null,
+    "expected": {
+      "floors": 8
+    }
+  },
+  {
+    "text": "عدد الطوابق ٧",
+    "pending": null,
+    "expected": {
+      "floors": 7
+    }
+  },
+  {
+    "text": "العمارة أربع أدوار",
+    "pending": null,
+    "expected": {
+      "floors": 4
+    }
+  },
+  {
+    "text": "عايز مبنى من دور واحد",
+    "pending": null,
+    "expected": {
+      "floors": 1
+    }
+  },
+  {
+    "text": "التعديل: 5 ادوار بدل 4",
+    "pending": null,
+    "expected": {
+      "floors": 5
+    }
+  },
+  {
+    "text": "لا خليها 5 أدوار",
+    "pending": "floors",
+    "expected": {
+      "floors": 5
+    }
+  },
+  {
+    "text": "خلاص خلي الدورين تلاته",
+    "pending": null,
+    "expected": {
+      "floors": 3
+    }
+  },
+  {
+    "text": "عدد الادوار هو ١٥",
+    "pending": null,
+    "expected": {
+      "floors": 15
+    }
+  },
+  {
+    "text": "عاوز بيت دورين بس",
+    "pending": null,
+    "expected": {
+      "floors": 2
+    }
+  },
+  {
+    "text": "المشروع ستة طوابق",
+    "pending": null,
+    "expected": {
+      "floors": 6
+    }
+  },
+  {
+    "text": "العمارة تلاتين دور",
+    "pending": null,
+    "expected": {
+      "floors": 30
+    }
+  },
+  {
+    "text": "عندي مبنى 20 دور",
+    "pending": null,
+    "expected": {
+      "floors": 20
+    }
+  },
+  {
+    "text": "عاوز 3 طوابق بس",
+    "pending": null,
+    "expected": {
+      "floors": 3
+    }
+  },
+  {
+    "text": "المبنى ٤٠ دور",
+    "pending": null,
+    "expected": {
+      "floors": 40
+    }
+  },
+  {
+    "text": "أربعين دور",
+    "pending": null,
+    "expected": {
+      "floors": 40
+    }
+  },
+  {
+    "text": "الطابقين فقط",
+    "pending": null,
+    "expected": {
+      "floors": 2
+    }
+  },
+  {
+    "text": "محتاج عمارة دورين وروف",
+    "pending": null,
+    "expected": {
+      "floors": 2
+    }
+  },
+  {
+    "text": "خلينا في سبع أدوار",
+    "pending": null,
+    "expected": {
+      "floors": 7
+    }
+  },
+  {
+    "text": "تشطيب اقتصادي",
+    "pending": null,
+    "expected": {
+      "pack": "economic"
+    }
+  },
+  {
+    "text": "المستوى يكون متوسط",
+    "pending": null,
+    "expected": {
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "عايز تشطيب لوكس وفخم",
+    "pending": null,
+    "expected": {
+      "pack": "luxury"
+    }
+  },
+  {
+    "text": "نصف تشطيب من فضلك",
+    "pending": null,
+    "expected": {
+      "pack": "semi"
+    }
+  },
+  {
+    "text": "نص تشطيب عشان الميزانية",
+    "pending": null,
+    "expected": {
+      "pack": "semi"
+    }
+  },
+  {
+    "text": "على المفتاح",
+    "pending": null,
+    "expected": {
+      "scope": "turnkey"
+    }
+  },
+  {
+    "text": "هيكل فقط من غير تشطيب",
+    "pending": null,
+    "expected": {
+      "scope": "structure"
+    }
+  },
+  {
+    "text": "عظم فقط",
+    "pending": null,
+    "expected": {
+      "scope": "structure"
+    }
+  },
+  {
+    "text": "شقة تشطيب فقط",
+    "pending": null,
+    "expected": {
+      "scope": "finishing"
+    }
+  },
+  {
+    "text": "تشطيب شقة متوسط",
+    "pending": null,
+    "expected": {
+      "scope": "finishing",
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "عايز عمارة سكنية",
+    "pending": null,
+    "expected": {
+      "type": "residential"
+    }
+  },
+  {
+    "text": "مبنى تجاري مكاتب",
+    "pending": null,
+    "expected": {
+      "type": "commercial"
+    }
+  },
+  {
+    "text": "مخازن تجارية",
+    "pending": null,
+    "expected": {
+      "type": "commercial"
+    }
+  },
+  {
+    "text": "مشروع إداري في الأقصر",
+    "pending": null,
+    "expected": {
+      "type": "commercial",
+      "location": "الأقصر"
+    }
+  },
+  {
+    "text": "فيلا سكني تشطيب فاخر",
+    "pending": null,
+    "expected": {
+      "type": "residential",
+      "pack": "luxury"
+    }
+  },
+  {
+    "text": "اختار الاقتصادي",
+    "pending": null,
+    "expected": {
+      "pack": "economic"
+    }
+  },
+  {
+    "text": "الباقة الفاخرة لو سمحت",
+    "pending": null,
+    "expected": {
+      "pack": "luxury"
+    }
+  },
+  {
+    "text": "عايز شغل الهيكل والخرسانة بس",
+    "pending": null,
+    "expected": {
+      "scope": "structure"
+    }
+  },
+  {
+    "text": "من غير أعمال التشطيب",
+    "pending": null,
+    "expected": {}
+  },
+  {
+    "text": "مقايسة شاملة على المفتاح",
+    "pending": null,
+    "expected": {
+      "scope": "turnkey"
+    }
+  },
+  {
+    "text": "عايز عمارة محلات",
+    "pending": null,
+    "expected": {
+      "type": "commercial"
+    }
+  },
+  {
+    "text": "المشروع مبنى سكني مختلط",
+    "pending": null,
+    "expected": {
+      "type": "residential"
+    }
+  },
+  {
+    "text": "نص تشطيب مش كامل",
+    "pending": null,
+    "expected": {
+      "pack": "semi"
+    }
+  },
+  {
+    "text": "شقة على المفتاح في الطود",
+    "pending": null,
+    "expected": {
+      "type": "residential",
+      "scope": "turnkey",
+      "location": "الطود"
+    }
+  },
+  {
+    "text": "مكتب إداري تشطيب متوسط",
+    "pending": null,
+    "expected": {
+      "type": "commercial",
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "الشقة فيها 3 غرف و2 حمام",
+    "pending": null,
+    "expected": {
+      "rooms": 3,
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "عايز ٤ غرف نوم و٣ حمامات",
+    "pending": null,
+    "expected": {
+      "rooms": 4,
+      "bathrooms": 3
+    }
+  },
+  {
+    "text": "غرفتين وحمامين",
+    "pending": null,
+    "expected": {
+      "rooms": 2,
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "عدد الغرف 5 والحمامات 2",
+    "pending": null,
+    "expected": {
+      "rooms": 5,
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "شقتين في الدور وأربع أدوار",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 2,
+      "floors": 4
+    }
+  },
+  {
+    "text": "عدد الشقق في الدور 3",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 3
+    }
+  },
+  {
+    "text": "تلات شقق بالدور",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 3
+    }
+  },
+  {
+    "text": "الدور فيه ٤ وحدات",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 4
+    }
+  },
+  {
+    "text": "حمامين بس",
+    "pending": null,
+    "expected": {
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "٣ غرف نوم",
+    "pending": null,
+    "expected": {
+      "rooms": 3
+    }
+  },
+  {
+    "text": "عدد الحمامات ٤",
+    "pending": null,
+    "expected": {
+      "bathrooms": 4
+    }
+  },
+  {
+    "text": "الشقة غرفتين و3 حمام",
+    "pending": null,
+    "expected": {
+      "rooms": 2,
+      "bathrooms": 3
+    }
+  },
+  {
+    "text": "عمارة فيها ٥ شقق في الدور",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 5
+    }
+  },
+  {
+    "text": "عندي وحدة سكنية واحدة بالدور",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 1
+    }
+  },
+  {
+    "text": "أوضتين وحمام واحد",
+    "pending": null,
+    "expected": {
+      "rooms": 2,
+      "bathrooms": 1
+    }
+  },
+  {
+    "text": "أربع غرف وثلاث حمامات في الشقة",
+    "pending": null,
+    "expected": {
+      "rooms": 4,
+      "bathrooms": 3
+    }
+  },
+  {
+    "text": "خليها ٦ غرف",
+    "pending": "rooms",
+    "expected": {
+      "rooms": 6
+    }
+  },
+  {
+    "text": "خلّي الحمامات ٣",
+    "pending": "bathrooms",
+    "expected": {
+      "bathrooms": 3
+    }
+  },
+  {
+    "text": "الشقة فيها حمامان",
+    "pending": null,
+    "expected": {
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "بالدور وحدتين سكنية",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 2
+    }
+  },
+  {
+    "text": "عدد الوحدات في الدور هو 4",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 4
+    }
+  },
+  {
+    "text": "غرفة واحدة وحمام واحد",
+    "pending": null,
+    "expected": {
+      "rooms": 1,
+      "bathrooms": 1
+    }
+  },
+  {
+    "text": "بناء دور فيه شقتين",
+    "pending": null,
+    "expected": {
+      "unitsPerFloor": 2
+    }
+  },
+  {
+    "text": "٣ حمامات وغرفتين نوم",
+    "pending": null,
+    "expected": {
+      "rooms": 2,
+      "bathrooms": 3
+    }
+  },
+  {
+    "text": "شقة ١٣٠ متر فيها ٣ غرف و٢ حمام",
+    "pending": null,
+    "expected": {
+      "area": 130,
+      "rooms": 3,
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "بدون بدروم وبدون أسانسير",
+    "pending": null,
+    "expected": {
+      "basement": false,
+      "elevator": false
+    }
+  },
+  {
+    "text": "مع بدروم وأسانسير",
+    "pending": null,
+    "expected": {
+      "basement": true,
+      "elevator": true
+    }
+  },
+  {
+    "text": "فيه مطبخ إضافي وتأسيس تكييف",
+    "pending": null,
+    "expected": {
+      "kitchen": true,
+      "ac": true
+    }
+  },
+  {
+    "text": "مش عايز أسانسير",
+    "pending": null,
+    "expected": {
+      "elevator": false
+    }
+  },
+  {
+    "text": "شيل المطبخ الإضافي",
+    "pending": null,
+    "expected": {
+      "kitchen": false
+    }
+  },
+  {
+    "text": "بدون تأسيس تكييف",
+    "pending": null,
+    "expected": {
+      "ac": false
+    }
+  },
+  {
+    "text": "مبنى مع بدروم",
+    "pending": null,
+    "expected": {
+      "basement": true
+    }
+  },
+  {
+    "text": "مش عايز بدروم",
+    "pending": null,
+    "expected": {
+      "basement": false
+    }
+  },
+  {
+    "text": "عايز تأسيس تكييف",
+    "pending": null,
+    "expected": {
+      "ac": true
+    }
+  },
+  {
+    "text": "مطبخ إضافي مطلوب",
+    "pending": null,
+    "expected": {
+      "kitchen": true
+    }
+  },
+  {
+    "text": "أسانسير موجود في المبنى",
+    "pending": null,
+    "expected": {
+      "elevator": true
+    }
+  },
+  {
+    "text": "الأرض في البياضية",
+    "pending": null,
+    "expected": {
+      "location": "البياضية"
+    }
+  },
+  {
+    "text": "المشروع ناحية أرمنت",
+    "pending": null,
+    "expected": {
+      "location": "أرمنت"
+    }
+  },
+  {
+    "text": "العقار في إسنا",
+    "pending": null,
+    "expected": {
+      "location": "اسنا"
+    }
+  },
+  {
+    "text": "موقع المشروع البر الغربي بالأقصر",
+    "pending": null,
+    "expected": {
+      "location": "البر الغربي"
+    }
+  },
+  {
+    "text": "عايز أبني في الطود",
+    "pending": null,
+    "expected": {
+      "location": "الطود"
+    }
+  },
+  {
+    "text": "العنوان ناحية الكرنك",
+    "pending": null,
+    "expected": {
+      "location": "الكرنك"
+    }
+  },
+  {
+    "text": "العمارة في العوامية",
+    "pending": null,
+    "expected": {
+      "location": "العوامية"
+    }
+  },
+  {
+    "text": "الأرض في القرنة",
+    "pending": null,
+    "expected": {
+      "location": "القرنة"
+    }
+  },
+  {
+    "text": "مشروع جديد بالزينية",
+    "pending": null,
+    "expected": {
+      "location": "الزينية"
+    }
+  },
+  {
+    "text": "المقايسة في العديسات",
+    "pending": null,
+    "expected": {
+      "location": "العديسات"
+    }
+  },
+  {
+    "text": "بدروم لا",
+    "pending": null,
+    "expected": {
+      "basement": false
+    }
+  },
+  {
+    "text": "مفيش مصعد في العمارة",
+    "pending": null,
+    "expected": {
+      "elevator": false
+    }
+  },
+  {
+    "text": "مع مطبخ وتكييف",
+    "pending": null,
+    "expected": {
+      "kitchen": true,
+      "ac": true
+    }
+  },
+  {
+    "text": "إلغاء الأسانسير من المشروع",
+    "pending": null,
+    "expected": {
+      "elevator": false
+    }
+  },
+  {
+    "text": "كام طن الحديد؟",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  },
+  {
+    "text": "بكام طن أسمنت السويس",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  },
+  {
+    "text": "سعر متر السيراميك لو سمحت",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  },
+  {
+    "text": "عاوز أعرف سعر الخرسانة الجاهزة",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  },
+  {
+    "text": "قارن لي الباقات",
+    "pending": null,
+    "expected": {
+      "intent": "compare_packages"
+    }
+  },
+  {
+    "text": "ممكن مقارنة أسعار الباقات",
+    "pending": null,
+    "expected": {
+      "intent": "compare_packages"
+    }
+  },
+  {
+    "text": "احسب المقايسة دلوقتي",
+    "pending": null,
+    "expected": {
+      "intent": "calculate"
+    }
+  },
+  {
+    "text": "كام الإجمالي بعد الحساب؟",
+    "pending": null,
+    "expected": {
+      "intent": "calculate"
+    }
+  },
+  {
+    "text": "شكراً يا هندسة",
+    "pending": null,
+    "expected": {
+      "intent": "thanks"
+    }
+  },
+  {
+    "text": "أنا مش عارف أختار",
+    "pending": null,
+    "expected": {
+      "intent": "unknown_fact"
+    }
+  },
+  {
+    "text": "ليه بتسألني عن عدد الأدوار؟",
+    "pending": null,
+    "expected": {
+      "intent": "why"
+    }
+  },
+  {
+    "text": "عايز أتكلم مع مهندس",
+    "pending": null,
+    "expected": {
+      "intent": "request_engineer"
+    }
+  },
+  {
+    "text": "ابعتني لمهندس حقيقي",
+    "pending": null,
+    "expected": {
+      "intent": "request_engineer"
+    }
+  },
+  {
+    "text": "لو شلت الأسانسير التكلفة تتغير؟",
+    "pending": null,
+    "expected": {
+      "intent": "scenario"
+    }
+  },
+  {
+    "text": "ابدأ من جديد خالص",
+    "pending": null,
+    "expected": {
+      "intent": "start_over"
+    }
+  },
+  {
+    "text": "عايز أرض 2 قيراط في البياضية",
+    "pending": null,
+    "expected": {
+      "plotArea": 350.07,
+      "location": "البياضية",
+      "intent": "plot_area"
+    }
+  },
+  {
+    "text": "قطعة أرض مساحتها فدان",
+    "pending": null,
+    "expected": {
+      "plotArea": 4200.83,
+      "intent": "plot_area"
+    }
+  },
+  {
+    "text": "الأرض 3 قراريط",
+    "pending": null,
+    "expected": {
+      "plotArea": 525.1,
+      "intent": "plot_area"
+    }
+  },
+  {
+    "text": "عندي 12 قصبة مربعة أرض في الأقصر",
+    "pending": null,
+    "expected": {
+      "plotArea": 151.23,
+      "location": "الأقصر",
+      "intent": "plot_area"
+    }
+  },
+  {
+    "text": "مساحة الدور فدان",
+    "pending": "area",
+    "expected": {
+      "area": 4200.83
+    }
+  },
+  {
+    "text": "أرض مساحتها 500 متر مربع",
+    "pending": null,
+    "expected": {}
+  },
+  {
+    "text": "مشروع في إسنا، دورين، 180 متر للدور",
+    "pending": null,
+    "expected": {
+      "location": "اسنا",
+      "floors": 2,
+      "area": 180
+    }
+  },
+  {
+    "text": "شقة اقتصادي مساحة ١٠٠ متر",
+    "pending": null,
+    "expected": {
+      "pack": "economic",
+      "area": 100
+    }
+  },
+  {
+    "text": "عمارة تجاري مساحة ٣٠٠ متر و٦ أدوار",
+    "pending": null,
+    "expected": {
+      "type": "commercial",
+      "area": 300,
+      "floors": 6
+    }
+  },
+  {
+    "text": "عمارة ٤ أدوار مع أسانسير وبدروم",
+    "pending": null,
+    "expected": {
+      "floors": 4,
+      "elevator": true,
+      "basement": true
+    }
+  },
+  {
+    "text": "عايز بناء ٢٢٠ متر وأربع أدوار تشطيب فاخر",
+    "pending": null,
+    "expected": {
+      "area": 220,
+      "floors": 4,
+      "pack": "luxury"
+    }
+  },
+  {
+    "text": "بكام متر المحارة؟",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  },
+  {
+    "text": "مش واضح عندي السعر",
+    "pending": null,
+    "expected": {}
+  },
+  {
+    "text": "ألف ومية متر مربع",
+    "pending": null,
+    "expected": {
+      "area": 1100
+    }
+  },
+  {
+    "text": "مليون ونص جنيه تقريباً",
+    "pending": null,
+    "expected": {}
+  },
+  {
+    "text": "المساحه ١٧٥ متر وعايز ٣ ادوار متوسط",
+    "pending": null,
+    "expected": {
+      "area": 175,
+      "floors": 3,
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "لو تقدر تحسب لبيت ١٨٠م دورين عظم فقط",
+    "pending": null,
+    "expected": {
+      "area": 180,
+      "floors": 2,
+      "scope": "structure"
+    }
+  },
+  {
+    "text": "محتاج شقة ١٤٥ متر نص تشطيب فيها غرفتين وحمامين",
+    "pending": null,
+    "expected": {
+      "area": 145,
+      "pack": "semi",
+      "rooms": 2,
+      "bathrooms": 2
+    }
+  },
+  {
+    "text": "عماره سكنيه ٧ ادوار، مساحة الطابق ٢٥٠ متر، بدون بدروم",
+    "pending": null,
+    "expected": {
+      "area": 250,
+      "floors": 7,
+      "basement": false
+    }
+  },
+  {
+    "text": "الموقع أرمنت والباقة اقتصادية، ومساحة الدور ١٣٠ م2",
+    "pending": null,
+    "expected": {
+      "location": "أرمنت",
+      "pack": "economic",
+      "area": 130
+    }
+  },
+  {
+    "text": "شقه 95 متر مطبخ إضافي من غير تكييف",
+    "pending": null,
+    "expected": {
+      "area": 95,
+      "kitchen": true,
+      "ac": false
+    }
+  },
+  {
+    "text": "أرض في البر الغربي 2 قيراط، لكن الدور المبني 180 متر",
+    "pending": null,
+    "expected": {
+      "plotArea": 350.07,
+      "location": "البر الغربي",
+      "area": 180
+    }
+  },
+  {
+    "text": "خلي عدد الأدوار أربعة وخلّيها بدون مصعد",
+    "pending": null,
+    "expected": {
+      "floors": 4,
+      "elevator": false
+    }
+  },
+  {
+    "text": "المبنى إداري على المفتاح وباقة متوسط",
+    "pending": null,
+    "expected": {
+      "type": "commercial",
+      "scope": "turnkey",
+      "pack": "medium"
+    }
+  },
+  {
+    "text": "عاوز سعر طن حديد تسليح بسرعة",
+    "pending": null,
+    "expected": {
+      "intent": "price_lookup"
+    }
+  }
+]

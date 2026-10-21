@@ -1,0 +1,44 @@
+{
+  "viewports": {
+    "desktop-light": {
+      "workspaceWidth": 1240,
+      "welcomeCards": 3,
+      "contextPanelResponsive": true,
+      "multilineComposer": true,
+      "sendState": "correct",
+      "launcherVisibility": "correct",
+      "consoleErrors": 0
+    },
+    "mobile-light": {
+      "workspaceWidth": 390,
+      "welcomeCards": 3,
+      "contextPanelResponsive": true,
+      "multilineComposer": true,
+      "sendState": "correct",
+      "launcherVisibility": "correct",
+      "consoleErrors": 0
+    },
+    "mobile-dark": {
+      "workspaceWidth": 390,
+      "welcomeCards": 3,
+      "contextPanelResponsive": true,
+      "multilineComposer": true,
+      "sendState": "correct",
+      "launcherVisibility": "correct",
+      "consoleErrors": 0
+    }
+  },
+  "consoleErrors": [],
+  "checks": [
+    "expanded centered workspace on desktop",
+    "full-screen conversational surface on mobile",
+    "responsive project context panel",
+    "welcome starter cards wired to live service selection",
+    "multiline composer and send-state behavior",
+    "launcher hides while chat is open",
+    "Escape-to-close and restore launcher",
+    "welcome experience includes a clearly labeled illustrative engineering sample",
+    "welcome opens at the top instead of auto-scrolling past the heading",
+    "light/dark color schemes"
+  ]
+}

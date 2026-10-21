@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-10-21T20:33:20.202Z",
+  "file": "api/_data/price-book.v8.json",
+  "version": "v8",
+  "rows": 201,
+  "extendedCatalog": {
+    "file": "api/_data/price-book-extended.v1.json",
+    "rows": 291,
+    "rowsExcludedFromDefaultSearch": 291
+  },
+  "active": 183,
+  "priced": 165,
+  "missingOrUnpriced": 18,
+  "numericPriceCoveragePercent": 90.2,
+  "statusCounts": {
+    "national": 75,
+    "estimate": 25,
+    "local": 61,
+    "priced": 4,
+    "missing": 18
+  },
+  "staleDaysThreshold": 90,
+  "staleOrUndatedPricedRows": 37,
+  "freshDatedPricedRows": 128,
+  "localPricedRows": 61,
+  "nationalAlternativeRows": 75,
+  "estimatedRows": 25,
+  "transportUnknownRows": 37,
+  "openGapIds": [
+    "P061",
+    "P062",
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P067",
+    "P132",
+    "P162",
+    "P163",
+    "P164",
+    "P165",
+    "P166",
+    "P167",
+    "P168",
+    "P169",
+    "P170",
+    "P171"
+  ],
+  "integrityIssues": [],
+  "interpretation": "Numeric price coverage counts active rows with a positive average only. It does not mean current, local, supplier-verified, transport-inclusive, quantity-complete, or approved for construction."
+}

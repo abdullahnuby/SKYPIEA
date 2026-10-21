@@ -1,0 +1,3453 @@
+{
+  "generatedAt": "2026-10-21T09:33:24.427Z",
+  "bulletin": {
+    "id": "jan-2026",
+    "title": "نشرة أسعار مواد البناء — يناير 2026",
+    "date": "2026-01-01",
+    "source": "نشرة أسعار مواد البناء — يناير 2026 (Scribd)",
+    "url": "https://www.scribd.com/document/990294528/%D8%A3%D8%AD%D8%AF%D8%AB-%D9%86%D8%B4%D8%B1%D8%A9-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D8%A8%D9%86%D8%A7%D8%A1-%D9%8A%D9%86%D8%A7%D9%8A%D8%B1-2026",
+    "currency": "EGP",
+    "taxNote": "النشرة تذكر شمول الضريبة لمعظم البنود؛ لم يُفصّل لكل بند على حدة.",
+    "transportNote": "معظم الأسعار بدون نقل للموقع إلا حيث يُذكر عكس ذلك.",
+    "staleNote": "تاريخ النشرة يناير 2026؛ أي سعر يُفعّل منها بعد أكثر من 90 يومًا يظهر كسعر قديم ويحتاج تأكيدًا.",
+    "extractionNote": "تم تصحيح أخطاء إملائية واضحة فقط (بلاط/بيتومين/جبسية) مع إبقاء الاسم الأصلي كمرادف للبحث؛ لم تُغيَّر أي أسعار أو وحدات."
+  },
+  "policy": {
+    "overwriteNewerPrices": false,
+    "fillMissingOnly": true,
+    "unitMismatchNotApplied": true
+  },
+  "counts": {
+    "bulletinRows": 313,
+    "addedRows": 291,
+    "filledMissing": 8,
+    "keptNewer": 16,
+    "attachedOnly": 29,
+    "unitMismatch": 1,
+    "unknownUnitRows": 10,
+    "totalRowsBefore": 146,
+    "totalRowsAfter": 437
+  },
+  "coverage": {
+    "before": {
+      "total": 146,
+      "priced": 57,
+      "missing": 89,
+      "percent": 39,
+      "stale": 16
+    },
+    "after": {
+      "total": 437,
+      "priced": 356,
+      "missing": 81,
+      "percent": 81.5,
+      "stale": 315
+    }
+  },
+  "actions": [
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P006",
+      "rowName": "حديد عز",
+      "bulletinName": "حديد عز",
+      "bulletinPrice": 38200,
+      "activePrice": 40290,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-001",
+      "rowName": "حديد بيانكو",
+      "bulletinName": "حديد بيانكو",
+      "bulletinPrice": 38000,
+      "unit": "طن"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P008",
+      "rowName": "حديد بشاي",
+      "bulletinName": "حديد بشاي",
+      "bulletinPrice": 38000,
+      "activePrice": 39800,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-002",
+      "rowName": "حديد العتال",
+      "bulletinName": "حديد العتال",
+      "bulletinPrice": 37500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-003",
+      "rowName": "حديد المعادي",
+      "bulletinName": "حديد المعادي",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-004",
+      "rowName": "حديد الكومي",
+      "bulletinName": "حديد الكومي",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-005",
+      "rowName": "حديد المراكبي",
+      "bulletinName": "حديد المراكبي",
+      "bulletinPrice": 37500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-006",
+      "rowName": "حديد عطية",
+      "bulletinName": "حديد عطية",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-007",
+      "rowName": "حديد العشري",
+      "bulletinName": "حديد العشري",
+      "bulletinPrice": 34500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-008",
+      "rowName": "حديد المصريين",
+      "bulletinName": "حديد المصريين",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-009",
+      "rowName": "حديد سرحان",
+      "bulletinName": "حديد سرحان",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-010",
+      "rowName": "حديد مصر ستيل",
+      "bulletinName": "حديد مصر ستيل",
+      "bulletinPrice": 34000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-011",
+      "rowName": "حديد الجارحي",
+      "bulletinName": "حديد الجارحي",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-012",
+      "rowName": "حديد السويس للصلب",
+      "bulletinName": "حديد السويس للصلب",
+      "bulletinPrice": 35000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-013",
+      "rowName": "حديد المدينة",
+      "bulletinName": "حديد المدينة",
+      "bulletinPrice": 34000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-014",
+      "rowName": "كمر ثقيل UPN/IPN/HEB/HEA 14/40",
+      "bulletinName": "كمر ثقيل UPN/IPN/HEB/HEA 14/40",
+      "bulletinPrice": 50000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-015",
+      "rowName": "كمر وسط 8/10/12 سم",
+      "bulletinName": "كمر وسط 8/10/12 سم",
+      "bulletinPrice": 41000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-016",
+      "rowName": "كمر سيجال 2:4 سم",
+      "bulletinName": "كمر سيجال 2:4 سم",
+      "bulletinPrice": 40000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-017",
+      "rowName": "زوايا ثقيلة 120/200 مم",
+      "bulletinName": "زوايا ثقيلة 120/200 مم",
+      "bulletinPrice": 45500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-018",
+      "rowName": "زوايا متوسطة 60/100 سم",
+      "bulletinName": "زوايا متوسطة 60/100 سم",
+      "bulletinPrice": 40000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-019",
+      "rowName": "زوايا خفيفة 40/50 سم",
+      "bulletinName": "زوايا خفيفة 40/50 سم",
+      "bulletinPrice": 37500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-020",
+      "rowName": "خوص طول 6 م",
+      "bulletinName": "خوص طول 6 م",
+      "bulletinPrice": 37500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-021",
+      "rowName": "صاج على البارد",
+      "bulletinName": "صاج على البارد",
+      "bulletinPrice": 47500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-022",
+      "rowName": "السويدي بورتالندي 42.5",
+      "bulletinName": "السويدي بورتالندي 42.5",
+      "bulletinPrice": 4080,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-023",
+      "rowName": "المعلم 42.5",
+      "bulletinName": "المعلم 42.5",
+      "bulletinPrice": 3730,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-024",
+      "rowName": "السهم",
+      "bulletinName": "السهم",
+      "bulletinPrice": 3750,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-025",
+      "rowName": "الفهد",
+      "bulletinName": "الفهد",
+      "bulletinPrice": 3740,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-026",
+      "rowName": "قنا (المسلة)",
+      "bulletinName": "قنا (المسلة)",
+      "bulletinPrice": 4200,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-027",
+      "rowName": "وادي النيل",
+      "bulletinName": "وادي النيل",
+      "bulletinPrice": 3800,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-028",
+      "rowName": "حلوان",
+      "bulletinName": "حلوان",
+      "bulletinPrice": 3900,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-029",
+      "rowName": "التعمير",
+      "bulletinName": "التعمير",
+      "bulletinPrice": 3550,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-030",
+      "rowName": "المخصوص",
+      "bulletinName": "المخصوص",
+      "bulletinPrice": 3900,
+      "unit": "طن"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P001",
+      "rowName": "أسمنت السويس",
+      "bulletinName": "السويس",
+      "bulletinPrice": 3910,
+      "activePrice": 3850,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P003",
+      "rowName": "أسمنت بني سويف",
+      "bulletinName": "مصر بني سويف",
+      "bulletinPrice": 3800,
+      "activePrice": 3685,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-031",
+      "rowName": "النصر",
+      "bulletinName": "النصر",
+      "bulletinPrice": 3770,
+      "unit": "طن"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P002",
+      "rowName": "أسمنت سيناء",
+      "bulletinName": "سيناء 42.5",
+      "bulletinPrice": 3750,
+      "activePrice": 4065,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-032",
+      "rowName": "الفيروز 52.5",
+      "bulletinName": "الفيروز 52.5",
+      "bulletinPrice": 4950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-033",
+      "rowName": "سوبر سيناء 42.5",
+      "bulletinName": "سوبر سيناء 42.5",
+      "bulletinPrice": 4950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-034",
+      "rowName": "سوبر رويال",
+      "bulletinName": "سوبر رويال",
+      "bulletinPrice": 4950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-035",
+      "rowName": "رويال العادية",
+      "bulletinName": "رويال العادية",
+      "bulletinPrice": 4950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-036",
+      "rowName": "إعمار المنيا 52.5",
+      "bulletinName": "إعمار المنيا 52.5",
+      "bulletinPrice": 4950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-037",
+      "rowName": "أسيوط A1",
+      "bulletinName": "أسيوط A1",
+      "bulletinPrice": 2980,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-038",
+      "rowName": "الفارج شطبنا",
+      "bulletinName": "الفارج شطبنا",
+      "bulletinPrice": 2970,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-039",
+      "rowName": "الواحة مخلوط",
+      "bulletinName": "الواحة مخلوط",
+      "bulletinPrice": 2970,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-040",
+      "rowName": "العمران 888",
+      "bulletinName": "العمران 888",
+      "bulletinPrice": 2900,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-041",
+      "rowName": "أهل مصر",
+      "bulletinName": "أهل مصر",
+      "bulletinPrice": 3250,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-042",
+      "rowName": "جنوب الوادي",
+      "bulletinName": "جنوب الوادي",
+      "bulletinPrice": 2950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-043",
+      "rowName": "التعمير للتشطيبات",
+      "bulletinName": "التعمير للتشطيبات",
+      "bulletinPrice": 2950,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-044",
+      "rowName": "مقاوم المسلح",
+      "bulletinName": "مقاوم المسلح",
+      "bulletinPrice": 4000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-045",
+      "rowName": "أسيوط مقاوم",
+      "bulletinName": "أسيوط مقاوم",
+      "bulletinPrice": 3850,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-046",
+      "rowName": "السهم مقاوم",
+      "bulletinName": "السهم مقاوم",
+      "bulletinPrice": 3900,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-047",
+      "rowName": "حلوان المقاوم",
+      "bulletinName": "حلوان المقاوم",
+      "bulletinPrice": 3980,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-048",
+      "rowName": "قاهر البحار",
+      "bulletinName": "قاهر البحار",
+      "bulletinPrice": 4070,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-049",
+      "rowName": "السويس سي ووتر",
+      "bulletinName": "السويس سي ووتر",
+      "bulletinPrice": 3970,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-050",
+      "rowName": "السويدي المقاوم",
+      "bulletinName": "السويدي المقاوم",
+      "bulletinPrice": 4200,
+      "unit": "طن"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P014",
+      "rowName": "زلط عادي",
+      "bulletinName": "زلط عادي",
+      "bulletinPrice": 300,
+      "activePrice": 290,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-051",
+      "rowName": "زلط مخصوص",
+      "bulletinName": "زلط مخصوص",
+      "bulletinPrice": 360,
+      "unit": "م³"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P015",
+      "rowName": "زلط فينو",
+      "bulletinName": "زلط فينو",
+      "bulletinPrice": 435,
+      "activePrice": 352,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P016",
+      "rowName": "سن",
+      "bulletinName": "زلط سن 2 دولوميت",
+      "bulletinPrice": 380,
+      "activePrice": 362,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P012",
+      "rowName": "رمل ناعم",
+      "bulletinName": "رمل ناعم",
+      "bulletinPrice": 160,
+      "activePrice": 260,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P011",
+      "rowName": "رمل عادي / حرش",
+      "bulletinName": "رمل حرش",
+      "bulletinPrice": 150,
+      "activePrice": 170,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P017",
+      "rowName": "خرسانة جاهزة C25",
+      "bulletinName": "خرسانة جاهزة جهد 250 كجم/م³",
+      "bulletinPrice": 3300,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-052",
+      "rowName": "مادة لزيادة قابلية التشغيل",
+      "bulletinName": "مادة لزيادة قابلية التشغيل",
+      "bulletinPrice": 30,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-053",
+      "rowName": "أساس التكس بوتارين",
+      "bulletinName": "أساس التكس بوتارين",
+      "bulletinPrice": 45,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-054",
+      "rowName": "سترين SBR",
+      "bulletinName": "سترين SBR",
+      "bulletinPrice": 25,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-055",
+      "rowName": "مادة لاصقة متعددة الأغراض",
+      "bulletinName": "مادة لاصقة متعددة الأغراض",
+      "bulletinPrice": 95,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-056",
+      "rowName": "حبيبات لخرسانة خفيفة",
+      "bulletinName": "حبيبات لخرسانة خفيفة",
+      "bulletinPrice": 185,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-057",
+      "rowName": "ألياف فايبر جلاس",
+      "bulletinName": "ألياف فايبر جلاس",
+      "bulletinPrice": 115,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-058",
+      "rowName": "مونة مسلحة بألياف الصوف الزجاجي",
+      "bulletinName": "مونة مسلحة بألياف الصوف الزجاجي",
+      "bulletinPrice": 13,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-059",
+      "rowName": "مونة ترميم مسحوق",
+      "bulletinName": "مونة ترميم مسحوق",
+      "bulletinPrice": 15,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-060",
+      "rowName": "مركب إيبوكسي لحقن الشروخ",
+      "bulletinName": "مركب إيبوكسي لحقن الشروخ",
+      "bulletinPrice": 550,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-061",
+      "rowName": "مونة إيبوكسية لزرع أشاير الحديد",
+      "bulletinName": "مونة إيبوكسية لزرع أشاير الحديد",
+      "bulletinPrice": 165,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-062",
+      "rowName": "برايمر إيبوكسي للفواصل",
+      "bulletinName": "برايمر إيبوكسي للفواصل",
+      "bulletinPrice": 300,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-063",
+      "rowName": "حشو خلفي رود 1.5 سم",
+      "bulletinName": "حشو خلفي رود 1.5 سم",
+      "bulletinPrice": 15,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-064",
+      "rowName": "حشو خلفي رود 2.5 سم",
+      "bulletinName": "حشو خلفي رود 2.5 سم",
+      "bulletinPrice": 25,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-065",
+      "rowName": "مادة لحشو الفواصل بولي يوريثان",
+      "bulletinName": "مادة لحشو الفواصل بولي يوريثان",
+      "bulletinPrice": 40,
+      "unit": "عبوة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-066",
+      "rowName": "أسمنتي مصمت 6×12×25 سم",
+      "bulletinName": "أسمنتي مصمت 6×12×25 سم",
+      "bulletinPrice": 2770,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-067",
+      "rowName": "أسمنتي مفرغ 20×20×40 سم",
+      "bulletinName": "أسمنتي مفرغ 20×20×40 سم",
+      "bulletinPrice": 16350,
+      "unit": "ألف طوبة"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P068",
+      "rowName": "طوب أسمنتي مفرغ 40×20×12",
+      "bulletinName": "أسمنتي مفرغ 12×20×40 سم",
+      "bulletinPrice": 12000,
+      "activePrice": 9850,
+      "activeDate": "2026-10-14",
+      "unit": "ألف طوبة",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-068",
+      "rowName": "وردي 6×12×25 سم",
+      "bulletinName": "وردي 6×12×25 سم",
+      "bulletinPrice": 5750,
+      "unit": "غير مذكورة في النشرة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-069",
+      "rowName": "طفلي خفيف كثافة 550 كجم/م³، 20×20×60 سم",
+      "bulletinName": "طفلي خفيف كثافة 550 كجم/م³، 20×20×60 سم",
+      "bulletinPrice": 3400,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-070",
+      "rowName": "طفلي خفيف كثافة 600/700 كجم/م³، 60×20×20 سم",
+      "bulletinName": "طفلي خفيف كثافة 600/700 كجم/م³، 60×20×20 سم",
+      "bulletinPrice": 3400,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-071",
+      "rowName": "طفلي قياسي 12×12×25 سم",
+      "bulletinName": "طفلي قياسي 12×12×25 سم",
+      "bulletinPrice": 4025,
+      "unit": "ألف طوبة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-072",
+      "rowName": "طفلي خاص 6×11×24 سم",
+      "bulletinName": "طفلي خاص 6×11×24 سم",
+      "bulletinPrice": 2450,
+      "unit": "ألف طوبة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-073",
+      "rowName": "طفلي خاص 12×11×24 سم",
+      "bulletinName": "طفلي خاص 12×11×24 سم",
+      "bulletinPrice": 3600,
+      "unit": "ألف طوبة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-074",
+      "rowName": "جبس سيناء جبسينا",
+      "bulletinName": "جبس سيناء جبسينا",
+      "bulletinPrice": 1550,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-075",
+      "rowName": "جبس إكسبريس البالح",
+      "bulletinName": "جبس إكسبريس البالح",
+      "bulletinPrice": 1450,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-076",
+      "rowName": "جبس العامرية",
+      "bulletinName": "جبس العامرية",
+      "bulletinPrice": 1450,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-077",
+      "rowName": "جبس السويس",
+      "bulletinName": "جبس السويس",
+      "bulletinPrice": 1450,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-078",
+      "rowName": "جبس الدولية",
+      "bulletinName": "جبس الدولية",
+      "bulletinPrice": 1500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-079",
+      "rowName": "جبس المعمار نجوم سينا",
+      "bulletinName": "جبس المعمار نجوم سينا",
+      "bulletinPrice": 1450,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-080",
+      "rowName": "جبس مصر سيناء إيكوبات",
+      "bulletinName": "جبس مصر سيناء إيكوبات",
+      "bulletinPrice": 1450,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-081",
+      "rowName": "جبس نجمة سيناء",
+      "bulletinName": "جبس نجمة سيناء",
+      "bulletinPrice": 1550,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-082",
+      "rowName": "جبس زهرة سيناء",
+      "bulletinName": "جبس زهرة سيناء",
+      "bulletinPrice": 1500,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-083",
+      "rowName": "جير مطفأ لأعمال البناء",
+      "bulletinName": "جير مطفأ لأعمال البناء",
+      "bulletinPrice": 1000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-084",
+      "rowName": "بلاط موزايكو كرارة 3×30×30 سم",
+      "bulletinName": "بلاط موزايكو كرارة 3×30×30 سم",
+      "bulletinPrice": 200,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-085",
+      "rowName": "بلاط موزايكو ألباستر 3×30×30 سم",
+      "bulletinName": "بلاط موزايكو ألباستر 3×30×30 سم",
+      "bulletinPrice": 215,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-086",
+      "rowName": "بلاط موزايكو رخام زعفران 3×30×30 سم",
+      "bulletinName": "بلاط موزايكو رخام زعفران 3×30×30 سم",
+      "bulletinPrice": 190,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-087",
+      "rowName": "بلاط موزايكو كرارة 2.5×25×25 سم",
+      "bulletinName": "بلاط موزايكو كرارة 2.5×25×25 سم",
+      "bulletinPrice": 190,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-088",
+      "rowName": "بلاط موزايكو ألباستر 2.5×25×25 سم",
+      "bulletinName": "بلاط موزايكو ألباستر 2.5×25×25 سم",
+      "bulletinPrice": 200,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-089",
+      "rowName": "بلاط موزايكو زعفران 2.5×25×25 سم",
+      "bulletinName": "بلاط موزايكو زعفران 2.5×25×25 سم",
+      "bulletinPrice": 180,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-090",
+      "rowName": "بلاط شطف رخام كرارة 40×40 سم",
+      "bulletinName": "بلاط شطف رخام كرارة 40×40 سم",
+      "bulletinPrice": 325,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-091",
+      "rowName": "بلاط شطف رخام كرارة 30×30 سم",
+      "bulletinName": "بلاط شطف رخام كرارة 30×30 سم",
+      "bulletinPrice": 225,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-092",
+      "rowName": "بلاط شطف رخام ألباستر 30×30 سم",
+      "bulletinName": "بلاط شطف رخام ألباستر 30×30 سم",
+      "bulletinPrice": 290,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-093",
+      "rowName": "بلاط شطف رخام أشكال ساند بالست",
+      "bulletinName": "بلاط شطف رخام أشكال ساند بالست",
+      "bulletinPrice": 360,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-094",
+      "rowName": "بلاط شطف رخام أشكال لون واحد",
+      "bulletinName": "بلاط شطف رخام أشكال لون واحد",
+      "bulletinPrice": 300,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-095",
+      "rowName": "بلاط أرصفة حجاري 40×40 سم",
+      "bulletinName": "بلاط أرصفة حجاري 40×40 سم",
+      "bulletinPrice": 230,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-096",
+      "rowName": "بلاط أرصفة كرارة",
+      "bulletinName": "بلاط أرصفة كرارة",
+      "bulletinPrice": 340,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-097",
+      "rowName": "بلاط أرصفة ألباستر",
+      "bulletinName": "بلاط أرصفة ألباستر",
+      "bulletinPrice": 355,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-098",
+      "rowName": "إنترلوك رمادي",
+      "bulletinName": "إنترلوك رمادي",
+      "bulletinPrice": 170,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-099",
+      "rowName": "إنترلوك أحمر 6×20×10 سم",
+      "bulletinName": "إنترلوك أحمر 6×20×10 سم",
+      "bulletinPrice": 175,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-100",
+      "rowName": "إنترلوك أصغر 6×20×20 سم",
+      "bulletinName": "إنترلوك أصغر 6×20×20 سم",
+      "bulletinPrice": 235,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-101",
+      "rowName": "بلاط حدائق رمادي 50×25×8 سم",
+      "bulletinName": "بلاط حدائق رمادي 50×25×8 سم",
+      "bulletinPrice": 70,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-102",
+      "rowName": "بلاط حدائق أحمر 50×25×8 سم",
+      "bulletinName": "بلاط حدائق أحمر 50×25×8 سم",
+      "bulletinPrice": 75,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-103",
+      "rowName": "بردورات رمادية 50×30×12/15 سم",
+      "bulletinName": "بردورات رمادية 50×30×12/15 سم",
+      "bulletinPrice": 108,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-104",
+      "rowName": "بردورات حمراء 50×30×12/15 سم",
+      "bulletinName": "بردورات حمراء 50×30×12/15 سم",
+      "bulletinPrice": 110,
+      "unit": "م²"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P043",
+      "rowName": "سيراميك حوائط 25×50",
+      "bulletinName": "سيراميك حوائط 50×25 سم",
+      "bulletinPrice": 160,
+      "activePrice": 129,
+      "activeDate": "2026-08-20",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-105",
+      "rowName": "سيراميك حوائط 63×31 سم",
+      "bulletinName": "سيراميك حوائط 63×31 سم",
+      "bulletinPrice": 190,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-106",
+      "rowName": "سيراميك حوائط 63×20 سم",
+      "bulletinName": "سيراميك حوائط 63×20 سم",
+      "bulletinPrice": 190,
+      "unit": "م²"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P044",
+      "rowName": "سيراميك أرضيات 60×60",
+      "bulletinName": "سيراميك أرضيات 60×60 سم",
+      "bulletinPrice": 200,
+      "activePrice": 174,
+      "activeDate": "2026-10-01",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P045",
+      "rowName": "سيراميك أرضيات 50×50",
+      "bulletinName": "سيراميك أرضيات 50×50 سم",
+      "bulletinPrice": 190,
+      "activePrice": 163,
+      "activeDate": "2026-10-01",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-107",
+      "rowName": "سيراميك أرضيات 40×40 سم",
+      "bulletinName": "سيراميك أرضيات 40×40 سم",
+      "bulletinPrice": 185,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-108",
+      "rowName": "رخام ترابيع جاللة اليت",
+      "bulletinName": "رخام ترابيع جاللة اليت",
+      "bulletinPrice": 520,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-109",
+      "rowName": "رخام ترابيع حالل عادي",
+      "bulletinName": "رخام ترابيع حالل عادي",
+      "bulletinPrice": 440,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-110",
+      "rowName": "رخام ترابيع تريستا",
+      "bulletinName": "رخام ترابيع تريستا",
+      "bulletinPrice": 630,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-111",
+      "rowName": "رخام ترابيع جاللة",
+      "bulletinName": "رخام ترابيع جاللة",
+      "bulletinPrice": 570,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-112",
+      "rowName": "جرانيت أحمر أسواني",
+      "bulletinName": "جرانيت أحمر أسواني",
+      "bulletinPrice": 925,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-113",
+      "rowName": "جرانيت فردي غزال",
+      "bulletinName": "جرانيت فردي غزال",
+      "bulletinPrice": 925,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-114",
+      "rowName": "جرانيت حاليب",
+      "bulletinName": "جرانيت حاليب",
+      "bulletinPrice": 630,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-115",
+      "rowName": "جرانيت درج أحمر أسواني",
+      "bulletinName": "جرانيت درج أحمر أسواني",
+      "bulletinPrice": 650,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-116",
+      "rowName": "جرانيت درج فردي غزال",
+      "bulletinName": "جرانيت درج فردي غزال",
+      "bulletinPrice": 650,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-117",
+      "rowName": "جرانيت درج حاليب",
+      "bulletinName": "جرانيت درج حاليب",
+      "bulletinPrice": 550,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-118",
+      "rowName": "معجون إيبوكسي مقاوم للكبريتات",
+      "bulletinName": "معجون إيبوكسي مقاوم للكبريتات",
+      "bulletinPrice": 235,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-119",
+      "rowName": "مونة إيبوكسية مقاومة للكبريتات",
+      "bulletinName": "مونة إيبوكسية مقاومة للكبريتات",
+      "bulletinPrice": 135,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-120",
+      "rowName": "دهان إيبوكسي",
+      "bulletinName": "دهان إيبوكسي",
+      "bulletinPrice": 315,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-121",
+      "rowName": "أرضيات HDF ألماني معامل احتكاك C2",
+      "bulletinName": "أرضيات HDF ألماني معامل احتكاك C2",
+      "bulletinPrice": 750,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-122",
+      "rowName": "أرضيات HDF تركي كلاس 21",
+      "bulletinName": "أرضيات HDF تركي كلاس 21",
+      "bulletinPrice": 540,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-123",
+      "rowName": "أرضيات HDF تركي كلاس 31",
+      "bulletinName": "أرضيات HDF تركي كلاس 31",
+      "bulletinPrice": 555,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-124",
+      "rowName": "أرضيات HDF تركي كلاس 32",
+      "bulletinName": "أرضيات HDF تركي كلاس 32",
+      "bulletinPrice": 570,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-125",
+      "rowName": "فينيل مصري سمك 1.8 مم",
+      "bulletinName": "فينيل مصري سمك 1.8 مم",
+      "bulletinPrice": 135,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-126",
+      "rowName": "مادة لصق للأرضيات الفينيل",
+      "bulletinName": "مادة لصق للأرضيات الفينيل",
+      "bulletinPrice": 55,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-127",
+      "rowName": "قرميد بورتجيز بدون لون",
+      "bulletinName": "قرميد بورتجيز بدون لون",
+      "bulletinPrice": 40,
+      "unit": "عدد"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-128",
+      "rowName": "قرميد جمل زاوية بدون لون",
+      "bulletinName": "قرميد جمل زاوية بدون لون",
+      "bulletinPrice": 120,
+      "unit": "عدد"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-129",
+      "rowName": "قرميد كف بدون لون",
+      "bulletinName": "قرميد كف بدون لون",
+      "bulletinPrice": 160,
+      "unit": "عدد"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-130",
+      "rowName": "كلادينج ألومنيوم 0.3 مم ألوان عادية",
+      "bulletinName": "كلادينج ألومنيوم 0.3 مم ألوان عادية",
+      "bulletinPrice": 900,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-131",
+      "rowName": "كلادينج ألومنيوم 0.3 مم ألوان خشبية",
+      "bulletinName": "كلادينج ألومنيوم 0.3 مم ألوان خشبية",
+      "bulletinPrice": 1060,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-132",
+      "rowName": "كلادينج ألومنيوم 0.4 مم ألوان عادية",
+      "bulletinName": "كلادينج ألومنيوم 0.4 مم ألوان عادية",
+      "bulletinPrice": 900,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-133",
+      "rowName": "كلادينج ألومنيوم 0.4 مم ألوان خشبية",
+      "bulletinName": "كلادينج ألومنيوم 0.4 مم ألوان خشبية",
+      "bulletinPrice": 1060,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-134",
+      "rowName": "طوب حراري",
+      "bulletinName": "طوب حراري",
+      "bulletinPrice": 430,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-135",
+      "rowName": "حجر هاشمي",
+      "bulletinName": "حجر هاشمي",
+      "bulletinPrice": 480,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-136",
+      "rowName": "حجر ميكا 10×20",
+      "bulletinName": "حجر ميكا 10×20",
+      "bulletinPrice": 450,
+      "unit": "م²"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P138",
+      "rowName": "رولات عزل مائي",
+      "bulletinName": "عازل رطوبة بيتيوميني مسلح بوليستر 3 مم",
+      "bulletinPrice": 160,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-137",
+      "rowName": "عازل رطوبة بيتيوميني فايبر جلاس 3 مم",
+      "bulletinName": "عازل رطوبة بيتيوميني فايبر جلاس 3 مم",
+      "bulletinPrice": 155,
+      "unit": "م²"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P139",
+      "rowName": "بيتومين للعزل",
+      "bulletinName": "بيتومين مؤكسد 70/60",
+      "bulletinPrice": 25,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-138",
+      "rowName": "دهان عازل للرطوبة على البارد",
+      "bulletinName": "دهان عازل للرطوبة على البارد",
+      "bulletinPrice": 45,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-139",
+      "rowName": "بوليسترين عازل حرارة كثافة 36 كجم/م³",
+      "bulletinName": "بوليسترين عازل حرارة كثافة 36 كجم/م³",
+      "bulletinPrice": 3820,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-140",
+      "rowName": "بوليسترين عازل حرارة كثافة 32 كجم/م³",
+      "bulletinName": "بوليسترين عازل حرارة كثافة 32 كجم/م³",
+      "bulletinPrice": 3200,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-141",
+      "rowName": "معجون تأسيسي",
+      "bulletinName": "معجون تأسيسي",
+      "bulletinPrice": 18,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-142",
+      "rowName": "ورنيش خارجي",
+      "bulletinName": "ورنيش خارجي",
+      "bulletinPrice": 21,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-143",
+      "rowName": "دهانات أسمنتية ناعمة أبيض",
+      "bulletinName": "دهانات أسمنتية ناعمة أبيض",
+      "bulletinPrice": 9,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-144",
+      "rowName": "دهانات أسمنتية متوسطة أبيض",
+      "bulletinName": "دهانات أسمنتية متوسطة أبيض",
+      "bulletinPrice": 9.5,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-145",
+      "rowName": "دهانات أسمنتية خشنة أبيض",
+      "bulletinName": "دهانات أسمنتية خشنة أبيض",
+      "bulletinPrice": 12,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-146",
+      "rowName": "بياض جرانواليت زخرفي",
+      "bulletinName": "بياض جرانواليت زخرفي",
+      "bulletinPrice": 40,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-147",
+      "rowName": "بياض نهائي عالي التحمل",
+      "bulletinName": "بياض نهائي عالي التحمل",
+      "bulletinPrice": 40,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-148",
+      "rowName": "منتج جبسي للضهارة",
+      "bulletinName": "منتج جبسي للضهارة",
+      "bulletinPrice": 6,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-149",
+      "rowName": "مونة بطانة وضهارة جبسية",
+      "bulletinName": "مونة بطانة وضهارة جبسية",
+      "bulletinPrice": 7,
+      "unit": "كجم"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P134",
+      "rowName": "معجون داخلي",
+      "bulletinName": "معجون حوائط بالستيك داخلي",
+      "bulletinPrice": 16,
+      "unit": "كجم"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P137",
+      "rowName": "معجون خارجي",
+      "bulletinName": "معجون حوائط بالستيك خارجي",
+      "bulletinPrice": 25,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-150",
+      "rowName": "دهان تحضيري",
+      "bulletinName": "دهان تحضيري",
+      "bulletinPrice": 42,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-151",
+      "rowName": "مط داخلي اقتصادي",
+      "bulletinName": "مط داخلي اقتصادي",
+      "bulletinPrice": 45,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-152",
+      "rowName": "مط داخلي عالي الجودة أبيض",
+      "bulletinName": "مط داخلي عالي الجودة أبيض",
+      "bulletinPrice": 125,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-153",
+      "rowName": "مط خارجي متفوق الجودة",
+      "bulletinName": "مط خارجي متفوق الجودة",
+      "bulletinPrice": 190,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-154",
+      "rowName": "نصف مط داخلي وخارجي",
+      "bulletinName": "نصف مط داخلي وخارجي",
+      "bulletinPrice": 175,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-155",
+      "rowName": "برايمر سينثتيك",
+      "bulletinName": "برايمر سينثتيك",
+      "bulletinPrice": 115,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-156",
+      "rowName": "برايمر أسود",
+      "bulletinName": "برايمر أسود",
+      "bulletinPrice": 72,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-157",
+      "rowName": "برايمر ضد الصدأ",
+      "bulletinName": "برايمر ضد الصدأ",
+      "bulletinPrice": 58,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-158",
+      "rowName": "برايمر أحمر",
+      "bulletinName": "برايمر أحمر",
+      "bulletinPrice": 60,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-159",
+      "rowName": "برايمر رمادي",
+      "bulletinName": "برايمر رمادي",
+      "bulletinPrice": 60,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-160",
+      "rowName": "مط أبيض داخلي",
+      "bulletinName": "مط أبيض داخلي",
+      "bulletinPrice": 180,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-161",
+      "rowName": "مط أبيض داخلي وخارجي عالي الجودة",
+      "bulletinName": "مط أبيض داخلي وخارجي عالي الجودة",
+      "bulletinPrice": 115,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-162",
+      "rowName": "نصف مط عالي الجودة",
+      "bulletinName": "نصف مط عالي الجودة",
+      "bulletinPrice": 215,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-163",
+      "rowName": "مط ألوان داخلي",
+      "bulletinName": "مط ألوان داخلي",
+      "bulletinPrice": 155,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-164",
+      "rowName": "شديد اللمعان أبيض داخلي وخارجي",
+      "bulletinName": "شديد اللمعان أبيض داخلي وخارجي",
+      "bulletinPrice": 200,
+      "unit": "لتر"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-165",
+      "rowName": "سيلير بولي استر",
+      "bulletinName": "سيلير بولي استر",
+      "bulletinPrice": 245,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-166",
+      "rowName": "ورنيش كيدي للأخشاب",
+      "bulletinName": "ورنيش كيدي للأخشاب",
+      "bulletinPrice": 170,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-167",
+      "rowName": "ورنيش نيترو سيلوز مط",
+      "bulletinName": "ورنيش نيترو سيلوز مط",
+      "bulletinPrice": 175,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-168",
+      "rowName": "ورنيش نيترو سيلوز لامع",
+      "bulletinName": "ورنيش نيترو سيلوز لامع",
+      "bulletinPrice": 180,
+      "unit": "كجم"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-169",
+      "rowName": "أسلاك نحاس PVC 2 مم",
+      "bulletinName": "أسلاك نحاس PVC 2 مم",
+      "bulletinPrice": 2055,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-170",
+      "rowName": "أسلاك نحاس PVC 3 مم",
+      "bulletinName": "أسلاك نحاس PVC 3 مم",
+      "bulletinPrice": 3000,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-171",
+      "rowName": "أسلاك نحاس PVC 4 مم",
+      "bulletinName": "أسلاك نحاس PVC 4 مم",
+      "bulletinPrice": 3885,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-172",
+      "rowName": "أسلاك نحاس PVC 6 مم",
+      "bulletinName": "أسلاك نحاس PVC 6 مم",
+      "bulletinPrice": 5850,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-173",
+      "rowName": "أسلاك نحاس PVC 16 مم",
+      "bulletinName": "أسلاك نحاس PVC 16 مم",
+      "bulletinPrice": 15360,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-174",
+      "rowName": "أسلاك نحاس PVC 25 مم",
+      "bulletinName": "أسلاك نحاس PVC 25 مم",
+      "bulletinPrice": 26100,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-175",
+      "rowName": "أسلاك نحاس PVC 35 مم",
+      "bulletinName": "أسلاك نحاس PVC 35 مم",
+      "bulletinPrice": 36050,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-176",
+      "rowName": "أسلاك نحاس PVC 50 مم",
+      "bulletinName": "أسلاك نحاس PVC 50 مم",
+      "bulletinPrice": 49175,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-177",
+      "rowName": "أسلاك ألومنيوم 120 مم",
+      "bulletinName": "أسلاك ألومنيوم 120 مم",
+      "bulletinPrice": 195,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-178",
+      "rowName": "أسلاك ألومنيوم 150 مم",
+      "bulletinName": "أسلاك ألومنيوم 150 مم",
+      "bulletinPrice": 240,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-179",
+      "rowName": "أسلاك ألومنيوم 185 مم",
+      "bulletinName": "أسلاك ألومنيوم 185 مم",
+      "bulletinPrice": 300,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-180",
+      "rowName": "أسلاك ألومنيوم 240 مم",
+      "bulletinName": "أسلاك ألومنيوم 240 مم",
+      "bulletinPrice": 280,
+      "unit": "لفة 100 م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-181",
+      "rowName": "كابل نحاس مجدول 10×2 مم",
+      "bulletinName": "كابل نحاس مجدول 10×2 مم",
+      "bulletinPrice": 275,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-182",
+      "rowName": "كابل نحاس مجدول 10×4 مم",
+      "bulletinName": "كابل نحاس مجدول 10×4 مم",
+      "bulletinPrice": 510,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-183",
+      "rowName": "كابل نحاس مسلح 4×4 مم",
+      "bulletinName": "كابل نحاس مسلح 4×4 مم",
+      "bulletinPrice": 235,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-184",
+      "rowName": "كابل نحاس مسلح 6×4 مم",
+      "bulletinName": "كابل نحاس مسلح 6×4 مم",
+      "bulletinPrice": 325,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-185",
+      "rowName": "كابل نحاس مسلح 10×4 مم",
+      "bulletinName": "كابل نحاس مسلح 10×4 مم",
+      "bulletinPrice": 485,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-186",
+      "rowName": "كابل نحاس مسلح 25+50×3 مم",
+      "bulletinName": "كابل نحاس مسلح 25+50×3 مم",
+      "bulletinPrice": 1785,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-187",
+      "rowName": "كابل نحاس مسلح 35+70×3 مم",
+      "bulletinName": "كابل نحاس مسلح 35+70×3 مم",
+      "bulletinPrice": 2580,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-188",
+      "rowName": "كابل نحاس مسلح 50+95×3 مم",
+      "bulletinName": "كابل نحاس مسلح 50+95×3 مم",
+      "bulletinPrice": 3560,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-189",
+      "rowName": "كابل نحاس مسلح 95+185×3 مم",
+      "bulletinName": "كابل نحاس مسلح 95+185×3 مم",
+      "bulletinPrice": 6875,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-190",
+      "rowName": "كابل ألومنيوم مسلح 70+120×3 مم",
+      "bulletinName": "كابل ألومنيوم مسلح 70+120×3 مم",
+      "bulletinPrice": 875,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-191",
+      "rowName": "كابل ألومنيوم مسلح 70+150×3 مم",
+      "bulletinName": "كابل ألومنيوم مسلح 70+150×3 مم",
+      "bulletinPrice": 1050,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-192",
+      "rowName": "كابل ألومنيوم مسلح 95+185×3 مم",
+      "bulletinName": "كابل ألومنيوم مسلح 95+185×3 مم",
+      "bulletinPrice": 1285,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-193",
+      "rowName": "كابل ألومنيوم مسلح 120+240×3 مم",
+      "bulletinName": "كابل ألومنيوم مسلح 120+240×3 مم",
+      "bulletinPrice": 1610,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-194",
+      "rowName": "كابل ألومنيوم مسلح 150+300×3 مم",
+      "bulletinName": "كابل ألومنيوم مسلح 150+300×3 مم",
+      "bulletinPrice": 1960,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-195",
+      "rowName": "كابل ضغط متوسط نحاس 50×3 مم",
+      "bulletinName": "كابل ضغط متوسط نحاس 50×3 مم",
+      "bulletinPrice": 2560,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-196",
+      "rowName": "كابل ضغط متوسط نحاس 70×3 مم",
+      "bulletinName": "كابل ضغط متوسط نحاس 70×3 مم",
+      "bulletinPrice": 3390,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-197",
+      "rowName": "كابل ضغط متوسط نحاس 95×3 مم",
+      "bulletinName": "كابل ضغط متوسط نحاس 95×3 مم",
+      "bulletinPrice": 4250,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-198",
+      "rowName": "كابل ضغط متوسط نحاس 120×3 مم",
+      "bulletinName": "كابل ضغط متوسط نحاس 120×3 مم",
+      "bulletinPrice": 5150,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-199",
+      "rowName": "كابل ضغط متوسط نحاس 150×3 مم",
+      "bulletinName": "كابل ضغط متوسط نحاس 150×3 مم",
+      "bulletinPrice": 3560,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-200",
+      "rowName": "كابل ضغط متوسط ألومنيوم 150×3 مم",
+      "bulletinName": "كابل ضغط متوسط ألومنيوم 150×3 مم",
+      "bulletinPrice": 3000,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-201",
+      "rowName": "كابل ضغط متوسط ألومنيوم 185×3 مم",
+      "bulletinName": "كابل ضغط متوسط ألومنيوم 185×3 مم",
+      "bulletinPrice": 3100,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-202",
+      "rowName": "كابل ضغط متوسط ألومنيوم 140×3 مم",
+      "bulletinName": "كابل ضغط متوسط ألومنيوم 140×3 مم",
+      "bulletinPrice": 3550,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-203",
+      "rowName": "كابل ضغط متوسط ألومنيوم 300×3 مم",
+      "bulletinName": "كابل ضغط متوسط ألومنيوم 300×3 مم",
+      "bulletinPrice": 3890,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-204",
+      "rowName": "كابل ضغط متوسط ألومنيوم 400×3 مم",
+      "bulletinName": "كابل ضغط متوسط ألومنيوم 400×3 مم",
+      "bulletinPrice": 4840,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-205",
+      "rowName": "كابل تليفون نحاسي 0.6×3 مم",
+      "bulletinName": "كابل تليفون نحاسي 0.6×3 مم",
+      "bulletinPrice": 30,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-206",
+      "rowName": "كابل تليفون نحاسي 0.6×5 مم",
+      "bulletinName": "كابل تليفون نحاسي 0.6×5 مم",
+      "bulletinPrice": 45,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-207",
+      "rowName": "كابل إنذار حريق شيلد 1.5×2",
+      "bulletinName": "كابل إنذار حريق شيلد 1.5×2",
+      "bulletinPrice": 70,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-208",
+      "rowName": "كابل إنذار حريق شيلد 2×2.5",
+      "bulletinName": "كابل إنذار حريق شيلد 2×2.5",
+      "bulletinPrice": 95,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-209",
+      "rowName": "خشب سويد موسكي فنلندي",
+      "bulletinName": "خشب سويد موسكي فنلندي",
+      "bulletinPrice": 21000,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-210",
+      "rowName": "خشب زان مبخر روماني",
+      "bulletinName": "خشب زان مبخر روماني",
+      "bulletinPrice": 40000,
+      "unit": "م³"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-211",
+      "rowName": "كونتر مضغوط 18 مم 244×122 سم",
+      "bulletinName": "كونتر مضغوط 18 مم 244×122 سم",
+      "bulletinPrice": 1750,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-212",
+      "rowName": "أبلكاش أسود 3 مم 244×122 سم",
+      "bulletinName": "أبلكاش أسود 3 مم 244×122 سم",
+      "bulletinPrice": 335,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-213",
+      "rowName": "أبلكاش أسود 4 مم 244×122 سم",
+      "bulletinName": "أبلكاش أسود 4 مم 244×122 سم",
+      "bulletinPrice": 350,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-214",
+      "rowName": "ألومنيوم فضي مؤكسد",
+      "bulletinName": "ألومنيوم فضي مؤكسد",
+      "bulletinPrice": 211000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-215",
+      "rowName": "ألومنيوم ملون",
+      "bulletinName": "ألومنيوم ملون",
+      "bulletinPrice": 229000,
+      "unit": "طن"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-216",
+      "rowName": "قطاع UPVC منزلق 18 مم زجاج مفرد",
+      "bulletinName": "قطاع UPVC منزلق 18 مم زجاج مفرد",
+      "bulletinPrice": 3530,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-217",
+      "rowName": "قطاع UPVC منزلق 18 مم زجاج + سلك",
+      "bulletinName": "قطاع UPVC منزلق 18 مم زجاج + سلك",
+      "bulletinPrice": 4065,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-218",
+      "rowName": "بانوراما منزلق 125 مم زجاج مفرد",
+      "bulletinName": "بانوراما منزلق 125 مم زجاج مفرد",
+      "bulletinPrice": 3920,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-219",
+      "rowName": "بانوراما منزلق 125 مم زجاج + سلك",
+      "bulletinName": "بانوراما منزلق 125 مم زجاج + سلك",
+      "bulletinPrice": 4375,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-220",
+      "rowName": "قطاع مفصلي 72 مم زجاج مفرد",
+      "bulletinName": "قطاع مفصلي 72 مم زجاج مفرد",
+      "bulletinPrice": 3805,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-221",
+      "rowName": "قطاع ثابت زجاج مفرد",
+      "bulletinName": "قطاع ثابت زجاج مفرد",
+      "bulletinPrice": 3355,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-222",
+      "rowName": "زجاج شفاف 3 مم",
+      "bulletinName": "زجاج شفاف 3 مم",
+      "bulletinPrice": 330,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-223",
+      "rowName": "زجاج شفاف 4 مم",
+      "bulletinName": "زجاج شفاف 4 مم",
+      "bulletinPrice": 375,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-224",
+      "rowName": "زجاج شفاف 6 مم",
+      "bulletinName": "زجاج شفاف 6 مم",
+      "bulletinPrice": 530,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-225",
+      "rowName": "زجاج برونز 6 مم",
+      "bulletinName": "زجاج برونز 6 مم",
+      "bulletinPrice": 655,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-226",
+      "rowName": "زجاج أخضر عاكس 6 مم",
+      "bulletinName": "زجاج أخضر عاكس 6 مم",
+      "bulletinPrice": 735,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-227",
+      "rowName": "زجاج أزرق فاتح عاكس 6 مم",
+      "bulletinName": "زجاج أزرق فاتح عاكس 6 مم",
+      "bulletinPrice": 775,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-228",
+      "rowName": "سيكوريت شفاف 4 مم",
+      "bulletinName": "سيكوريت شفاف 4 مم",
+      "bulletinPrice": 485,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-229",
+      "rowName": "سيكوريت شفاف 6 مم",
+      "bulletinName": "سيكوريت شفاف 6 مم",
+      "bulletinPrice": 625,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-230",
+      "rowName": "سيكوريت برونز 6 مم",
+      "bulletinName": "سيكوريت برونز 6 مم",
+      "bulletinPrice": 765,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-231",
+      "rowName": "سيكوريت أخضر عاكس 6 مم",
+      "bulletinName": "سيكوريت أخضر عاكس 6 مم",
+      "bulletinPrice": 845,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-232",
+      "rowName": "سيكوريت أزرق فاتح عاكس 6 مم",
+      "bulletinName": "سيكوريت أزرق فاتح عاكس 6 مم",
+      "bulletinPrice": 885,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-233",
+      "rowName": "بولي كاربونيت كريستال ألماني 2.5 مم",
+      "bulletinName": "بولي كاربونيت كريستال ألماني 2.5 مم",
+      "bulletinPrice": 5150,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-234",
+      "rowName": "بولي كاربونيت ألوان 2 مم",
+      "bulletinName": "بولي كاربونيت ألوان 2 مم",
+      "bulletinPrice": 3100,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-235",
+      "rowName": "بولي كاربونيت مفرغ ألماني 6 مم",
+      "bulletinName": "بولي كاربونيت مفرغ ألماني 6 مم",
+      "bulletinPrice": 2550,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-236",
+      "rowName": "بولي كاربونيت مفرغ 5.5 مم",
+      "bulletinName": "بولي كاربونيت مفرغ 5.5 مم",
+      "bulletinPrice": 1650,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-237",
+      "rowName": "بولي كاربونيت مفرغ 4.5 مم",
+      "bulletinName": "بولي كاربونيت مفرغ 4.5 مم",
+      "bulletinPrice": 1350,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-238",
+      "rowName": "ألواح جبسية عادية 12.5 مم 3×1.2 م",
+      "bulletinName": "ألواح جبسية عادية 12.5 مم 3×1.2 م",
+      "bulletinPrice": 320,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-239",
+      "rowName": "ألواح مضادة للحريق 12.5 مم",
+      "bulletinName": "ألواح مضادة للحريق 12.5 مم",
+      "bulletinPrice": 410,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-240",
+      "rowName": "ألواح مضادة للرطوبة 12.5 مم",
+      "bulletinName": "ألواح مضادة للرطوبة 12.5 مم",
+      "bulletinPrice": 410,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-241",
+      "rowName": "معجون ملء الفواصل 12 كجم",
+      "bulletinName": "معجون ملء الفواصل 12 كجم",
+      "bulletinPrice": 90,
+      "unit": "شيكارة"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-242",
+      "rowName": "بلاطات جبسية 9.5 مم 60×60",
+      "bulletinName": "بلاطات جبسية 9.5 مم 60×60",
+      "bulletinPrice": 180,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-243",
+      "rowName": "بلاطات جبسية مثقبة 12.5 مم",
+      "bulletinName": "بلاطات جبسية مثقبة 12.5 مم",
+      "bulletinPrice": 225,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-244",
+      "rowName": "بلاطات جبسية anti-bacteria 12.5 مم",
+      "bulletinName": "بلاطات جبسية anti-bacteria 12.5 مم",
+      "bulletinPrice": 225,
+      "unit": "م²"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-245",
+      "rowName": "أكسسوار سقف بلاطات 3.6 م",
+      "bulletinName": "أكسسوار سقف بلاطات 3.6 م",
+      "bulletinPrice": 120,
+      "unit": "عود"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-246",
+      "rowName": "ألواح مارموكس 2 سم 60×250 سم",
+      "bulletinName": "ألواح مارموكس 2 سم 60×250 سم",
+      "bulletinPrice": 585,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-247",
+      "rowName": "ألواح مارموكس 3 سم 60×250 سم",
+      "bulletinName": "ألواح مارموكس 3 سم 60×250 سم",
+      "bulletinPrice": 650,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-248",
+      "rowName": "ألواح مارموكس 4 سم 60×250 سم",
+      "bulletinName": "ألواح مارموكس 4 سم 60×250 سم",
+      "bulletinPrice": 745,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-249",
+      "rowName": "ألواح مارموكس 5 سم 60×250 سم",
+      "bulletinName": "ألواح مارموكس 5 سم 60×250 سم",
+      "bulletinPrice": 845,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-250",
+      "rowName": "ألواح مارموكس 4/6 مم",
+      "bulletinName": "ألواح مارموكس 4/6 مم",
+      "bulletinPrice": 215,
+      "unit": "لوح"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-251",
+      "rowName": "مواسير حديد مجلفن 1/2 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 1/2 بوصة",
+      "bulletinPrice": 90,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-252",
+      "rowName": "مواسير حديد مجلفن 3/4 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 3/4 بوصة",
+      "bulletinPrice": 115,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-253",
+      "rowName": "مواسير حديد مجلفن 1 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 1 بوصة",
+      "bulletinPrice": 150,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-254",
+      "rowName": "مواسير حديد مجلفن 1.5 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 1.5 بوصة",
+      "bulletinPrice": 200,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-255",
+      "rowName": "مواسير حديد مجلفن 2 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 2 بوصة",
+      "bulletinPrice": 250,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-256",
+      "rowName": "مواسير حديد مجلفن 3 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 3 بوصة",
+      "bulletinPrice": 420,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-257",
+      "rowName": "مواسير حديد مجلفن 4 بوصة",
+      "bulletinName": "مواسير حديد مجلفن 4 بوصة",
+      "bulletinPrice": 545,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-258",
+      "rowName": "PPR عادي 1/2 بوصة",
+      "bulletinName": "PPR عادي 1/2 بوصة",
+      "bulletinPrice": 35,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-259",
+      "rowName": "PPR عادي 3/4 بوصة",
+      "bulletinName": "PPR عادي 3/4 بوصة",
+      "bulletinPrice": 55,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-260",
+      "rowName": "PPR عادي 1 بوصة",
+      "bulletinName": "PPR عادي 1 بوصة",
+      "bulletinPrice": 80,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-261",
+      "rowName": "PPR عادي 1.25 بوصة",
+      "bulletinName": "PPR عادي 1.25 بوصة",
+      "bulletinPrice": 125,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-262",
+      "rowName": "PPR عادي 1.5 بوصة",
+      "bulletinName": "PPR عادي 1.5 بوصة",
+      "bulletinPrice": 185,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-263",
+      "rowName": "PPR عادي 2 بوصة",
+      "bulletinName": "PPR عادي 2 بوصة",
+      "bulletinPrice": 300,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-264",
+      "rowName": "PPR فايبر معزول 1/2 بوصة",
+      "bulletinName": "PPR فايبر معزول 1/2 بوصة",
+      "bulletinPrice": 60,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-265",
+      "rowName": "PPR فايبر معزول 3/4 بوصة",
+      "bulletinName": "PPR فايبر معزول 3/4 بوصة",
+      "bulletinPrice": 95,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-266",
+      "rowName": "PPR فايبر معزول 1 بوصة",
+      "bulletinName": "PPR فايبر معزول 1 بوصة",
+      "bulletinPrice": 145,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-267",
+      "rowName": "PPR فايبر معزول 1.25 بوصة",
+      "bulletinName": "PPR فايبر معزول 1.25 بوصة",
+      "bulletinPrice": 235,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-268",
+      "rowName": "PPR فايبر معزول 1.5 بوصة",
+      "bulletinName": "PPR فايبر معزول 1.5 بوصة",
+      "bulletinPrice": 345,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-269",
+      "rowName": "PPR فايبر معزول 2 بوصة",
+      "bulletinName": "PPR فايبر معزول 2 بوصة",
+      "bulletinPrice": 550,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-270",
+      "rowName": "PPR ضد الشمس 1/2 بوصة",
+      "bulletinName": "PPR ضد الشمس 1/2 بوصة",
+      "bulletinPrice": 50,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-271",
+      "rowName": "PPR ضد الشمس 3/4 بوصة",
+      "bulletinName": "PPR ضد الشمس 3/4 بوصة",
+      "bulletinPrice": 72,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-272",
+      "rowName": "PPR ضد الشمس 1 بوصة",
+      "bulletinName": "PPR ضد الشمس 1 بوصة",
+      "bulletinPrice": 115,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-273",
+      "rowName": "PPR ضد الشمس 1.25 بوصة",
+      "bulletinName": "PPR ضد الشمس 1.25 بوصة",
+      "bulletinPrice": 175,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-274",
+      "rowName": "PPR ضد الشمس 1.5 بوصة",
+      "bulletinName": "PPR ضد الشمس 1.5 بوصة",
+      "bulletinPrice": 275,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-275",
+      "rowName": "PPR ضد الشمس 2 بوصة",
+      "bulletinName": "PPR ضد الشمس 2 بوصة",
+      "bulletinPrice": 465,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-276",
+      "rowName": "PVC رمادي 1/2 بوصة",
+      "bulletinName": "PVC رمادي 1/2 بوصة",
+      "bulletinPrice": 42,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-277",
+      "rowName": "PVC رمادي 3/4 بوصة",
+      "bulletinName": "PVC رمادي 3/4 بوصة",
+      "bulletinPrice": 60,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-278",
+      "rowName": "PVC رمادي 1 بوصة",
+      "bulletinName": "PVC رمادي 1 بوصة",
+      "bulletinPrice": 85,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-279",
+      "rowName": "PVC رمادي 1.5 بوصة",
+      "bulletinName": "PVC رمادي 1.5 بوصة",
+      "bulletinPrice": 140,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-280",
+      "rowName": "PVC رمادي 2 بوصة",
+      "bulletinName": "PVC رمادي 2 بوصة",
+      "bulletinPrice": 215,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-281",
+      "rowName": "مواسير صرف مدعمة 1/2 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 1/2 بوصة",
+      "bulletinPrice": 40,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-282",
+      "rowName": "مواسير صرف مدعمة 3/4 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 3/4 بوصة",
+      "bulletinPrice": 50,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-283",
+      "rowName": "مواسير صرف مدعمة 1 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 1 بوصة",
+      "bulletinPrice": 60,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-284",
+      "rowName": "مواسير صرف مدعمة 1.25 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 1.25 بوصة",
+      "bulletinPrice": 80,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-285",
+      "rowName": "مواسير صرف مدعمة 1.5 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 1.5 بوصة",
+      "bulletinPrice": 90,
+      "unit": "م.ط"
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P120",
+      "rowName": "مواسير PVC صرف 2 بوصة سمك 3 مم",
+      "bulletinName": "مواسير صرف مدعمة 2 بوصة",
+      "bulletinPrice": 150,
+      "activePrice": 31.87,
+      "activeDate": "2026-02-01",
+      "unit": "م",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P121",
+      "rowName": "مواسير PVC صرف 3 بوصة سمك 3 مم",
+      "bulletinName": "مواسير صرف مدعمة 3 بوصة",
+      "bulletinPrice": 170,
+      "activePrice": 37.3,
+      "activeDate": "2026-02-01",
+      "unit": "م",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P122",
+      "rowName": "مواسير PVC صرف 4 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 4 بوصة",
+      "bulletinPrice": 270,
+      "unit": "م"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-286",
+      "rowName": "مواسير صرف مدعمة 6 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 6 بوصة",
+      "bulletinPrice": 380,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-287",
+      "rowName": "مواسير بولي بروبلين 1.8 مم",
+      "bulletinName": "مواسير بولي بروبلين 1.8 مم",
+      "bulletinPrice": 60,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-288",
+      "rowName": "مواسير بولي بروبلين 63 مم",
+      "bulletinName": "مواسير بولي بروبلين 63 مم",
+      "bulletinPrice": 75,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-289",
+      "rowName": "مواسير بولي بروبلين 75 مم",
+      "bulletinName": "مواسير بولي بروبلين 75 مم",
+      "bulletinPrice": 85,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-290",
+      "rowName": "مواسير بولي بروبلين 110 مم",
+      "bulletinName": "مواسير بولي بروبلين 110 مم",
+      "bulletinPrice": 165,
+      "unit": "م.ط"
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "J26-291",
+      "rowName": "مواسير بولي بروبلين 160 مم",
+      "bulletinName": "مواسير بولي بروبلين 160 مم",
+      "bulletinPrice": 335,
+      "unit": "م.ط"
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P004",
+      "rowName": "أسمنت رمادي عام",
+      "bulletinName": "أسمنت رمادي عام (وسيط الأسمنت العادي 42.5)",
+      "bulletinPrice": 3800,
+      "activePrice": 3990,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "وسيط 13 ماركة أسمنت عادي 42.5 في النشرة؛ ليس سعر ماركة محددة."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P007",
+      "rowName": "حديد استثماري",
+      "bulletinName": "حديد استثماري (نطاق حديد التسليح)",
+      "bulletinPrice": 36100,
+      "activePrice": 38349,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "نطاق 15 ماركة حديد في النشرة؛ «حديد استثماري» غير مذكور بالاسم، فالقيمة استرشادية للمقارنة."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P009",
+      "rowName": "حديد المصريين / المراكبي",
+      "bulletinName": "حديد المصريين / المراكبي (نطاق)",
+      "bulletinPrice": 36250,
+      "activePrice": 39400,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "المصريين 35,000 والمراكبي 37,500 في النشرة؛ الصف المدمج يحمل النطاق."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P032",
+      "rowName": "جبس",
+      "bulletinName": "جبس (نطاق ماركات النشرة)",
+      "bulletinPrice": 1500,
+      "activePrice": 1975,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "نطاق 9 ماركات جبس في النشرة؛ ليس سعر ماركة محددة."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P028",
+      "rowName": "طوب أحمر طفلي مثقب",
+      "bulletinName": "طوب طفلي قياسي 12×12×25 (مقارنة)",
+      "bulletinPrice": 4025,
+      "activePrice": 1600,
+      "activeDate": "2026-10-14",
+      "unit": "ألف طوبة",
+      "note": "أقرب بند للطوب الأحمر الطفلي المثقب؛ المقاس مختلف، للمقارنة فقط."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P110",
+      "rowName": "لوح جبس بورد",
+      "bulletinName": "لوح جبس بورد (نشرة يناير)",
+      "bulletinPrice": 320,
+      "activePrice": 825,
+      "activeDate": "2026-10-19",
+      "unit": "لوح",
+      "note": "لوح جبس عادي 12.5 مم 3×1.2 م؛ الكتالوج يحمل سعرًا أحدث (825) فلم يُستبدل."
+    },
+    {
+      "action": "derived-quote",
+      "kind": "derived",
+      "rowId": "P052",
+      "rowName": "رخام / جرانيت",
+      "bulletinName": "رخام/جرانيت (نطاق النشرة)",
+      "bulletinPrice": 682.5,
+      "activePrice": null,
+      "activeDate": "2026-10-19",
+      "unit": "م²",
+      "note": "نطاق 16 نوع رخام/جرانيت في النشرة؛ البند العام يحتاج اختيار النوع قبل التسعير، فبقي بدون سعر نشط."
+    },
+    {
+      "action": "filled-derived",
+      "kind": "special-fill",
+      "rowId": "P141",
+      "rowName": "ألواح جبس بورد",
+      "bulletinName": "ألواح جبس بورد (مشتق من لوح 3×1.2 م)",
+      "bulletinPrice": 88.89,
+      "unit": "م²"
+    },
+    {
+      "action": "filled-derived",
+      "kind": "special-fill",
+      "rowId": "P089",
+      "rowName": "رخام / جرانيت للسلالم",
+      "bulletinName": "رخام/جرانيت للسلالم (نطاق جرانيت الدرج)",
+      "bulletinPrice": 600,
+      "unit": "م²"
+    },
+    {
+      "action": "unit-mismatch-option",
+      "kind": "paint-option",
+      "rowId": "P133",
+      "rowName": "سيلر داخلي",
+      "bulletinName": "دهان تحضيري",
+      "bulletinPrice": 42,
+      "catalogUnit": "لتر",
+      "quoteUnit": "كجم",
+      "note": "وحدة النشرة (كجم) مختلفة عن وحدة البند (لتر)؛ لم يُفعّل السعر."
+    },
+    {
+      "action": "attached-option",
+      "kind": "paint-option",
+      "rowId": "P135",
+      "rowName": "بلاستيك داخلي",
+      "bulletinName": "مط داخلي اقتصادي",
+      "bulletinPrice": 45,
+      "catalogUnit": "لتر",
+      "quoteUnit": "لتر",
+      "note": "خيار سعر متاح للاستعلام؛ لم يُفعّل تلقائيًا لوجود أكثر من منتج/جودة."
+    },
+    {
+      "action": "attached-option",
+      "kind": "paint-option",
+      "rowId": "P135",
+      "rowName": "بلاستيك داخلي",
+      "bulletinName": "مط أبيض داخلي",
+      "bulletinPrice": 180,
+      "catalogUnit": "لتر",
+      "quoteUnit": "لتر",
+      "note": "خيار سعر متاح للاستعلام؛ لم يُفعّل تلقائيًا لوجود أكثر من منتج/جودة."
+    },
+    {
+      "action": "attached-option",
+      "kind": "paint-option",
+      "rowId": "P136",
+      "rowName": "بلاستيك خارجي",
+      "bulletinName": "مط خارجي متفوق الجودة",
+      "bulletinPrice": 190,
+      "catalogUnit": "لتر",
+      "quoteUnit": "لتر",
+      "note": "خيار سعر متاح للاستعلام؛ لم يُفعّل تلقائيًا لوجود أكثر من منتج/جودة."
+    },
+    {
+      "action": "attached-option",
+      "kind": "paint-option",
+      "rowId": "P136",
+      "rowName": "بلاستيك خارجي",
+      "bulletinName": "مط أبيض داخلي وخارجي عالي الجودة",
+      "bulletinPrice": 115,
+      "catalogUnit": "لتر",
+      "quoteUnit": "لتر",
+      "note": "خيار سعر متاح للاستعلام؛ لم يُفعّل تلقائيًا لوجود أكثر من منتج/جودة."
+    },
+    {
+      "action": "attached-option",
+      "kind": "paint-option",
+      "rowId": "P136",
+      "rowName": "بلاستيك خارجي",
+      "bulletinName": "نصف مط عالي الجودة",
+      "bulletinPrice": 215,
+      "catalogUnit": "لتر",
+      "quoteUnit": "لتر",
+      "note": "خيار سعر متاح للاستعلام؛ لم يُفعّل تلقائيًا لوجود أكثر من منتج/جودة."
+    }
+  ],
+  "keptNewer": [
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P006",
+      "rowName": "حديد عز",
+      "bulletinName": "حديد عز",
+      "bulletinPrice": 38200,
+      "activePrice": 40290,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P008",
+      "rowName": "حديد بشاي",
+      "bulletinName": "حديد بشاي",
+      "bulletinPrice": 38000,
+      "activePrice": 39800,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P001",
+      "rowName": "أسمنت السويس",
+      "bulletinName": "السويس",
+      "bulletinPrice": 3910,
+      "activePrice": 3850,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P003",
+      "rowName": "أسمنت بني سويف",
+      "bulletinName": "مصر بني سويف",
+      "bulletinPrice": 3800,
+      "activePrice": 3685,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P002",
+      "rowName": "أسمنت سيناء",
+      "bulletinName": "سيناء 42.5",
+      "bulletinPrice": 3750,
+      "activePrice": 4065,
+      "activeDate": "2026-10-14",
+      "unit": "طن",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P014",
+      "rowName": "زلط عادي",
+      "bulletinName": "زلط عادي",
+      "bulletinPrice": 300,
+      "activePrice": 290,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P015",
+      "rowName": "زلط فينو",
+      "bulletinName": "زلط فينو",
+      "bulletinPrice": 435,
+      "activePrice": 352,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P016",
+      "rowName": "سن",
+      "bulletinName": "زلط سن 2 دولوميت",
+      "bulletinPrice": 380,
+      "activePrice": 362,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P012",
+      "rowName": "رمل ناعم",
+      "bulletinName": "رمل ناعم",
+      "bulletinPrice": 160,
+      "activePrice": 260,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P011",
+      "rowName": "رمل عادي / حرش",
+      "bulletinName": "رمل حرش",
+      "bulletinPrice": 150,
+      "activePrice": 170,
+      "activeDate": "2026-10-14",
+      "unit": "م³",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P068",
+      "rowName": "طوب أسمنتي مفرغ 40×20×12",
+      "bulletinName": "أسمنتي مفرغ 12×20×40 سم",
+      "bulletinPrice": 12000,
+      "activePrice": 9850,
+      "activeDate": "2026-10-14",
+      "unit": "ألف طوبة",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P043",
+      "rowName": "سيراميك حوائط 25×50",
+      "bulletinName": "سيراميك حوائط 50×25 سم",
+      "bulletinPrice": 160,
+      "activePrice": 129,
+      "activeDate": "2026-08-20",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P044",
+      "rowName": "سيراميك أرضيات 60×60",
+      "bulletinName": "سيراميك أرضيات 60×60 سم",
+      "bulletinPrice": 200,
+      "activePrice": 174,
+      "activeDate": "2026-10-01",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P045",
+      "rowName": "سيراميك أرضيات 50×50",
+      "bulletinName": "سيراميك أرضيات 50×50 سم",
+      "bulletinPrice": 190,
+      "activePrice": 163,
+      "activeDate": "2026-10-01",
+      "unit": "م²",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P120",
+      "rowName": "مواسير PVC صرف 2 بوصة سمك 3 مم",
+      "bulletinName": "مواسير صرف مدعمة 2 بوصة",
+      "bulletinPrice": 150,
+      "activePrice": 31.87,
+      "activeDate": "2026-02-01",
+      "unit": "م",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    },
+    {
+      "action": "kept-newer",
+      "kind": "attach",
+      "rowId": "P121",
+      "rowName": "مواسير PVC صرف 3 بوصة سمك 3 مم",
+      "bulletinName": "مواسير صرف مدعمة 3 بوصة",
+      "bulletinPrice": 170,
+      "activePrice": 37.3,
+      "activeDate": "2026-02-01",
+      "unit": "م",
+      "note": "السعر النشط أحدث من نشرة يناير 2026؛ أُضيفت النشرة كاقتباس مرجعي فقط."
+    }
+  ],
+  "filled": [
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P017",
+      "rowName": "خرسانة جاهزة C25",
+      "bulletinName": "خرسانة جاهزة جهد 250 كجم/م³",
+      "bulletinPrice": 3300,
+      "unit": "م³"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P138",
+      "rowName": "رولات عزل مائي",
+      "bulletinName": "عازل رطوبة بيتيوميني مسلح بوليستر 3 مم",
+      "bulletinPrice": 160,
+      "unit": "م²"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P139",
+      "rowName": "بيتومين للعزل",
+      "bulletinName": "بيتومين مؤكسد 70/60",
+      "bulletinPrice": 25,
+      "unit": "كجم"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P134",
+      "rowName": "معجون داخلي",
+      "bulletinName": "معجون حوائط بالستيك داخلي",
+      "bulletinPrice": 16,
+      "unit": "كجم"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P137",
+      "rowName": "معجون خارجي",
+      "bulletinName": "معجون حوائط بالستيك خارجي",
+      "bulletinPrice": 25,
+      "unit": "كجم"
+    },
+    {
+      "action": "filled",
+      "kind": "attach",
+      "rowId": "P122",
+      "rowName": "مواسير PVC صرف 4 بوصة",
+      "bulletinName": "مواسير صرف مدعمة 4 بوصة",
+      "bulletinPrice": 270,
+      "unit": "م"
+    },
+    {
+      "action": "filled-derived",
+      "kind": "special-fill",
+      "rowId": "P141",
+      "rowName": "ألواح جبس بورد",
+      "bulletinName": "ألواح جبس بورد (مشتق من لوح 3×1.2 م)",
+      "bulletinPrice": 88.89,
+      "unit": "م²"
+    },
+    {
+      "action": "filled-derived",
+      "kind": "special-fill",
+      "rowId": "P089",
+      "rowName": "رخام / جرانيت للسلالم",
+      "bulletinName": "رخام/جرانيت للسلالم (نطاق جرانيت الدرج)",
+      "bulletinPrice": 600,
+      "unit": "م²"
+    }
+  ],
+  "unitMismatch": [
+    {
+      "action": "unit-mismatch-option",
+      "kind": "paint-option",
+      "rowId": "P133",
+      "rowName": "سيلر داخلي",
+      "bulletinName": "دهان تحضيري",
+      "bulletinPrice": 42,
+      "catalogUnit": "لتر",
+      "quoteUnit": "كجم",
+      "note": "وحدة النشرة (كجم) مختلفة عن وحدة البند (لتر)؛ لم يُفعّل السعر."
+    }
+  ],
+  "unknownUnits": [
+    {
+      "name": "مادة لزيادة قابلية التشغيل",
+      "price": 30,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "أساس التكس بوتارين",
+      "price": 45,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "سترين SBR",
+      "price": 25,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "مادة لاصقة متعددة الأغراض",
+      "price": 95,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "ألياف فايبر جلاس",
+      "price": 115,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "مونة مسلحة بألياف الصوف الزجاجي",
+      "price": 13,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "مونة ترميم مسحوق",
+      "price": 15,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "مركب إيبوكسي لحقن الشروخ",
+      "price": 550,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "مونة إيبوكسية لزرع أشاير الحديد",
+      "price": 165,
+      "note": "الوحدة غير مذكورة في النشرة؛ لا تُستخدم في الحساب حتى تأكيد الوحدة."
+    },
+    {
+      "name": "وردي 6×12×25 سم",
+      "price": 5750,
+      "note": "الوحدة غير مذكورة في النشرة (أرجح ألف طوبة)؛ لم تُفترض."
+    }
+  ],
+  "anomalies": [
+    {
+      "name": "أسلاك ألومنيوم 120/150/185/240 مم",
+      "issue": "الأسعار (195–300) تبدو منخفضة جدًا لكل لفة 100 م لهذه المقاسات؛ غالبًا الوحدة في المصدر لكل متر. لم تُصحّح تلقائيًا."
+    },
+    {
+      "name": "أسلاك ألومنيوم 240 مم",
+      "issue": "سعر 280 أقل من 185 مم (300) — تعارض داخلي في النشرة."
+    },
+    {
+      "name": "كابل ضغط متوسط نحاس 150×3 مم",
+      "issue": "سعر 3,560 أقل من 120×3 مم (5,150) — تعارض داخلي."
+    },
+    {
+      "name": "كابل ضغط متوسط ألومنيوم 140×3 مم",
+      "issue": "مقاس 140 مم غير قياسي في كابلات الضغط المتوسط؛ راجع المقاس."
+    },
+    {
+      "name": "مط أبيض داخلي",
+      "issue": "الاسم مكرر بسعرين 135 و225؛ سُجل نطاق 135–225 بدل اختيار أحدهما."
+    },
+    {
+      "name": "وردي 6×12×25 سم",
+      "issue": "الوحدة غير مذكورة؛ لم تُفترض ألف طوبة رغم ترجيحها."
+    },
+    {
+      "name": "إضافات الخرسانة (8 بنود)",
+      "issue": "الوحدة غير مذكورة في النشرة لمعظم الإضافات؛ سُجل السعر مع وحدة «غير مذكورة» ولم تُستخدم في الحساب."
+    },
+    {
+      "name": "بلاطات جبسية 9.5 مم",
+      "issue": "وردت «حبسية» في النص المستخرج؛ أُبقيت كمرادف للبحث."
+    },
+    {
+      "name": "مواسير بولي بروبلين 1.8 مم",
+      "issue": "1.8 مم قد تكون سماكة وليست قطرًا؛ راجع البند قبل الاستخدام."
+    }
+  ]
+}

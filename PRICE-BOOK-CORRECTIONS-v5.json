@@ -1,0 +1,666 @@
+{
+  "version": "v5",
+  "createdAt": "2026-10-21",
+  "source": "price-book.v3.json + reviewed price-book.v4.json + MISSING-PRICES-2026-10-IMPORT.json",
+  "summary": "Restored newer source-backed records, corrected mismatched units and order-of-magnitude regressions, retained unsupported prices as open gaps, and corrected the independently derived electrical per-m² bridge range.",
+  "correctedRows": [
+    {
+      "id": "P001",
+      "name": "أسمنت السويس",
+      "before": {
+        "unit": "طن",
+        "low": 3550,
+        "avg": 3850,
+        "high": 4200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - متوسط ماركات",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 3850,
+        "avg": 3850,
+        "high": 3850,
+        "date": "2026-10-14",
+        "source": "مصر اليوم / موقع مصر — سعر وطني بديل",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P002",
+      "name": "أسمنت سيناء",
+      "before": {
+        "unit": "طن",
+        "low": 3550,
+        "avg": 3850,
+        "high": 4200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - متوسط ماركات",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 4060,
+        "avg": 4065,
+        "high": 4070,
+        "date": "2026-10-14",
+        "source": "مصر اليوم / موقع مصر — سعر وطني بديل",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P003",
+      "name": "أسمنت بني سويف",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - متوسط ماركات",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 3670,
+        "avg": 3685,
+        "high": 3700,
+        "date": "2026-10-14",
+        "source": "موقع مصر — سعر وطني بديل",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P004",
+      "name": "أسمنت رمادي عام",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - متوسط ماركات",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 3850,
+        "avg": 3990,
+        "high": 4070,
+        "date": "2026-10-14",
+        "source": "مصر اليوم / موقع مصر — سعر وطني بديل",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P005",
+      "name": "شيكارة أسمنت 50 كجم",
+      "before": {
+        "unit": "م³",
+        "low": 300,
+        "avg": 300,
+        "high": 435,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "شيكارة",
+        "low": 185,
+        "avg": 195,
+        "high": 205,
+        "date": "2026-10-14",
+        "source": "محسوب من سعر الطن الوطني",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P006",
+      "name": "حديد عز",
+      "before": {
+        "unit": "م³",
+        "low": 150,
+        "avg": 155,
+        "high": 160,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 40158,
+        "avg": 40290,
+        "high": 40422,
+        "date": "2026-10-14",
+        "source": "موقع مصر / الطريق — سعر وطني بديل",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P028",
+      "name": "طوب أحمر طفلي مثقب",
+      "before": {
+        "unit": "ألف طوبة",
+        "low": 1200,
+        "avg": 1500,
+        "high": 1800,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - طوب طفلي",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      },
+      "restored": {
+        "unit": "ألف طوبة",
+        "low": 850,
+        "avg": 1600,
+        "high": 2350,
+        "date": "2026-10-14",
+        "source": "موقع مصر / البلد — سعر وطني بديل",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      }
+    },
+    {
+      "id": "P029",
+      "name": "طوب أحمر 20×10×6",
+      "before": {
+        "unit": "م²",
+        "low": 35,
+        "avg": 35,
+        "high": 55,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - طوب أحمر 12سم",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      },
+      "restored": {
+        "unit": "ألف طوبة",
+        "low": 1445,
+        "avg": 1445,
+        "high": 1445,
+        "date": "2026-10-14",
+        "source": "بالتفصيل — سعر وطني بديل",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      }
+    },
+    {
+      "id": "P030",
+      "name": "طوب أسمنتي مصمت 25×12×6",
+      "before": {
+        "unit": "م³",
+        "low": 180,
+        "avg": 220,
+        "high": 260,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - طوب أحمر 25سم",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      },
+      "restored": {
+        "unit": "ألف طوبة",
+        "low": 2200,
+        "avg": 2200,
+        "high": 2200,
+        "date": "2026-10-14",
+        "source": "بالتفصيل — سعر وطني بديل",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      }
+    },
+    {
+      "id": "P032",
+      "name": "جبس",
+      "before": {
+        "unit": "طن",
+        "low": 1450,
+        "avg": 1500,
+        "high": 1550,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - جبس",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": 1850,
+        "avg": 1975,
+        "high": 2100,
+        "date": "2026-10-14",
+        "source": "الطريق — سعر وطني بديل",
+        "status": "national",
+        "category": "المباني والبياض",
+        "active": true
+      }
+    },
+    {
+      "id": "P037",
+      "name": "مصنعية كهرباء",
+      "before": {
+        "unit": "م.ط",
+        "low": 80,
+        "avg": 125,
+        "high": 185,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - PPR متوسط",
+        "status": "national",
+        "category": "السباكة والصرف",
+        "active": true
+      },
+      "restored": {
+        "unit": "نقطة",
+        "low": 70,
+        "avg": 95,
+        "high": 120,
+        "date": "2026-10-21",
+        "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+        "status": "local",
+        "category": "المصنعيات والعمالة",
+        "active": true
+      }
+    },
+    {
+      "id": "P045",
+      "name": "سيراميك أرضيات 50×50",
+      "before": {
+        "unit": "م²",
+        "low": 160,
+        "avg": 185,
+        "high": 200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - سيراميك حوائط",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      },
+      "restored": {
+        "unit": "م²",
+        "low": 140,
+        "avg": 163,
+        "high": 185,
+        "date": "2026-10-01",
+        "source": "الطريق / أصول مصر — سعر وطني بديل",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      }
+    },
+    {
+      "id": "P046",
+      "name": "سيراميك فرز أول",
+      "before": {
+        "unit": "م²",
+        "low": 185,
+        "avg": 195,
+        "high": 200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - سيراميك أرضيات",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      },
+      "restored": {
+        "unit": "م²",
+        "low": 150,
+        "avg": 380,
+        "high": 610,
+        "date": "2026-10-14",
+        "source": "إقرأ 24 / فيتو — نطاق وطني واسع",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      }
+    },
+    {
+      "id": "P047",
+      "name": "بورسلين",
+      "before": {
+        "unit": "م²",
+        "low": 440,
+        "avg": 500,
+        "high": 630,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - رخام",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      },
+      "restored": {
+        "unit": "م²",
+        "low": 250,
+        "avg": 325,
+        "high": 400,
+        "date": "2026-10-14",
+        "source": "إقرأ 24 / فيتو — سعر وطني بديل",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      }
+    },
+    {
+      "id": "P048",
+      "name": "سيراميك كليوباترا",
+      "before": {
+        "unit": "م²",
+        "low": 550,
+        "avg": 700,
+        "high": 925,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - جرانيت",
+        "status": "national",
+        "category": "التchطيبات",
+        "active": true
+      },
+      "restored": {
+        "unit": "م²",
+        "low": 149,
+        "avg": 558,
+        "high": 967,
+        "date": "2026-10-14",
+        "source": "الطريق — نطاق منتجات واسع",
+        "status": "national",
+        "category": "التشطيبات",
+        "active": true
+      }
+    },
+    {
+      "id": "P061",
+      "name": "سلك ربط حديد",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - سلك ربط (تبع الحديد)",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "كجم",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "سعر محلي مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P062",
+      "name": "حديد تسليح قطر 8 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P063",
+      "name": "حديد تسليح قطر 10 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P064",
+      "name": "حديد تسليح قطر 12 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P065",
+      "name": "حديد تسليح قطر 16 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P066",
+      "name": "حديد تسليح قطر 18 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P067",
+      "name": "حديد تسليح قطر 25 مم",
+      "before": {
+        "unit": "طن",
+        "low": 34500,
+        "avg": 37500,
+        "high": 38200,
+        "date": "2026-01-01",
+        "source": "نشرة يناير 2026 - حديد تسليح",
+        "status": "national",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "طن",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "عرض سعر محلي حسب القطر مطلوب",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    },
+    {
+      "id": "P119",
+      "name": "خامات كهرباء لشقة 100 م² — مرجعي",
+      "before": {
+        "unit": "م²",
+        "low": 80,
+        "avg": 125,
+        "high": 180,
+        "date": "2026-10-21",
+        "source": "مصنعيات أكتوبر 2026 - خامات كهرباء للمتر",
+        "status": "local",
+        "category": "المصنعيات والعمالة",
+        "active": true
+      },
+      "restored": {
+        "unit": "مشروع شقة 100 م²",
+        "low": 10000,
+        "avg": 12500,
+        "high": 15000,
+        "date": "2026-03-01",
+        "source": "as eskahraba — رقم مرجعي للشقة كما ورد في التقرير، وليس وحدة سعر تصلح للضرب في مسطحات المبنى؛ بديل وطني",
+        "status": "national",
+        "category": "الكهرباء",
+        "active": true
+      }
+    },
+    {
+      "id": "P132",
+      "name": "كراسي بلاستيك للحديد",
+      "before": {
+        "unit": "طن",
+        "low": 40000,
+        "avg": 45000,
+        "high": 50000,
+        "date": "2026-10-21",
+        "source": "تقديري - كراسي بلاستيك",
+        "status": "estimate",
+        "category": "الهيكل الخرساني",
+        "active": true
+      },
+      "restored": {
+        "unit": "قطعة",
+        "low": null,
+        "avg": null,
+        "high": null,
+        "date": "2026-10-19",
+        "source": "فجوة — سعر مورد محلي مطلوب؛ معدل كمية 3–5 قطع/م²",
+        "status": "missing",
+        "category": "الهيكل الخرساني",
+        "active": true
+      }
+    }
+  ],
+  "explicitOpenGaps": [
+    "P061",
+    "P062",
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P067",
+    "P132"
+  ],
+  "notes": [
+    "P005 is a 50 kg cement bag, not m³.",
+    "P006 is steel rebar priced per tonne, not m³.",
+    "P003/P004 are restored to October values after a 10x January-value anomaly.",
+    "P037 is restored to the supplied October local electrical-point labor rate.",
+    "Steel diameter-specific prices, tie wire, and plastic spacers remain unpriced because the cited import report did not provide matching price evidence.",
+    "B26-003 is derived from the P119 lump-sum reference at 100–150 EGP/m²; do not treat the derived row as an independent local supplier quotation."
+  ],
+  "derivedBridgeCorrection": {
+    "id": "B26-003",
+    "name": "خامات كهرباء للمتر",
+    "unit": "م²",
+    "before": {
+      "low": 80,
+      "avg": 125,
+      "high": 180
+    },
+    "after": {
+      "low": 100,
+      "avg": 125,
+      "high": 150
+    },
+    "basis": "The documented source reference is 10,000–15,000 EGP for a 100 m² apartment; divide by 100 to derive 100–150 EGP/m², with 125 EGP/m² midpoint. This remains an explicitly derived reference, not a verified local supplier quote."
+  }
+}

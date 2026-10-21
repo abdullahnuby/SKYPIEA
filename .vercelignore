@@ -1,0 +1,8 @@
+node_modules/
+tests/
+examples/
+docs/
+README.md
+CHANGELOG.md
+RELEASE-MANIFEST.json
+RELEASE-SIZE-REPORT.json

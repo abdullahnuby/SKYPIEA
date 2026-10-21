@@ -1,0 +1,72 @@
+{
+  "version": "v4",
+  "file": "api\\_data\\price-book.v4.json",
+  "sha256": "0f29bd0cf6ef2306fb9499c7f5166220269cb87c64024d4ce60e1e6d7f8f295a",
+  "active": 470,
+  "priced": 409,
+  "coveragePercent": 87,
+  "minimumCoveragePercent": 70,
+  "warnings": 833,
+  "gaps": [
+    {
+      "name": "الهيكل الخرساني",
+      "active": 96,
+      "priced": 82,
+      "missing": 14
+    },
+    {
+      "name": "التشطيبات",
+      "active": 167,
+      "priced": 156,
+      "missing": 11
+    },
+    {
+      "name": "التكاليف غير المباشرة",
+      "active": 8,
+      "priced": 0,
+      "missing": 8
+    },
+    {
+      "name": "السباكة والصرف",
+      "active": 55,
+      "priced": 49,
+      "missing": 6
+    },
+    {
+      "name": "الحفر والأساسات",
+      "active": 5,
+      "priced": 0,
+      "missing": 5
+    },
+    {
+      "name": "الكهرباء",
+      "active": 54,
+      "priced": 49,
+      "missing": 5
+    },
+    {
+      "name": "المصنعيات والعمالة",
+      "active": 47,
+      "priced": 42,
+      "missing": 5
+    },
+    {
+      "name": "الأسانسير",
+      "active": 4,
+      "priced": 0,
+      "missing": 4
+    },
+    {
+      "name": "خيارات إضافية",
+      "active": 5,
+      "priced": 3,
+      "missing": 2
+    },
+    {
+      "name": "المباني والبياض",
+      "active": 29,
+      "priced": 28,
+      "missing": 1
+    }
+  ]
+}

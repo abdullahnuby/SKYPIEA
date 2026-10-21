@@ -1,0 +1,31 @@
+{
+  "name": "skypiea-beno-platform",
+  "version": "1.0.0-alpha.11",
+  "private": true,
+  "type": "commonjs",
+  "description": "SKYPIEA landing page with the integrated Beno construction cost-estimation assistant.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/audit-price-book.cjs --check && node scripts/audit-agent-knowledge.cjs --check && node scripts/build.cjs && node build.mjs",
+    "test": "node tests/run.cjs",
+    "test:api": "node tests/api.test.cjs",
+    "test:browser": "python3 tests/browser-smoke.py",
+    "test:landing": "python3 tests/landing-page-smoke.py",
+    "check:secrets": "node scripts/check-bundle-secrets.cjs",
+    "publish:prices": "node scripts/publish-price-book.cjs",
+    "import:labor": "node scripts/import-labor-rates-2026-10.cjs",
+    "start": "npm run build && node scripts/local-server.cjs",
+    "dev": "npm run build && node scripts/local-server.cjs",
+    "admin:setup": "node scripts/setup-admin.cjs",
+    "test:admin": "node tests/admin.test.cjs",
+    "test:admin:browser": "python3 tests/admin-browser-smoke.py",
+    "report:gaps": "node scripts/report-price-gaps.cjs",
+    "audit:prices": "node scripts/audit-price-book.cjs",
+    "update:prices2026": "node scripts/update-prices-2026.cjs",
+    "audit:knowledge": "node scripts/audit-agent-knowledge.cjs",
+    "audit:prices:all": "node scripts/audit-price-book.cjs --check && node scripts/audit-agent-knowledge.cjs --check",
+    "test:workspace": "python3 tests/beno-workspace-smoke.py"
+  }
+}

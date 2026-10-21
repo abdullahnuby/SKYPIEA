@@ -1,0 +1,988 @@
+{
+  "generatedAt": "2026-10-21T10:10:35.046Z",
+  "labor": {
+    "id": "labor-2026-10",
+    "title": "قائمة مصنعيات التشطيبات والخرسانات والمباني — أكتوبر 2026",
+    "shortTitle": "مصنعيات أكتوبر 2026",
+    "date": "2026-10-21",
+    "source": "قائمة مصنعيات واردة من المستخدم — 2026-10-21",
+    "currency": "EGP",
+    "sourceItems": 31,
+    "scope": "labor-only",
+    "note": "الأسعار مصنعيات فقط: تشمل أجرة العمالة والصنايعية، ولا تشمل الخامات مثل الحديد والأسمنت والرمل والزلط والبلاط والدهانات إلا إذا ذُكر عكس ذلك. لم يحدد المستخدم شمول الضريبة؛ لذلك taxIncluded=false.",
+    "factorsNote": "عوامل التسعير المذكورة لا تُضاف تلقائيًا إلى الأسعار؛ تُعرض كعوامل يجب تطبيقها يدويًا حسب المشروع."
+  },
+  "policy": {
+    "laborOnly": true,
+    "overwriteNewerPrices": false,
+    "fillMissingOnly": true,
+    "elementSpecificConcreteNotAveraged": true,
+    "incompatibleUnitsNotApplied": true,
+    "previousPricesPreserved": true
+  },
+  "counts": {
+    "suppliedItems": 31,
+    "suppliedRows": 32,
+    "addedRows": 27,
+    "filledMissing": 4,
+    "updatedActive": 2,
+    "keptActive": 0,
+    "comparisons": 2,
+    "unitMismatch": 0,
+    "totalRowsBefore": 437,
+    "totalRowsAfter": 464
+  },
+  "coverage": {
+    "before": {
+      "total": 437,
+      "priced": 356,
+      "missing": 81,
+      "percent": 81.5,
+      "stale": 315
+    },
+    "after": {
+      "total": 464,
+      "priced": 387,
+      "missing": 77,
+      "percent": 83.4,
+      "stale": 314
+    }
+  },
+  "baseline": {
+    "bookVersion": "v2",
+    "source": "PRICE-GAPS-REPORT.json before the labor import",
+    "boq": {
+      "apartment": {
+        "coveragePercent": 32,
+        "priceGapCount": 17
+      },
+      "building": {
+        "coveragePercent": 31,
+        "priceGapCount": 18
+      }
+    },
+    "takeoff": {
+      "priceCoverage": 49,
+      "priceGapCount": 38,
+      "quantityGapCount": 64
+    }
+  },
+  "actions": [
+    {
+      "action": "filled",
+      "kind": "fill",
+      "rowId": "P033",
+      "rowName": "مصنعية المحارة والبياض",
+      "laborName": "محارة / لياسة",
+      "laborPrice": 67.5,
+      "laborUnit": "م²",
+      "note": "مصنعية محارة ولياسة للحوائط والأسقف؛ لا تشمل مونة الأسمنت والرمل."
+    },
+    {
+      "action": "updated-active",
+      "kind": "fill",
+      "rowId": "P037",
+      "rowName": "مصنعية كهرباء",
+      "laborName": "نقطة كهرباء",
+      "laborPrice": 95,
+      "laborUnit": "نقطة",
+      "previousPrice": 200,
+      "previousDate": "2026-07-01",
+      "note": "نقطة الكهرباء شاملة التأسيس والتوصيل؛ لا تشمل خامات الأسلاك والمفاتيح والبريزات."
+    },
+    {
+      "action": "updated-active",
+      "kind": "fill",
+      "rowId": "P056",
+      "rowName": "مصنعية سيراميك",
+      "laborName": "تركيب سيراميك",
+      "laborPrice": 225,
+      "laborUnit": "م²",
+      "previousPrice": 105,
+      "previousDate": "2026-10-19",
+      "note": "تركيب سيراميك للأرضيات؛ لا يشمل السيراميك أو المواد."
+    },
+    {
+      "action": "filled",
+      "kind": "fill",
+      "rowId": "P090",
+      "rowName": "مصنعية دهانات",
+      "laborName": "نقاشة سادة",
+      "laborPrice": 60,
+      "laborUnit": "م²",
+      "note": "دهان سادة فقط. الدهانات الديكورية 70–120/م² في صف مستقل؛ الدهان الخارجي قد يحتاج سقالات."
+    },
+    {
+      "action": "filled",
+      "kind": "fill",
+      "rowId": "P146",
+      "rowName": "مصنعية جبس بورد",
+      "laborName": "جبس بورد مودرن",
+      "laborPrice": 265,
+      "laborUnit": "م²",
+      "note": "مصنعية تركيب جبس بورد مودرن للمتر المسطح؛ لا تشمل الألواح والبروفايل."
+    },
+    {
+      "action": "filled-derived",
+      "kind": "derived",
+      "rowId": "P130",
+      "rowName": "مصنعية مباني",
+      "laborName": "مصنعية مباني — نطاق جامع",
+      "laborPrice": 50,
+      "laborUnit": "م²",
+      "note": "نصف طوبة 12 سم: 35–55/م². طوبة كاملة 25 سم: 180–260/م³ × 0.25 م = 45–65/م². النطاق الجامع 35–65/م² والقيمة الوسطية 50 للبنود العامة فقط؛ راجع سماكة الحائط قبل الاعتماد."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-001",
+      "rowName": "تأسيس الكهرباء",
+      "laborName": "تأسيس الكهرباء",
+      "laborPrice": 225,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "من مساحة الشقة؛ تأسيس فقط، ولا يشمل خامات الأسلاك والمواسير."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-002",
+      "rowName": "تأسيس وتشطيب السباكة",
+      "laborName": "تأسيس وتشطيب السباكة",
+      "laborPrice": 300,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "من المساحة المسطحة؛ لا تشمل الأطقم الصحية أو الخامات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-003",
+      "rowName": "سباكة حمام أو مطبخ",
+      "laborName": "سباكة حمام أو مطبخ",
+      "laborPrice": 3500,
+      "laborUnit": "قطعة",
+      "scope": "finishing",
+      "note": "لكل حمام أو مطبخ؛ لا تشمل الخامات. لا تُحوّل إلى سعر نقطة دون معرفة عدد النقاط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-004",
+      "rowName": "تركيب بورسلين",
+      "laborName": "تركيب بورسلين",
+      "laborPrice": 450,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "تركيب فقط؛ لا يشمل البورسلين أو المواد."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-005",
+      "rowName": "تركيب باركيه / HDF",
+      "laborName": "تركيب باركيه / HDF",
+      "laborPrice": 115,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "تركيب فقط؛ لا يشمل الباركيه أو المواد."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-006",
+      "rowName": "جبس بورد مودرن — م.ط",
+      "laborName": "جبس بورد مودرن — م.ط",
+      "laborPrice": 265,
+      "laborUnit": "م.ط",
+      "scope": "finishing",
+      "note": "نسخة المتر الطولي من نفس بند الجبس المودرن؛ لا تُجمع مع صف المتر المسطح."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-007",
+      "rowName": "جبس بلدي كلاسيك",
+      "laborName": "جبس بلدي كلاسيك",
+      "laborPrice": 200,
+      "laborUnit": "م.ط",
+      "scope": "finishing",
+      "note": "مصنعية فقط؛ لا تشمل مواد الجبس."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-008",
+      "rowName": "دهانات ديكورية",
+      "laborName": "دهانات ديكورية",
+      "laborPrice": 95,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "دهانات ديكورية؛ لا تشمل المواد أو السقالات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-009",
+      "rowName": "دهان أبواب خشبية",
+      "laborName": "دهان أبواب خشبية",
+      "laborPrice": 325,
+      "laborUnit": "باب",
+      "scope": "finishing",
+      "note": "دهان باب خشبي؛ لا يشمل الدهان نفسه."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-010",
+      "rowName": "دهان باب الشقة الرئيسي",
+      "laborName": "دهان باب الشقة الرئيسي",
+      "laborPrice": 600,
+      "laborUnit": "باب",
+      "scope": "finishing",
+      "note": "دهان الباب الرئيسي؛ لا يشمل الدهان نفسه."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-011",
+      "rowName": "حلوق أبواب وشبابيك",
+      "laborName": "حلوق أبواب وشبابيك",
+      "laborPrice": 125,
+      "laborUnit": "حلقة",
+      "scope": "finishing",
+      "note": "حلقة واحدة؛ لا تشمل الخامات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-012",
+      "rowName": "تركيب وتجميع أبواب داخلية",
+      "laborName": "تركيب وتجميع أبواب داخلية",
+      "laborPrice": 350,
+      "laborUnit": "باب",
+      "scope": "finishing",
+      "note": "تركيب وتجميع فقط؛ لا يشمل الباب أو الإكسسوارات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-013",
+      "rowName": "تركيب شبابيك ألوميتال",
+      "laborName": "تركيب شبابيك ألوميتال",
+      "laborPrice": 225,
+      "laborUnit": "قطعة",
+      "scope": "finishing",
+      "note": "تركيب فقط؛ لا يشمل الشباك أو الزجاج."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-014",
+      "rowName": "قواعد عادية / مسلحة / ميد",
+      "laborName": "قواعد عادية / مسلحة / ميد",
+      "laborPrice": 575,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "قواعد وميد. يوجد بند منفصل «أساسات مسلحة 290–310» بنطاق مختلف؛ التعارض ظاهر ولم يُدمج."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-015",
+      "rowName": "أعمدة ورقاب",
+      "laborName": "أعمدة ورقاب",
+      "laborPrice": 1150,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "أعمدة ورقاب. يوجد بند منفصل «أعمدة مسلحة 310 تقريبًا» بنطاق مختلف؛ التعارض ظاهر ولم يُدمج."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-016",
+      "rowName": "سقف مصمت Solid Slab",
+      "laborName": "سقف مصمت Solid Slab",
+      "laborPrice": 700,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "سقف مصمت. يوجد بند منفصل «أسقف مسلحة 310 تقريبًا» بنطاق مختلف؛ التعارض ظاهر ولم يُدمج."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-017",
+      "rowName": "سقف هوردي / فلات سلاب",
+      "laborName": "سقف هوردي / فلات سلاب",
+      "laborPrice": 850,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "الهوردي والفلات سلاب أعلى من المصمت وفق عامل التسعير المذكور."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-018",
+      "rowName": "متر مسطح شامل أعمدة وسقف",
+      "laborName": "متر مسطح شامل أعمدة وسقف",
+      "laborPrice": 550,
+      "laborUnit": "م²",
+      "scope": "structure",
+      "note": "سعر شامل للأعمدة والسقف معًا؛ لا يُجمع مع صفوف الأعمدة أو السقف المنفصلة."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-019",
+      "rowName": "خرسانة عادية للبشة",
+      "laborName": "خرسانة عادية للبشة",
+      "laborPrice": 135,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "خرسانة عادية للبشة؛ لا تشمل الخامات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-020",
+      "rowName": "أساسات مسلحة",
+      "laborName": "أساسات مسلحة",
+      "laborPrice": 300,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "القيمة كما وردت منفصلة. تتعارض مع «قواعد عادية/مسلحة/ميد 450–700»؛ لا تُستخدم تلقائيًا لتسعير البند العام."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-021",
+      "rowName": "أعمدة مسلحة",
+      "laborName": "أعمدة مسلحة",
+      "laborPrice": 310,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "قيمة تقريبية كما وردت (310). تتعارض مع «أعمدة ورقاب 900–1,400»؛ لا تُستخدم تلقائيًا."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-022",
+      "rowName": "أسقف مسلحة",
+      "laborName": "أسقف مسلحة",
+      "laborPrice": 310,
+      "laborUnit": "م³",
+      "scope": "structure",
+      "note": "قيمة تقريبية كما وردت (310). تتعارض مع «سقف مصمت 550–850» و«هوردي/فلات 700–1,000»؛ لا تُستخدم تلقائيًا."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-023",
+      "rowName": "طبانات السور",
+      "laborName": "طبانات السور",
+      "laborPrice": 100,
+      "laborUnit": "م.ط",
+      "scope": "structure",
+      "note": "متر طولي واحد؛ لا تشمل الخامات."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-024",
+      "rowName": "طوب أحمر قاطوع 12 سم",
+      "laborName": "طوب أحمر قاطوع 12 سم",
+      "laborPrice": 45,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "مصنعية مباني 12 سم على مساحة الحائط."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-025",
+      "rowName": "طوب أحمر جدار 25 سم",
+      "laborName": "طوب أحمر جدار 25 سم",
+      "laborPrice": 220,
+      "laborUnit": "م³",
+      "scope": "finishing",
+      "note": "مصنعية مباني 25 سم بالحجم. التحويل إلى م² يستخدم سماكة 0.25 م: 45–65/م²."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-026",
+      "rowName": "مباني بالألف طوبة",
+      "laborName": "مباني بالألف طوبة",
+      "laborPrice": 1500,
+      "laborUnit": "1,000 طوبة",
+      "scope": "finishing",
+      "note": "لكل 1,000 طوبة؛ لا تُجمع مع سعر المتر المسطح دون معرفة عدد الطوب لكل م²."
+    },
+    {
+      "action": "added",
+      "kind": "new-row",
+      "rowId": "L26-027",
+      "rowName": "مصنعية رخام",
+      "laborName": "مصنعية رخام",
+      "laborPrice": 525,
+      "laborUnit": "م²",
+      "scope": "finishing",
+      "note": "تركيب رخام أرضيات أو درج؛ لا يشمل الرخام أو المواد."
+    },
+    {
+      "action": "comparison-only",
+      "kind": "comparison",
+      "rowId": "P126",
+      "rowName": "مصنعية سباكة بدون دفن (حمام + مطبخ)",
+      "laborName": "سباكة حمام أو مطبخ",
+      "laborPrice": 3500,
+      "laborUnit": "قطعة",
+      "catalogUnit": "مشروع حمام + مطبخ",
+      "activePrice": 6500,
+      "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 6,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+    },
+    {
+      "action": "comparison-only",
+      "kind": "comparison",
+      "rowId": "P127",
+      "rowName": "مصنعية سباكة مع دفن في الحائط (حمام + مطبخ)",
+      "laborName": "سباكة حمام أو مطبخ",
+      "laborPrice": 3500,
+      "laborUnit": "قطعة",
+      "catalogUnit": "مشروع حمام + مطبخ",
+      "activePrice": 7500,
+      "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 7,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+    }
+  ],
+  "mapping": [
+    {
+      "item": "تأسيس الكهرباء",
+      "unit": "م²",
+      "low": 150,
+      "high": 300,
+      "mappedTo": "L26-001",
+      "mappedRowName": "تأسيس الكهرباء",
+      "action": "added"
+    },
+    {
+      "item": "نقطة كهرباء",
+      "unit": "نقطة",
+      "low": 70,
+      "high": 120,
+      "mappedTo": "P037",
+      "mappedRowName": "مصنعية كهرباء",
+      "action": "updated-active"
+    },
+    {
+      "item": "تأسيس وتشطيب السباكة",
+      "unit": "م²",
+      "low": 200,
+      "high": 400,
+      "mappedTo": "L26-002",
+      "mappedRowName": "تأسيس وتشطيب السباكة",
+      "action": "added"
+    },
+    {
+      "item": "سباكة حمام أو مطبخ",
+      "unit": "قطعة",
+      "low": 2500,
+      "high": 4500,
+      "mappedTo": "L26-003",
+      "mappedRowName": "سباكة حمام أو مطبخ",
+      "action": "added"
+    },
+    {
+      "item": "محارة / لياسة",
+      "unit": "م²",
+      "low": 50,
+      "high": 85,
+      "mappedTo": "P033",
+      "mappedRowName": "مصنعية المحارة والبياض",
+      "action": "filled"
+    },
+    {
+      "item": "تركيب سيراميك",
+      "unit": "م²",
+      "low": 150,
+      "high": 300,
+      "mappedTo": "P056",
+      "mappedRowName": "مصنعية سيراميك",
+      "action": "updated-active"
+    },
+    {
+      "item": "تركيب بورسلين",
+      "unit": "م²",
+      "low": 300,
+      "high": 600,
+      "mappedTo": "L26-004",
+      "mappedRowName": "تركيب بورسلين",
+      "action": "added"
+    },
+    {
+      "item": "تركيب باركيه / HDF",
+      "unit": "م²",
+      "low": 80,
+      "high": 150,
+      "mappedTo": "L26-005",
+      "mappedRowName": "تركيب باركيه / HDF",
+      "action": "added"
+    },
+    {
+      "item": "جبس بورد مودرن",
+      "unit": "م²",
+      "low": 180,
+      "high": 350,
+      "mappedTo": "P146",
+      "mappedRowName": "مصنعية جبس بورد",
+      "action": "filled"
+    },
+    {
+      "item": "جبس بورد مودرن — م.ط",
+      "unit": "م.ط",
+      "low": 180,
+      "high": 350,
+      "mappedTo": "L26-006",
+      "mappedRowName": "جبس بورد مودرن — م.ط",
+      "action": "added"
+    },
+    {
+      "item": "جبس بلدي كلاسيك",
+      "unit": "م.ط",
+      "low": 150,
+      "high": 250,
+      "mappedTo": "L26-007",
+      "mappedRowName": "جبس بلدي كلاسيك",
+      "action": "added"
+    },
+    {
+      "item": "نقاشة سادة",
+      "unit": "م²",
+      "low": 45,
+      "high": 75,
+      "mappedTo": "P090",
+      "mappedRowName": "مصنعية دهانات",
+      "action": "filled"
+    },
+    {
+      "item": "دهانات ديكورية",
+      "unit": "م²",
+      "low": 70,
+      "high": 120,
+      "mappedTo": "L26-008",
+      "mappedRowName": "دهانات ديكورية",
+      "action": "added"
+    },
+    {
+      "item": "دهان أبواب خشبية",
+      "unit": "باب",
+      "low": 250,
+      "high": 400,
+      "mappedTo": "L26-009",
+      "mappedRowName": "دهان أبواب خشبية",
+      "action": "added"
+    },
+    {
+      "item": "دهان باب الشقة الرئيسي",
+      "unit": "باب",
+      "low": 500,
+      "high": 700,
+      "mappedTo": "L26-010",
+      "mappedRowName": "دهان باب الشقة الرئيسي",
+      "action": "added"
+    },
+    {
+      "item": "حلوق أبواب وشبابيك",
+      "unit": "حلقة",
+      "low": 100,
+      "high": 150,
+      "mappedTo": "L26-011",
+      "mappedRowName": "حلوق أبواب وشبابيك",
+      "action": "added"
+    },
+    {
+      "item": "تركيب وتجميع أبواب داخلية",
+      "unit": "باب",
+      "low": 250,
+      "high": 450,
+      "mappedTo": "L26-012",
+      "mappedRowName": "تركيب وتجميع أبواب داخلية",
+      "action": "added"
+    },
+    {
+      "item": "تركيب شبابيك ألوميتال",
+      "unit": "قطعة",
+      "low": 150,
+      "high": 300,
+      "mappedTo": "L26-013",
+      "mappedRowName": "تركيب شبابيك ألوميتال",
+      "action": "added"
+    },
+    {
+      "item": "قواعد عادية / مسلحة / ميد",
+      "unit": "م³",
+      "low": 450,
+      "high": 700,
+      "mappedTo": "L26-014",
+      "mappedRowName": "قواعد عادية / مسلحة / ميد",
+      "action": "added"
+    },
+    {
+      "item": "أعمدة ورقاب",
+      "unit": "م³",
+      "low": 900,
+      "high": 1400,
+      "mappedTo": "L26-015",
+      "mappedRowName": "أعمدة ورقاب",
+      "action": "added"
+    },
+    {
+      "item": "سقف مصمت Solid Slab",
+      "unit": "م³",
+      "low": 550,
+      "high": 850,
+      "mappedTo": "L26-016",
+      "mappedRowName": "سقف مصمت Solid Slab",
+      "action": "added"
+    },
+    {
+      "item": "سقف هوردي / فلات سلاب",
+      "unit": "م³",
+      "low": 700,
+      "high": 1000,
+      "mappedTo": "L26-017",
+      "mappedRowName": "سقف هوردي / فلات سلاب",
+      "action": "added"
+    },
+    {
+      "item": "متر مسطح شامل أعمدة وسقف",
+      "unit": "م²",
+      "low": 450,
+      "high": 650,
+      "mappedTo": "L26-018",
+      "mappedRowName": "متر مسطح شامل أعمدة وسقف",
+      "action": "added"
+    },
+    {
+      "item": "خرسانة عادية للبشة",
+      "unit": "م³",
+      "low": 90,
+      "high": 180,
+      "mappedTo": "L26-019",
+      "mappedRowName": "خرسانة عادية للبشة",
+      "action": "added"
+    },
+    {
+      "item": "أساسات مسلحة",
+      "unit": "م³",
+      "low": 290,
+      "high": 310,
+      "mappedTo": "L26-020",
+      "mappedRowName": "أساسات مسلحة",
+      "action": "added"
+    },
+    {
+      "item": "أعمدة مسلحة",
+      "unit": "م³",
+      "low": 310,
+      "high": 310,
+      "mappedTo": "L26-021",
+      "mappedRowName": "أعمدة مسلحة",
+      "action": "added"
+    },
+    {
+      "item": "أسقف مسلحة",
+      "unit": "م³",
+      "low": 310,
+      "high": 310,
+      "mappedTo": "L26-022",
+      "mappedRowName": "أسقف مسلحة",
+      "action": "added"
+    },
+    {
+      "item": "طبانات السور",
+      "unit": "م.ط",
+      "low": 100,
+      "high": 100,
+      "mappedTo": "L26-023",
+      "mappedRowName": "طبانات السور",
+      "action": "added"
+    },
+    {
+      "item": "طوب أحمر قاطوع 12 سم",
+      "unit": "م²",
+      "low": 35,
+      "high": 55,
+      "mappedTo": "L26-024",
+      "mappedRowName": "طوب أحمر قاطوع 12 سم",
+      "action": "added"
+    },
+    {
+      "item": "طوب أحمر جدار 25 سم",
+      "unit": "م³",
+      "low": 180,
+      "high": 260,
+      "mappedTo": "L26-025",
+      "mappedRowName": "طوب أحمر جدار 25 سم",
+      "action": "added"
+    },
+    {
+      "item": "مباني بالألف طوبة",
+      "unit": "1,000 طوبة",
+      "low": 1200,
+      "high": 1800,
+      "mappedTo": "L26-026",
+      "mappedRowName": "مباني بالألف طوبة",
+      "action": "added"
+    },
+    {
+      "item": "تركيب رخام أرضيات أو درج",
+      "unit": "م²",
+      "low": 350,
+      "high": 700,
+      "mappedTo": "L26-027",
+      "mappedRowName": "مصنعية رخام",
+      "action": "added"
+    }
+  ],
+  "derivedBridges": [
+    {
+      "rowId": "P130",
+      "name": "مصنعية مباني — نطاق جامع",
+      "unit": "م²",
+      "low": 35,
+      "high": 65,
+      "avg": 50,
+      "sourceItems": [
+        "طوب أحمر قاطوع 12 سم",
+        "طوب أحمر جدار 25 سم"
+      ],
+      "aliases": [
+        "مصنعية مباني",
+        "مباني 12 سم",
+        "مباني 25 سم",
+        "طوب أحمر قاطوع 12 سم",
+        "طوب أحمر جدار 25 سم"
+      ],
+      "note": "نصف طوبة 12 سم: 35–55/م². طوبة كاملة 25 سم: 180–260/م³ × 0.25 م = 45–65/م². النطاق الجامع 35–65/م² والقيمة الوسطية 50 للبنود العامة فقط؛ راجع سماكة الحائط قبل الاعتماد.",
+      "rowName": "مصنعية مباني",
+      "activePrice": 50,
+      "activeDate": "2026-10-21"
+    }
+  ],
+  "comparisons": [
+    {
+      "rowId": "P126",
+      "rowName": "مصنعية سباكة بدون دفن (حمام + مطبخ)",
+      "laborName": "سباكة حمام أو مطبخ",
+      "laborLow": 2500,
+      "laborPrice": 3500,
+      "laborHigh": 4500,
+      "laborUnit": "قطعة",
+      "activePrice": 6500,
+      "activeUnit": "مشروع حمام + مطبخ",
+      "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 6,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+    },
+    {
+      "rowId": "P127",
+      "rowName": "مصنعية سباكة مع دفن في الحائط (حمام + مطبخ)",
+      "laborName": "سباكة حمام أو مطبخ",
+      "laborLow": 2500,
+      "laborPrice": 3500,
+      "laborHigh": 4500,
+      "laborUnit": "قطعة",
+      "activePrice": 7500,
+      "activeUnit": "مشروع حمام + مطبخ",
+      "note": "مقارنة فقط: 2,500–4,500 لكل حمام أو مطبخ. السعر النشط 7,500 لمشروع حمام + مطبخ، ووحدة البند مختلفة؛ لم يُستبدل."
+    }
+  ],
+  "factors": [
+    {
+      "key": "floor4_no_hoist",
+      "label": "الدور الرابع فأعلى بدون أوناش",
+      "effect": "+10–20%",
+      "appliesTo": "labor"
+    },
+    {
+      "key": "pump_pour",
+      "label": "الصب بالبمب",
+      "effect": "يقلل مصنعية الصب قليلًا",
+      "appliesTo": "concrete-labor"
+    },
+    {
+      "key": "manual_mixer",
+      "label": "الصب اليدوي بالخلاطة النحلة",
+      "effect": "يرفع السعر",
+      "appliesTo": "concrete-labor"
+    },
+    {
+      "key": "distance_permits_gates",
+      "label": "المسافات والتصاريح والبوابات",
+      "effect": "قد يرفع السعر",
+      "appliesTo": "all-labor"
+    },
+    {
+      "key": "large_areas",
+      "label": "المساحات الكبيرة",
+      "effect": "تسمح بخصم بسيط",
+      "appliesTo": "all-labor"
+    },
+    {
+      "key": "slab_type",
+      "label": "نوع السقف والتسليح",
+      "effect": "الفلات سلاب والهوردي أعلى من المصمت",
+      "appliesTo": "concrete-labor"
+    }
+  ],
+  "decisions": [
+    {
+      "key": "p090_paint",
+      "decision": "P090 مصنعية دهانات filled with standard paint labor 45–75/م² (نقاشة سادة).",
+      "rationale": "The frozen takeoff uses one row for both interior and exterior paint. The standard rate is the direct match for plain paint; decorative paint 70–120/م² is stored as a separate lookup row rather than inflating the generic row."
+    },
+    {
+      "key": "p093_concrete",
+      "decision": "P093 مصنعية صب خرسانة left open.",
+      "rationale": "The supplied concrete rates are element-specific (قواعد 450–700, أعمدة 900–1,400, أسقف 550–1,000/م³) and include a conflicting second set (أساسات/أعمدة/أسقف 290–310). A single m³ average would invent a number and misprice at least one element. Element rows are added for lookup only."
+    },
+    {
+      "key": "p130_masonry",
+      "decision": "P130 مصنعية مباني filled with a derived 35–65/م² bridge.",
+      "rationale": "The single frozen row serves both half-brick and full-brick walls. 12 cm is 35–55/م²; 25 cm is 180–260/م³, which is 45–65/م² at 0.25 m thickness. The bridge stores the union, not a hidden average."
+    },
+    {
+      "key": "p041_p131_plumbing",
+      "decision": "P041/P131 plumbing per point left open.",
+      "rationale": "The supplied plumbing rates are per م² (200–400) and per bathroom/kitchen piece (2,500–4,500). There is no per-point rate and no supplied points-per-bathroom count, so converting either would be an assumption."
+    },
+    {
+      "key": "p126_p127_plumbing",
+      "decision": "P126/P127 lump sums kept; supplied per-piece rate attached as comparison only.",
+      "rationale": "The units differ (مشروع حمام + مطبخ vs قطعة). Overwriting would compare unlike scopes."
+    },
+    {
+      "key": "p037_p056_updates",
+      "decision": "P037 and P056 updated to the dated local labor rate, with previous values preserved.",
+      "rationale": "The user list is dated 2026-10-21, newer than P037 (2026-07-01) and P056 (2026-10-19), and is explicitly labor-only. The old values remain in previousPrice for audit."
+    }
+  ],
+  "unresolved": [
+    {
+      "rowId": "P093",
+      "rowName": "مصنعية صب خرسانة",
+      "unit": "م³",
+      "reason": "الأسعار الموردة خاصة بالعنصر (قواعد 450–700، أعمدة 900–1,400، أسقف 550–1,000/م³) وتوجد مجموعة ثانية متعارضة (أساسات/أعمدة/أسقف 290–310). لا يوجد سعر م³ واحد صالح لكل العناصر.",
+      "options": [
+        "إضافة بنود حصر/BOQ لكل عنصر",
+        "اعتماد متوسط مرجح بمعاملات عناصر محددة",
+        "استخدام نطاق القواعد 450–700 مع تحذير واضح"
+      ]
+    },
+    {
+      "rowId": "P041",
+      "rowName": "مصنعية سباكة",
+      "unit": "نقطة",
+      "reason": "المورد قدّم سعرًا لكل م² (200–400) ولكل حمام/مطبخ (2,500–4,500)، وليس لكل نقطة. لا يوجد عدد نقاط لكل حمام في البيانات.",
+      "options": [
+        "تزويد سعر النقطة",
+        "اعتماد عدد نقاط قياسي لكل حمام/مطبخ",
+        "استخدام سعر المقطوعية بدل سعر النقطة"
+      ]
+    },
+    {
+      "rowId": "P131",
+      "rowName": "مصنعية تأسيس سباكة — نقطة",
+      "unit": "نقطة",
+      "reason": "نفس مشكلة P041: لا يوجد سعر نقطة صريح.",
+      "options": [
+        "تزويد سعر النقطة",
+        "اعتماد عدد نقاط قياسي",
+        "استخدام سعر المقطوعية"
+      ]
+    },
+    {
+      "rowId": "P091",
+      "rowName": "مصنعية نجارة مسلحة",
+      "unit": "م²",
+      "reason": "لم ترد مصنعية شدة/نجارة مسلحة في القائمة الموردة.",
+      "options": [
+        "تزويد سعر الشدة",
+        "الاحتفاظ بها كفجوة"
+      ]
+    },
+    {
+      "rowId": "P092",
+      "rowName": "مصنعية حدادة مسلحة",
+      "unit": "طن",
+      "reason": "لم ترد مصنعية حدادة/تسليح في القائمة الموردة.",
+      "options": [
+        "تزويد سعر الطن",
+        "الاحتفاظ بها كفجوة"
+      ]
+    },
+    {
+      "rowId": "P145",
+      "rowName": "مصنعية عزل مائي",
+      "unit": "م²",
+      "reason": "لم ترد مصنعية عزل مائي في القائمة الموردة.",
+      "options": [
+        "تزويد سعر العزل حسب النظام والطبقات",
+        "الاحتفاظ بها كفجوة"
+      ]
+    },
+    {
+      "rowId": "P090",
+      "rowName": "مصنعية دهانات",
+      "unit": "م²",
+      "reason": "تم تفعيل الدهان السادة 45–75/م². الدهان الديكوري 70–120/م² في صف منفصل، والدهان الخارجي قد يحتاج سقالات. المحرك يستخدم P090 للداخل والخارج معًا.",
+      "options": [
+        "الاحتفاظ بالسعر السادة مع تحذير",
+        "استخدام 45–120 للبند العام",
+        "فصل الداخلي عن الخارجي في محرك الحصر (يتطلب تعديل المحرك المجمد)"
+      ]
+    },
+    {
+      "rowId": "P130",
+      "rowName": "مصنعية مباني",
+      "unit": "م²",
+      "reason": "السعر الجامع 35–65/م² مشتق: 12 سم 35–55/م²، و25 سم 180–260/م³ × 0.25 م = 45–65/م². يحتاج تأكيد سماكة الحائط وشمول السقالات.",
+      "options": [
+        "تأكيد سماكة 25 سم",
+        "استخدام سعر منفصل لكل سماكة (يتطلب تعديل المحرك المجمد)",
+        "الاحتفاظ بالنطاق الجامع"
+      ]
+    },
+    {
+      "rowId": "P126/P127",
+      "rowName": "مصنعية سباكة بدون/مع دفن",
+      "unit": "مشروع حمام + مطبخ",
+      "reason": "السعر المورد 2,500–4,500 لكل قطعة (حمام أو مطبخ)، بينما الصف النشط 6,500/7,500 لمشروع حمام + مطبخ. الوحدات مختلفة ولم يُستبدل السعر النشط.",
+      "options": [
+        "تأكيد أن 2,500–4,500 لكل قطعة",
+        "تحويل السعر إلى مشروع بضرب عدد القطع",
+        "الاحتفاظ بالمقارنة فقط"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "area": "الخرسانة",
+      "detail": "قواعد 450–700 وأعمدة 900–1,400 وأسقف 550–1,000/م³، مقابل أساسات 290–310 وأعمدة 310 وأسقف 310/م³. الفارق كبير ولا يمكن دمجه دون معرفة ما إذا كانت المجموعة الثانية تشمل الشدة والحدادة أم لا."
+    },
+    {
+      "area": "الجبس بورد",
+      "detail": "السعر 180–350 ورد لوحدة م² أو م.ط. تم حفظ صفين منفصلين بنفس النطاق، واستخدام صف المتر المسطح فقط في P146."
+    },
+    {
+      "area": "الدهانات",
+      "detail": "نقاشة سادة 45–75/م²، دهانات ديكورية 70–120/م². المحرك يستخدم صفًا واحدًا للدهان الداخلي والخارجي؛ تم تفعيل السادة فقط."
+    },
+    {
+      "area": "المباني",
+      "detail": "12 سم 35–55/م²، 25 سم 180–260/م³، والألف طوبة 1,200–1,800. تحويل 25 سم إلى م² استخدم سماكة 0.25 م، وهو افتراض هندسي موثق وليس سعرًا مورّدًا."
+    },
+    {
+      "area": "الضريبة",
+      "detail": "القائمة لم تحدد شمول الضريبة؛ كل الصفوف taxIncluded=false. لا تُضف ضريبة تلقائيًا قبل التأكيد."
+    }
+  ]
+}

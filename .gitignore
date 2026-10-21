@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+playwright-report/
+test-results/
+.local/
+
+# Local debugging/export artifacts
+.tmp-*.json
+.tmp-*.cjs

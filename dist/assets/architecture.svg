@@ -1,0 +1,26 @@
+<svg width="900" height="1000" viewBox="0 0 900 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="25" x2="840" y2="930" gradientUnits="userSpaceOnUse"><stop stop-color="#143d79"/><stop offset=".48" stop-color="#0b1f44"/><stop offset="1" stop-color="#07142e"/></linearGradient>
+    <linearGradient id="glass" x1="330" y1="130" x2="800" y2="770" gradientUnits="userSpaceOnUse"><stop stop-color="#dcebff" stop-opacity=".88"/><stop offset=".43" stop-color="#3f8cff" stop-opacity=".55"/><stop offset="1" stop-color="#173c78" stop-opacity=".16"/></linearGradient>
+    <linearGradient id="edge" x1="210" y1="120" x2="630" y2="790" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#58a4ff" stop-opacity=".1"/></linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(645 278) rotate(90) scale(420 400)" gradientUnits="userSpaceOnUse"><stop stop-color="#338bff" stop-opacity=".48"/><stop offset="1" stop-color="#338bff" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#a9ceff" stroke-opacity=".22" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="900" height="1000" rx="42" fill="url(#bg)"/>
+  <rect width="900" height="1000" rx="42" fill="url(#glow)"/>
+  <circle cx="710" cy="177" r="140" stroke="#82bbff" stroke-opacity=".18"/>
+  <circle cx="710" cy="177" r="190" stroke="#82bbff" stroke-opacity=".13"/>
+  <circle cx="710" cy="177" r="240" stroke="#82bbff" stroke-opacity=".09"/>
+  <path d="M167 1000V403L373 108L632 224V1000H167Z" fill="#112d58" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M373 108 632 224V1000H373V108Z" fill="url(#glass)" fill-opacity=".48"/>
+  <path d="M167 403 373 108 373 1000H167V403Z" fill="#8fc0ff" fill-opacity=".10"/>
+  <path d="M167 403 373 108 632 224" stroke="#e7f2ff" stroke-opacity=".85" stroke-width="4"/>
+  <path d="M218 402V1000M270 328V1000M322 255V1000M425 132V1000M477 155V1000M529 178V1000M581 201V1000" stroke="#c7ddff" stroke-opacity=".34" stroke-width="2"/>
+  <path d="M167 463 632 284M167 523 632 344M167 583 632 404M167 643 632 464M167 703 632 524M167 763 632 584M167 823 632 644M167 883 632 704M167 943 632 764" stroke="#c7ddff" stroke-opacity=".25" stroke-width="2"/>
+  <path d="M632 224 806 339V1000H632V224Z" fill="#081831" stroke="#91bdff" stroke-opacity=".45" stroke-width="3"/>
+  <path d="M659 296 780 376V1000M659 412 780 492M659 528 780 608M659 644 780 724M659 760 780 840M659 876 780 956" stroke="#9ec7ff" stroke-opacity=".34" stroke-width="2"/>
+  <path d="M105 1000 167 403 373 108 632 224 806 339 874 1000" stroke="#d5e8ff" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M82 1000H850" stroke="#9cc7ff" stroke-opacity=".45" stroke-width="3"/>
+  <g transform="translate(70 68)"><rect width="170" height="62" rx="31" fill="#fff" fill-opacity=".08" stroke="#e2efff" stroke-opacity=".22"/><circle cx="31" cy="31" r="5" fill="#60a5fa"/><text x="49" y="37" font-family="Arial,sans-serif" font-size="18" letter-spacing="3" fill="#eff6ff">SKYPIEA</text></g>
+  <g transform="translate(80 830)"><rect width="335" height="102" rx="18" fill="#06152d" fill-opacity=".82" stroke="#86baff" stroke-opacity=".3"/><path d="M30 32H62M30 43H50M30 54H69" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/><text x="86" y="44" font-family="Arial,sans-serif" font-size="14" letter-spacing="2.2" fill="#8fc3ff">ENGINEERING</text><text x="86" y="69" font-family="Arial,sans-serif" font-size="14" letter-spacing="2.2" fill="#fff">MEETS TECHNOLOGY</text></g>
+</svg>

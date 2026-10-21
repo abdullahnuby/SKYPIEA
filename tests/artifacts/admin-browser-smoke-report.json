@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0-alpha.8",
+  "status": "passed",
+  "testMode": "Admin browser smoke uses a mocked API and the archived 146-row v1 catalog fixture; tests/admin.test.cjs exercises the real local Node API. The operational catalog is v8 (183 active core rows) and 291 unused January-bulletin variants live in a non-searchable extended archive.",
+  "checks": {
+    "adminDashboardLoaded": true,
+    "historicalFixtureRows": 146,
+    "rateDefinitionsRendered": 68,
+    "wasteDefinitionsRendered": 23,
+    "searchFilter": true,
+    "priceEditAndPublish": true,
+    "resourceRateEditAndSave": true,
+    "legacyRateSync": true,
+    "wasteRateEditAndSave": true,
+    "publishedVersion": "v2 in the isolated UI mock",
+    "consoleErrors": []
+  },
+  "screenshots": [
+    "tests/artifacts/admin-dashboard-desktop.png",
+    "tests/artifacts/admin-dashboard-mobile.png"
+  ],
+  "limits": [
+    "UI-only admin interactions were tested against a mock API; the Node integration suite separately exercises local API behavior.",
+    "The 146-row v1 catalog fixture is historical and does not represent the active v8 catalog.",
+    "Supabase migration was not executed against a live database.",
+    "Vercel deployment was not performed."
+  ],
+  "notes": [],
+  "source": "Admin browser smoke"
+}
