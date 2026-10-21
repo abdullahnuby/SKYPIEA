@@ -4,225 +4,280 @@
   const PHONE_DISPLAY = '01550130114';
   const WHATSAPP_NUMBER = '201550130114';
   let language = 'ar';
-
-  const icons = {
-    arrow: '<path d="M5 12h14M13 5l7 7-7 7"/>',
-    chat: '<path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/>',
-    check: '<path d="m5 12 4 4L19 6"/>',
-    layers: '<path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/>',
-    calculator: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2m4 0h2M8 16h2m4 0h2"/>',
-    ruler: '<path d="M21.3 8.7 15.3 2.7a2.4 2.4 0 0 0-3.4 0L2.7 11.9a2.4 2.4 0 0 0 0 3.4l6 6a2.4 2.4 0 0 0 3.4 0l9.2-9.2a2.4 2.4 0 0 0 0-3.4Z"/><path d="m7.5 9.5 2 2m1-5 2 2m1-5 2 2m-1 8 2 2"/>',
-    shield: '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
-    spark: '<path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/>',
-    cube: '<path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9"/>',
-    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-    message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/>',
-    quote: '<path d="M3 21c3-2 5-5 5-10V5H2v7h4m12 9c3-2 5-5 5-10V5h-6v7h4"/>',
-    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
-    close: '<path d="m6 6 12 12M18 6 6 18"/>',
-    phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 8.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>',
-    plus: '<path d="M12 5v14M5 12h14"/>',
-  };
-
-  function icon(name, size = 20) {
-    return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name] || icons.spark}</svg>`;
-  }
+  let activeSector = 'engineering';
+  let mobileMenuOpen = false;
+  let brandGradientCount = 0;
+  const draft = { name: '', phone: '', sector: '', message: '' };
 
   const copy = {
     ar: {
-      navFeatures: 'إمكانيات Beno', navExample: 'مثال للتقدير', navFaq: 'أسئلة شائعة', navCta: 'احسب مع Beno', language: 'EN',
-      eyebrow: 'مساعد التسعير الهندسي من SKYPIEA', titleA: 'قبل ما تبدأ البناء،', titleB: 'خلّي Beno يحسبهالك.',
-      desc: 'احكي عن مشروعك بطريقتك. Beno يساعدك في تكوين تقدير مبدئي، ينظم البنود، يفصل الخامات عن المصنعية، ويظهر لك النواقص بدل ما يخمّن أرقام.',
-      ctaPrimary: 'خلّي Beno يحسبلك', ctaSecondary: 'شوف Beno بيشتغل إزاي', note: 'ابدأ بالمعلومات اللي عندك — مش لازم تكون مجهّز كل التفاصيل.',
-      visualCaption: 'مثال توضيحي — مش أسعار فعلية', online: 'جاهز يبدأ معاك', sampleUser: 'عايز أقدّر تكلفة مبنى جديد.', sampleBeno: 'تمام. نبدأ بالبيانات المتاحة، ونحدد الناقص قبل ما نعرض رقم مضلل.', estimatePreview: 'شكل التقدير اللي هتراجعه', stage1: 'الحفر والردم', stage2: 'الخرسانة المسلحة', stage3: 'المباني والمحارة', stage4: 'التشطيبات', statusData: 'يتحدد حسب بيانات مشروعك', previewCta: 'ابدأ تقدير مشروعك',
-      strip1: 'بند واضح بدل زحمة أسطر', strip2: 'خامات ومصنعيات منفصلة', strip3: 'نواقص وافتراضات ظاهرة', strip4: 'تقدر تراجع وتعدّل',
-      featureEyebrow: 'إيه اللي يميّز Beno؟', featureTitleA: 'مش مجرد شات،', featureTitleB: 'ده مساعد للتقدير الهندسي.', featureDesc: 'Beno مصمم يساعدك ترتّب فكرة المشروع في صورة تقدير قابل للمراجعة، مش يديك رقم وخلاص.',
-      f1Title: 'يفهم وصفك الطبيعي', f1Text: 'ابدأ بسؤالك زي ما بتتكلم مع مهندس، وكمّل بالمعلومات المتاحة عندك.',
-      f2Title: 'ينظّم بنود المقايسة', f2Text: 'يجمع الخامات الصغيرة داخل مجموعة شغلها، مع إبقاء التفاصيل متاحة وقت المراجعة.',
-      f3Title: 'يفصل الخامات عن المصنعية', f3Text: 'تقدر تشوف تكلفة التوريدات لوحدها والمصنعيات لوحدها بدل ما تختلط عليك.',
-      f4Title: 'ما يغطّيش على الناقص', f4Text: 'لو سعر أو كمية أساسية ناقصة، يوضحها بدل ما يختلق رقم نهائي بثقة زائفة.',
-      featureCta: 'جرّب ده مع Beno',
-      tryEyebrow: 'ابدأ من سؤالك', tryTitleA: 'مش لازم تعرف تبدأ منين.', tryTitleB: 'اختار أقرب سؤال ليك.', tryDesc: 'كل اختيار هيفتح نفس المحادثة مع Beno ويجهّز لك بداية مناسبة — من غير تسجيل أو فلو منفصل.',
-      try1Tag: 'تشطيب', try1Title: 'عايز أقدّر تكلفة شقة', try1Text: 'ابدأ من المساحة ومستوى التشطيب والتفاصيل المتاحة.',
-      try2Tag: 'مبنى جديد', try2Title: 'عايز أقدّر تكلفة عمارة', try2Text: 'حدد مساحة الدور وعدد الأدوار ونطاق الأعمال.',
-      try3Tag: 'سعر بند', try3Title: 'عايز أعرف سعر خامة أو بند', try3Text: 'اسأل عن خامة أو بند، وراجع الوحدة ومصدر السعر وتاريخه.',
-      tryAction: 'ابدأ مع Beno',
-      howEyebrow: 'ببساطة', howTitleA: 'إنت تتكلم.', howTitleB: 'Beno يرتّب الحساب.',
-      how1Title: 'احكي اللي تعرفه', how1Text: 'نوع المشروع ومساحته أو سؤالك عن بند — أي معلومة بداية مفيدة.',
-      how2Title: 'Beno يسأل عن المهم', how2Text: 'لو معلومة مؤثرة ناقصة، يطلب توضيحها بدل ما يفترضها من عنده.',
-      how3Title: 'راجع النتيجة براحتك', how3Text: 'شوف البنود الرئيسية وافتح تفاصيل الخامات والكميات وعدّل ما يحتاج مراجعة.',
-      transparencyEyebrow: 'تقدير واضح مش وعود', transparencyTitleA: 'الرقم المفيد،', transparencyTitleB: 'هو الرقم اللي تعرف أساسه.',
-      transparencyText: 'Beno يقدّم تقديرًا مبدئيًا اعتمادًا على البيانات المتاحة في محرك الحساب وكتالوج الأسعار. النتائج ليست مقايسة تنفيذية معتمدة، والأسعار المحلية والكميات تحتاج مراجعة حسب المشروع.',
-      trans1: 'وحدة القياس واضحة', trans2: 'مصدر السعر وتاريخه عند توفرهما', trans3: 'الكميات قابلة للمراجعة', trans4: 'الفجوات تظهر بدل التخمين',
-      transparencyCta: 'ابدأ تقدير مبدئي',
-      faqEyebrow: 'أسئلة شائعة', faqTitleA: 'قبل ما تبدأ مع', faqTitleB: 'Beno',
-      q1: 'هل لازم أجهّز كل بيانات المشروع؟', a1: 'لأ. ابدأ بالمعلومات المتاحة، وBeno هيسألك عن التفاصيل الأساسية اللي يحتاجها للحساب. لو البيانات غير كافية، هيوضح ده.',
-      q2: 'هل الرقم الناتج سعر تنفيذ نهائي؟', a2: 'لا. ده تقدير مبدئي يساعدك في تكوين صورة أولية. الاعتماد النهائي يتطلب مراجعة الرسومات والكميات والأسعار المحلية والمواصفات بواسطة مهندس.',
-      q3: 'هل أقدر أغيّر الكميات؟', a3: 'أيوه، تفاصيل المقايسة تتيح مراجعة الكميات وتعديلها وإعادة الحساب قبل استخدام النتيجة.',
-      q4: 'ماذا لو سعر بند غير موجود؟', a4: 'Beno يعلن عن فجوة السعر بدل ما يستبدلها بسعر بند آخر أو يخفيها داخل إجمالي غير موثوق.',
-      finalEyebrow: 'ابدأ بسؤال واحد', finalTitleA: 'عندك مشروع في بالك؟', finalTitleB: 'خلّي Beno يبدأ معاك.', finalText: 'مش محتاج تسجّل حساب أو تملأ نموذج طويل. افتح المحادثة واحكي له عايز تحسب إيه.', finalCta: 'اتكلم مع Beno واحسب',
-      footerText: 'مساعد التسعير الهندسي — تقديرات أولية قابلة للمراجعة.', footerCall: 'تواصل مع مهندس', rights: 'جميع الحقوق محفوظة.', disclaimer: 'Beno لا يستبدل مراجعة المهندس أو الرسومات والمواصفات المعتمدة.'
+      nav: { home: 'الرئيسية', sectors: 'قطاعاتنا', services: 'خدماتنا', beno: 'Beno الذكي', approach: 'منهجيتنا', about: 'عنّا', contact: 'تواصل معنا' },
+      announcement: 'مظلة واحدة · تخصصات متكاملة · حلول عملية',
+      heroEyebrow: 'حلول هندسية وتكنولوجية متكاملة', heroTitleA: 'نبني الواقع،', heroTitleB: 'ونوسّع الإمكانيات.',
+      heroDesc: 'من الرسومات الهندسية إلى الأنظمة الرقمية الذكية، تجمع SKYPIEA الخبرة الهندسية والتكنولوجيا في مكان واحد لتساعدك على تحويل احتياجك إلى حل واضح وقابل للتنفيذ.',
+      ctaPrimary: 'ناقش مشروعك معنا', ctaSecondary: 'اكتشف خدماتنا', heroFoot: 'حلول مصممة لاحتياجك، وليست مجرد خدمات جاهزة.',
+      visualTag: 'حلول تحت مظلة واحدة', visualHeadline: 'الفكرة تبدأ هنا.', visualSub: 'والتنفيذ يصنع الفرق.', floatingEngineering: 'الهندسة', floatingTech: 'التكنولوجيا',
+      valueOneTitle: 'رؤية متكاملة', valueOneText: 'نفهم الصورة الكبيرة قبل تفاصيل التنفيذ.', valueTwoTitle: 'حلول عملية', valueTwoText: 'خطوات واضحة مبنية على احتياجك الحقيقي.', valueThreeTitle: 'تواصل مباشر', valueThreeText: 'نتابع معك من أول مناقشة حتى التسليم.',
+      sectorsEyebrow: 'قطاعاتنا', sectorsTitle: 'تخصصان مختلفان،', sectorsTitleB: 'رؤية واحدة.', sectorsDesc: 'نجمع بين عالم البناء وعالم التقنية داخل كيان واحد، لتجد الشريك المناسب للمشروع الذي تريد إنجازه.',
+      engineering: 'الهندسة', technology: 'التكنولوجيا', explore: 'استكشف القطاع', engineeringShort: 'من التصميم إلى التنفيذ', technologyShort: 'من الفكرة إلى الحل الرقمي',
+      engineeringDesc: 'حلول هندسية عملية تراعي متطلبات المشروع، وتدعم اتخاذ القرار والتنفيذ بجودة ووضوح.', technologyDesc: 'حلول رقمية تساعد الشركات على تحسين تجربة العملاء، وتنظيم العمل، وأتمتة المهام المتكررة.',
+      engineeringServices: [
+        { title: 'الرسومات الهندسية', desc: 'إعداد وتطوير الرسومات والمخططات وفق متطلبات المشروع.' },
+        { title: 'الإشراف الهندسي', desc: 'متابعة الأعمال لضمان الالتزام بالمخططات والمتطلبات المتفق عليها.' },
+        { title: 'تنفيذ المشروعات', desc: 'تنفيذ أعمال البناء من خلال نطاق عمل واضح وخطة منظمة.' }
+      ],
+      technologyServices: [
+        { title: 'المواقع وتطبيقات الويب', desc: 'تجارب رقمية احترافية تساعد نشاطك على الظهور والنمو.' },
+        { title: 'التطبيقات والأنظمة', desc: 'تطبيقات وأنظمة لإدارة العمليات والبيانات واحتياجات العمل.' },
+        { title: 'الذكاء الاصطناعي والأتمتة', desc: 'حلول عملية لتقليل العمل اليدوي وربط خطوات العمل ببعضها.' },
+        { title: 'Beno — مساعد التسعير الهندسي', desc: 'مساعد متخصص يساعد المهندس على تنظيم التقدير ومراجعة الكميات والأسعار الناقصة.', beno: true }
+      ],
+      serviceEyebrow: 'ماذا نقدم؟', serviceTitle: 'حلول واضحة،', serviceTitleB: 'تبدأ من احتياجك.', serviceDesc: 'اختر القطاع المناسب لمشروعك، وسنبدأ بفهم المطلوب وتحديد نطاق عمل واضح قبل اقتراح الحل.',
+      engineeringTab: 'الخدمات الهندسية', technologyTab: 'الخدمات التكنولوجية', serviceCta: 'اطلب مناقشة الخدمة',
+      benoEyebrow: 'منتج ذكي ضمن حلولنا التكنولوجية', benoTitle: 'Beno', benoTitleB: 'مساعد التسعير الهندسي من SKYPIEA.', benoDesc: 'طوّرنا Beno ليكون إحدى حلولنا التكنولوجية المتخصصة في تقدير تكاليف البناء. يساعد المهندس على تنظيم البنود، وفصل الخامات عن المصنعية، وإظهار البيانات الناقصة بوضوح — بجانب خدماتنا الهندسية والتكنولوجية الأخرى.', benoBadge: 'إحدى حلول SKYPIEA', benoPointOne: 'تنظيم بنود المقايسة حسب مراحل العمل', benoPointTwo: 'فصل التوريدات والخامات عن المصنعية', benoPointThree: 'إظهار فجوات الكميات والأسعار بدل التخمين', benoTry: 'جرّب Beno', benoOtherServices: 'استكشف باقي الخدمات', benoPreviewLabel: 'داخل تجربة Beno', benoPreviewUser: 'عايز أراجع تقدير تشطيب شقة.', benoPreviewReply: 'نبدأ بالبيانات المتاحة، ونراجع الوحدات والكميات والأسعار الناقصة قبل عرض أي إجمالي.', benoRowOne: 'تنظيم البنود', benoRowTwo: 'الخامات والمصنعية', benoRowThree: 'النواقص والافتراضات', benoPreviewCaption: 'معاينة توضيحية للتجربة — ليست نتيجة مشروع حقيقي.',
+      differenceEyebrow: 'لماذا SKYPIEA؟', differenceTitle: 'مش شغل منفصل؛', differenceTitleB: 'حل متكامل.', differenceDesc: 'نؤمن أن جودة الحل لا تعتمد على تنفيذه فقط، بل على فهم المشكلة، وضوح الخطوات، والتواصل الجيد طوال الطريق.',
+      benefitOneTitle: 'فهم قبل التنفيذ', benefitOneText: 'نبدأ بتحديد الهدف والأولويات والنتيجة المطلوبة.', benefitTwoTitle: 'توقعات واضحة', benefitTwoText: 'نوضح نطاق العمل والمخرجات والخطوات من البداية.', benefitThreeTitle: 'تفكير يجمع التخصصات', benefitThreeText: 'نربط الخبرة الهندسية بالحلول الرقمية حين تخدم المشروع.', benefitFourTitle: 'شراكة قابلة للنمو', benefitFourText: 'حلول قابلة للتطوير مع تغيّر احتياجاتك.',
+      approachEyebrow: 'منهجية العمل', approachTitle: 'خطوات بسيطة،', approachTitleB: 'منظمة وواضحة.', stepOne: 'نفهم احتياجك', stepOneText: 'نستمع لفكرة المشروع والأهداف والتحديات.', stepTwo: 'نحدد الحل', stepTwoText: 'نرتب نطاق العمل والمخرجات والخطوات المقترحة.', stepThree: 'نبدأ التنفيذ', stepThreeText: 'نعمل على الحل المتفق عليه بمتابعة وتواصل واضح.', stepFour: 'نسلّم ونطوّر', stepFourText: 'نراجع المخرجات ونحدد الخطوات التالية عند الحاجة.',
+      aboutEyebrow: 'عن SKYPIEA', aboutTitle: 'مظلة واحدة،', aboutTitleB: 'لبناء ما هو أفضل.', aboutText: 'SKYPIEA كيان يجمع الحلول الهندسية والتكنولوجية تحت رؤية واحدة. هدفنا تقديم خدمات مفهومة وعملية تساعد الأفراد والشركات على إنجاز مشروعاتهم وتنظيم أعمالهم بثقة أكبر.', aboutPointOne: 'تركيز على الهدف والنتيجة', aboutPointTwo: 'تواصل واضح من البداية', aboutPointThree: 'اختيار الحل المناسب، لا الأكثر تعقيدًا',
+      contactEyebrow: 'ابدأ من هنا', contactTitle: 'عندك مشروع في ذهنك؟', contactTitleB: 'خلّينا نتكلم.', contactDesc: 'احكِ لنا باختصار عن احتياجك، وسنحوّل التفاصيل إلى رسالة واضحة لبدء النقاش عبر واتساب.',
+      formName: 'الاسم', formNamePlaceholder: 'اكتب اسمك', formPhone: 'رقم التواصل (اختياري)', formPhonePlaceholder: 'رقم الهاتف', formSector: 'الخدمة المطلوبة', selectService: 'اختر القطاع', formMessage: 'نبذة عن المشروع', formMessagePlaceholder: 'ما الذي تريد تنفيذه أو تطويره؟', sendWhatsApp: 'إرسال الطلب عبر واتساب', formHint: 'لن يتم حفظ البيانات على الموقع؛ ستُفتح رسالة واتساب بالمعلومات التي أدخلتها.',
+      callUs: 'اتصل بنا', whatsappUs: 'راسلنا على واتساب', contactLabel: 'تواصل مباشر', finalLine: 'هندسة تبني الهياكل. وتكنولوجيا تفتح الإمكانيات.', footerDesc: 'حلول هندسية وتكنولوجية متكاملة تحت مظلة واحدة.', quickLinks: 'روابط سريعة', sectorsFooter: 'القطاعات', rights: 'جميع الحقوق محفوظة.', whatsappMessage: 'مرحبًا SKYPIEA، أرغب في مناقشة مشروع أو خدمة.'
     },
     en: {
-      navFeatures: 'What Beno does', navExample: 'Example estimate', navFaq: 'FAQ', navCta: 'Estimate with Beno', language: 'العربية',
-      eyebrow: 'Engineering cost-estimation assistant by SKYPIEA', titleA: 'Before construction starts,', titleB: 'let Beno estimate with you.',
-      desc: 'Describe your project in your own words. Beno helps shape a preliminary estimate, organize work items, separate materials from labor, and flag missing inputs instead of guessing.',
-      ctaPrimary: 'Estimate with Beno', ctaSecondary: 'See how Beno works', note: 'Start with what you know — you do not need every detail ready.',
-      visualCaption: 'Illustrative example — not actual prices', online: 'Ready when you are', sampleUser: 'I want to estimate a new building.', sampleBeno: 'Let’s start with available data and identify gaps before showing a misleading total.', estimatePreview: 'What your estimate review looks like', stage1: 'Excavation & backfill', stage2: 'Reinforced concrete', stage3: 'Masonry & plaster', stage4: 'Finishes', statusData: 'Based on your project data', previewCta: 'Start your estimate',
-      strip1: 'Clear work packages', strip2: 'Materials separated from labor', strip3: 'Missing inputs are visible', strip4: 'Review and edit quantities',
-      featureEyebrow: 'What makes Beno useful?', featureTitleA: 'More than a chat,', featureTitleB: 'a practical estimating assistant.', featureDesc: 'Beno helps turn your project description into a reviewable estimate — not just a number without context.',
-      f1Title: 'Understand natural language', f1Text: 'Start with a question the way you would explain it to an engineer.',
-      f2Title: 'Organize the bill of quantities', f2Text: 'Group small resources under their work package while keeping detail available for review.',
-      f3Title: 'Separate materials and labor', f3Text: 'See supply costs and labor costs independently instead of mixing them together.',
-      f4Title: 'Expose missing data', f4Text: 'If an essential price or quantity is missing, Beno says so instead of inventing a confident total.',
-      featureCta: 'Try this with Beno',
-      tryEyebrow: 'Start with your question', tryTitleA: 'Not sure where to begin?', tryTitleB: 'Choose a starting point.', tryDesc: 'Each choice opens the same Beno conversation with a useful starter prompt — no sign-up or separate workflow.',
-      try1Tag: 'Finishing', try1Title: 'Estimate an apartment finish', try1Text: 'Start with area, finish level, and the details you know.',
-      try2Tag: 'New building', try2Title: 'Estimate a building', try2Text: 'Set floor area, number of floors, and project scope.',
-      try3Tag: 'Price lookup', try3Title: 'Ask about a material or item', try3Text: 'Check the item, unit, recorded source, and price date.',
-      tryAction: 'Start with Beno',
-      howEyebrow: 'Simple by design', howTitleA: 'You explain.', howTitleB: 'Beno organizes the estimate.',
-      how1Title: 'Tell Beno what you know', how1Text: 'Project type, area, or a question about a work item — any useful starting point.',
-      how2Title: 'Beno asks what matters', how2Text: 'When an important input is missing, Beno asks instead of making an unsupported assumption.',
-      how3Title: 'Review the result', how3Text: 'See main work items, open material and quantity details, and edit what needs review.',
-      transparencyEyebrow: 'Clear estimates, honest limits', transparencyTitleA: 'A useful number', transparencyTitleB: 'comes with its basis.',
-      transparencyText: 'Beno provides a preliminary estimate based on available calculation logic and catalog data. It is not an approved execution BOQ; quantities and local prices still need project-specific engineering review.',
-      trans1: 'Units are explicit', trans2: 'Source and date shown when available', trans3: 'Quantities can be reviewed', trans4: 'Gaps shown instead of guessed',
-      transparencyCta: 'Start a preliminary estimate',
-      faqEyebrow: 'FAQ', faqTitleA: 'Before you start with', faqTitleB: 'Beno',
-      q1: 'Do I need every project detail ready?', a1: 'No. Start with what you have. Beno will ask for important inputs when needed and explain when the data is insufficient.',
-      q2: 'Is the amount a final construction price?', a2: 'No. It is a preliminary estimate. Final approval requires checking drawings, quantities, specifications, and local prices with an engineer.',
-      q3: 'Can I change quantities?', a3: 'Yes. You can review and edit quantities in the estimate details and recalculate before relying on the result.',
-      q4: 'What if an item has no price?', a4: 'Beno flags the price gap instead of substituting an unrelated item or hiding it in an unsupported total.',
-      finalEyebrow: 'Start with one question', finalTitleA: 'Have a project in mind?', finalTitleB: 'Let Beno start with you.', finalText: 'No account or long form. Open the conversation and describe what you need to estimate.', finalCta: 'Chat with Beno and estimate',
-      footerText: 'Engineering cost-estimation assistant — preliminary estimates for review.', footerCall: 'Talk to an engineer', rights: 'All rights reserved.', disclaimer: 'Beno does not replace professional engineering review or approved drawings and specifications.'
+      nav: { home: 'Home', sectors: 'Our sectors', services: 'Services', beno: 'Beno AI', approach: 'Our approach', about: 'About', contact: 'Contact' },
+      announcement: 'One umbrella · Integrated disciplines · Practical solutions',
+      heroEyebrow: 'Integrated engineering & technology solutions', heroTitleA: 'We build what matters,', heroTitleB: 'and unlock what’s next.',
+      heroDesc: 'From engineering drawings to intelligent digital systems, SKYPIEA brings engineering expertise and technology together to turn your needs into clear, actionable solutions.',
+      ctaPrimary: 'Discuss your project', ctaSecondary: 'Explore services', heroFoot: 'Solutions shaped around your needs—not off-the-shelf services.',
+      visualTag: 'Integrated under one umbrella', visualHeadline: 'Every idea starts somewhere.', visualSub: 'Execution makes the difference.', floatingEngineering: 'Engineering', floatingTech: 'Technology',
+      valueOneTitle: 'A joined-up view', valueOneText: 'We see the bigger picture before the details.', valueTwoTitle: 'Practical solutions', valueTwoText: 'Clear steps built around your real needs.', valueThreeTitle: 'Direct communication', valueThreeText: 'From the first conversation to delivery.',
+      sectorsEyebrow: 'Our sectors', sectorsTitle: 'Two disciplines,', sectorsTitleB: 'one vision.', sectorsDesc: 'We connect the world of construction with the world of technology in one company, giving you the right partner for the work ahead.',
+      engineering: 'Engineering', technology: 'Technology', explore: 'Explore sector', engineeringShort: 'From design to delivery', technologyShort: 'From idea to digital solution',
+      engineeringDesc: 'Practical engineering services shaped around project requirements, supporting clear decisions and quality execution.', technologyDesc: 'Digital solutions that help businesses improve customer experiences, organize operations, and automate repetitive work.',
+      engineeringServices: [
+        { title: 'Engineering drawings', desc: 'Preparation and development of drawings and plans around project requirements.' },
+        { title: 'Engineering supervision', desc: 'Follow-up of work against agreed drawings, requirements, and standards.' },
+        { title: 'Project execution', desc: 'Construction delivery supported by a clear scope and organized plan.' }
+      ],
+      technologyServices: [
+        { title: 'Websites & web apps', desc: 'Professional digital experiences that help your business show up and grow.' },
+        { title: 'Apps & business systems', desc: 'Applications and systems for operations, data, and day-to-day business needs.' },
+        { title: 'AI & automation', desc: 'Practical solutions to reduce manual work and connect business processes.' },
+        { title: 'Beno — engineering cost assistant', desc: 'A specialized assistant to organize preliminary estimates and review missing quantities and prices.', beno: true }
+      ],
+      serviceEyebrow: 'What we do', serviceTitle: 'Clear solutions,', serviceTitleB: 'starting with your needs.', serviceDesc: 'Choose the sector that fits your project. We begin by understanding the goal and defining a clear scope before recommending a solution.',
+      engineeringTab: 'Engineering services', technologyTab: 'Technology services', serviceCta: 'Discuss this service',
+      benoEyebrow: 'A focused product within our technology solutions', benoTitle: 'Beno', benoTitleB: 'SKYPIEA’s engineering cost assistant.', benoDesc: 'Beno is one of our specialized technology solutions for construction cost estimation. It helps engineers organize work items, separate materials from labor, and identify missing inputs clearly — alongside our wider engineering and technology services.', benoBadge: 'A SKYPIEA solution', benoPointOne: 'Organizes BOQ items by work stage', benoPointTwo: 'Separates material supply from labor', benoPointThree: 'Flags missing quantities and prices instead of guessing', benoTry: 'Try Beno', benoOtherServices: 'Explore our other services', benoPreviewLabel: 'Inside Beno', benoPreviewUser: 'I need to review an apartment finishing estimate.', benoPreviewReply: 'We’ll start with available details and review units, quantities, and missing prices before presenting a total.', benoRowOne: 'Work-item organization', benoRowTwo: 'Materials and labor', benoRowThree: 'Gaps and assumptions', benoPreviewCaption: 'Illustrative preview — not a real project result.',
+      differenceEyebrow: 'Why SKYPIEA', differenceTitle: 'Not isolated tasks;', differenceTitleB: 'a connected solution.', differenceDesc: 'Good solutions depend on more than delivery. They start with understanding the challenge, defining the steps, and communicating clearly throughout.',
+      benefitOneTitle: 'Understand first', benefitOneText: 'We identify the goal, priorities, and desired outcome.', benefitTwoTitle: 'Clear expectations', benefitTwoText: 'Scope, deliverables, and steps are discussed upfront.', benefitThreeTitle: 'Cross-disciplinary thinking', benefitThreeText: 'We connect engineering expertise with digital solutions where useful.', benefitFourTitle: 'Room to grow', benefitFourText: 'Solutions can evolve as your needs change.',
+      approachEyebrow: 'How we work', approachTitle: 'Simple steps,', approachTitleB: 'clear throughout.', stepOne: 'Understand', stepOneText: 'We listen to your idea, goals, and challenges.', stepTwo: 'Define', stepTwoText: 'We outline the scope, deliverables, and possible next steps.', stepThree: 'Build', stepThreeText: 'We work on the agreed solution with clear follow-up.', stepFour: 'Deliver & improve', stepFourText: 'We review the outcome and identify next steps if needed.',
+      aboutEyebrow: 'About SKYPIEA', aboutTitle: 'One umbrella,', aboutTitleB: 'built for what’s next.', aboutText: 'SKYPIEA brings engineering and technology solutions together under one vision. We aim to provide practical, understandable services that help individuals and businesses deliver projects and run their work with greater confidence.', aboutPointOne: 'Focus on outcomes', aboutPointTwo: 'Clear communication from day one', aboutPointThree: 'The right solution, not the most complex one',
+      contactEyebrow: 'Start here', contactTitle: 'Have a project in mind?', contactTitleB: 'Let’s talk.', contactDesc: 'Tell us briefly what you need. We’ll turn your details into a clear WhatsApp message to start the conversation.',
+      formName: 'Name', formNamePlaceholder: 'Your name', formPhone: 'Contact number (optional)', formPhonePlaceholder: 'Phone number', formSector: 'Service needed', selectService: 'Choose a sector', formMessage: 'Project overview', formMessagePlaceholder: 'What would you like to build or improve?', sendWhatsApp: 'Send request via WhatsApp', formHint: 'Your details are not saved on this website. WhatsApp opens with your message ready to send.',
+      callUs: 'Call us', whatsappUs: 'Message us on WhatsApp', contactLabel: 'Direct contact', finalLine: 'Engineering builds structures. Technology builds possibilities.', footerDesc: 'Integrated engineering and technology solutions under one umbrella.', quickLinks: 'Quick links', sectorsFooter: 'Sectors', rights: 'All rights reserved.', whatsappMessage: 'Hello SKYPIEA, I would like to discuss a project or service.'
     }
   };
+
+  const iconPaths = {
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+    arrow: '<path d="M7 17 17 7M7 7h10v10"/>',
+    arrowLeft: '<path d="M19 12H5m7-7-7 7 7 7"/>',
+    arrowDown: '<path d="M12 4v16m-7-7 7 7 7-7"/>',
+    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+    close: '<path d="m18 6-12 12M6 6l12 12"/>',
+    check: '<path d="m5 12 4 4L19 6"/>',
+    layers: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>',
+    zap: '<path d="m13 2-3 8h7l-6 12 2-9H6l7-11Z"/>',
+    message: '<path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5Z"/>',
+    draft: '<path d="m15 5 4 4M4 20l4-.8L19 8a2.1 2.1 0 0 0-3-3L5 16l-1 4Z"/><path d="M3 3h7M3 3v7"/>',
+    shield: '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+    building: '<path d="M4 21V5l8-3v19M12 8h8v13M2 21h20M7 8h2m-2 4h2m-2 4h2m7-4h2m-2 4h2"/>',
+    cpu: '<rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"/>',
+    globe2: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>',
+    device: '<rect x="3" y="4" width="13" height="15" rx="2"/><path d="M7 8h5M7 12h5M8 19v2h13V8h-5"/>',
+    bot: '<rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 3v5M8 13h.01M16 13h.01M9 17h6M2 13v3m20-3v3"/>',
+    workflow: '<rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><path d="M9 6h6M18 9v6M6 9v9h9"/>',
+    monitor: '<rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8m-4-5v5"/>',
+    phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 8.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>',
+    spark: '<path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    shieldcheck: '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/>',
+  };
+  function icon(name, size = 20, extra = '') {
+    const body = iconPaths[name] || iconPaths.spark;
+    return `<svg class="${extra}" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+  }
+  function brandMark(light = false, compact = false) {
+    const gradientId = `mark-gradient-${++brandGradientCount}`;
+    return `<span class="brand-lockup ${compact ? 'brand-lockup--compact' : ''}">
+      <svg class="brand-symbol" viewBox="0 0 150 110" aria-hidden="true">
+        <defs><linearGradient id="${gradientId}" x1="8" y1="8" x2="137" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${light ? '#7abaff' : '#0b4fbd'}"/><stop offset=".58" stop-color="${light ? '#ffffff' : '#2563eb'}"/><stop offset="1" stop-color="${light ? '#cce5ff' : '#60a5fa'}"/></linearGradient></defs>
+        <path d="M20 28C24 22 31 18 42 14L105 1C115 -1 124 3 132 10L145 22L101 28L53 45C41 49 29 49 22 44C16 40 16 33 20 28Z" fill="url(#${gradientId})"/>
+        <path d="M22 48L63 33C74 29 85 32 94 39L126 62C138 71 135 78 122 84L64 108C53 112 43 109 33 102L5 83C23 88 38 86 54 79L86 65C92 62 92 58 85 55L57 43L36 51Z" fill="url(#${gradientId})"/>
+      </svg><span class="brand-word-area"><span class="brand-word ${light ? 'brand-word--light' : ''}">SKYPIEA</span>${compact ? '' : `<span class="brand-tagline ${light ? 'brand-tagline--light' : ''}">ENGINEERING &amp; TECHNOLOGY SOLUTIONS</span>`}</span>
+    </span>`;
+  }
+  function heading(eyebrow, title, titleB = '', desc = '', align = 'right') {
+    return `<div class="section-heading section-heading--${align}"><span class="eyebrow"><span></span>${eyebrow}</span><h2>${title} ${titleB ? `<span>${titleB}</span>` : ''}</h2>${desc ? `<p>${desc}</p>` : ''}</div>`;
+  }
+  function whatsappLink(message = copy[language].whatsappMessage) {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+  const nav = (t) => [
+    { id: 'home', label: t.nav.home }, { id: 'sectors', label: t.nav.sectors }, { id: 'services', label: t.nav.services },
+    { id: 'beno', label: t.nav.beno }, { id: 'approach', label: t.nav.approach }, { id: 'about', label: t.nav.about }
+  ];
+
+  function renderServiceCards(t) {
+    const items = activeSector === 'engineering' ? t.engineeringServices : t.technologyServices;
+    const icons = activeSector === 'engineering' ? ['draft', 'shield', 'building'] : ['globe2', 'device', 'bot', 'spark'];
+    return items.map((service, index) => {
+      const action = service.beno
+        ? `<button class="service-link" data-beno-open="service-card" data-beno-prompt="${language === 'ar' ? 'عايز أجرّب Beno في تقدير تكلفة مشروع بناء' : 'I want to try Beno for a construction cost estimate'}">${t.benoTry}${icon('arrowLeft', 16)}</button>`
+        : `<button class="service-link" data-discuss-sector="${activeSector}">${t.serviceCta}${icon('arrowLeft', 16)}</button>`;
+      return `<article class="service-card ${service.beno ? 'service-card--beno' : ''}"><div class="service-card-heading"><span class="service-icon">${icon(icons[index] || 'spark', 24)}</span><span class="service-number">0${index + 1}</span></div><h3>${service.title}</h3><p>${service.desc}</p>${action}</article>`;
+    }).join('');
+  }
 
   function render() {
     const t = copy[language];
     const isAr = language === 'ar';
     document.documentElement.lang = language;
     document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-    document.title = isAr ? 'Beno | مساعد التسعير الهندسي من SKYPIEA' : 'Beno | Engineering Cost Estimation by SKYPIEA';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', isAr
-      ? 'احكي عن مشروعك مع Beno، مساعد التسعير الهندسي من SKYPIEA. تقدير مبدئي منظم يفصل الخامات عن المصنعية ويظهر نواقص الأسعار والكميات.'
-      : 'Talk to Beno, SKYPIEA’s engineering cost-estimation assistant. Get an organized preliminary estimate with materials, labor, and missing inputs clearly separated.');
-
+    document.title = isAr ? 'SKYPIEA | حلول هندسية وتكنولوجية متكاملة' : 'SKYPIEA | Engineering & Technology Solutions';
+    const navLinks = nav(t);
     document.getElementById('root').innerHTML = `
-      <div class="site-shell ${isAr ? 'is-arabic' : 'is-english'}">
-        <header class="site-header" id="site-header">
-          <div class="container header-inner">
-            <a class="brand-link" href="#home" aria-label="SKYPIEA home">
-              <span class="brand-symbol">S</span>
-              <span class="brand-main"><strong>SKYPIEA</strong><small>ENGINEERING INTELLIGENCE</small></span>
-              <span class="brand-divider"></span>
-              <span class="brand-product"><strong>Beno</strong><small>${isAr ? 'مساعد التسعير' : 'COST ESTIMATOR'}</small></span>
-            </a>
-            <nav class="main-nav" aria-label="${isAr ? 'التنقل الرئيسي' : 'Main navigation'}">
-              <a href="#features">${t.navFeatures}</a><a href="#example">${t.navExample}</a><a href="#faq">${t.navFaq}</a>
-            </nav>
-            <div class="header-actions"><button class="language-toggle" data-language>${t.language}</button><button class="button button--small button--primary" data-beno-open="header">${t.navCta}${icon('arrow', 16)}</button><button class="mobile-menu-button" data-menu aria-label="Menu">${icon('menu', 22)}</button></div>
-          </div>
-          <nav class="mobile-nav" id="mobile-nav"><a href="#features">${t.navFeatures}</a><a href="#example">${t.navExample}</a><a href="#faq">${t.navFaq}</a><button data-beno-open="mobile-nav">${t.navCta}${icon('arrow', 16)}</button></nav>
-        </header>
+    <div class="site-shell ${isAr ? 'is-arabic' : 'is-english'}">
+      <header class="site-header" id="site-header"><div class="container header-inner">
+        <a class="brand-link" href="#home" data-scroll="home" aria-label="SKYPIEA home">${brandMark(false, true)}<span class="brand-small-label">ENGINEERING <i></i> TECHNOLOGY</span></a>
+        <nav class="main-nav ${mobileMenuOpen ? 'main-nav--open' : ''}" aria-label="${isAr ? 'التنقل الرئيسي' : 'Main navigation'}">${navLinks.map(item => `<button data-scroll="${item.id}">${item.label}</button>`).join('')}<button class="nav-contact-mobile" data-scroll="contact">${t.nav.contact}</button></nav>
+        <div class="header-actions"><button class="language-toggle" data-language aria-label="${isAr ? 'Switch to English' : 'التبديل إلى العربية'}">${icon('globe', 16)}<span>${isAr ? 'EN' : 'عربي'}</span></button><button class="button button--small button--nav" data-scroll="contact">${t.nav.contact}${icon('arrow', 16)}</button><button class="mobile-menu-button" data-menu aria-label="${mobileMenuOpen ? 'Close menu' : 'Open menu'}">${icon(mobileMenuOpen ? 'close' : 'menu', 22)}</button></div>
+      </div></header>
+      <main>
+        <section id="home" class="hero-section section-anchor"><div class="hero-glow hero-glow--one"></div><div class="hero-glow hero-glow--two"></div><div class="container hero-grid">
+          <div class="hero-copy"><div class="hero-kicker"><span class="kicker-dot"></span>${t.heroEyebrow}</div><h1>${t.heroTitleA}<br><span>${t.heroTitleB}</span></h1><p class="hero-description">${t.heroDesc}</p><div class="hero-actions"><button class="button button--primary" data-scroll="contact">${t.ctaPrimary}${icon('arrowLeft', 18)}</button><button class="button button--secondary" data-scroll="services">${t.ctaSecondary}${icon('arrowDown', 17)}</button></div><div class="hero-trust-line"><span class="hero-check">${icon('check', 14)}</span>${t.heroFoot}</div><div class="hero-micro-stats"><div><strong>02</strong><span>${t.sectorsEyebrow}</span></div><span class="micro-divider"></span><div><strong>01</strong><span>${isAr ? 'رؤية موحّدة' : 'Unified vision'}</span></div><span class="micro-divider"></span><div><strong>∞</strong><span>${isAr ? 'إمكانيات للنمو' : 'Room to grow'}</span></div></div></div>
+          <div class="hero-art-wrap" aria-label="SKYPIEA engineering and technology visual"><div class="hero-art-frame"><img src="./assets/architecture.svg" class="architecture-illustration" alt="Abstract architectural facade representing engineering and technology"><div class="art-overlay"></div><div class="art-topline"><span class="art-status"><span></span>${t.visualTag}</span><span class="art-cross">✳</span></div><div class="art-message"><span class="art-label">SKYPIEA / 01</span><h2>${t.visualHeadline}<br><span>${t.visualSub}</span></h2><div class="art-line"></div></div><div class="art-bottom-meta">${brandMark(true, true)}<span>${isAr ? 'حلول متكاملة' : 'Integrated solutions'}</span></div></div><div class="floating-card floating-card--engineering"><span class="floating-icon">${icon('draft', 20)}</span><span><b>${t.floatingEngineering}</b><small>${isAr ? 'دقة · تخطيط · تنفيذ' : 'Precision · Planning · Delivery'}</small></span><span class="floating-arrow">${icon('arrow', 16)}</span></div><div class="floating-card floating-card--technology"><span class="floating-icon floating-icon--blue">${icon('cpu', 20)}</span><span><b>${t.floatingTech}</b><small>${isAr ? 'أنظمة · حلول · أتمتة' : 'Systems · Solutions · Automation'}</small></span><span class="floating-arrow">${icon('arrow', 16)}</span></div><div class="hero-art-orbit"></div></div>
+        </div><div class="container hero-values"><div class="value-item"><span class="value-icon">${icon('layers', 20)}</span><div><h3>${t.valueOneTitle}</h3><p>${t.valueOneText}</p></div></div><div class="value-item"><span class="value-icon">${icon('zap', 20)}</span><div><h3>${t.valueTwoTitle}</h3><p>${t.valueTwoText}</p></div></div><div class="value-item"><span class="value-icon">${icon('message', 20)}</span><div><h3>${t.valueThreeTitle}</h3><p>${t.valueThreeText}</p></div></div></div></section>
 
-        <main>
-          <section id="home" class="hero-section section-anchor">
-            <div class="hero-orb hero-orb--one"></div><div class="hero-orb hero-orb--two"></div>
-            <div class="container hero-grid">
-              <div class="hero-copy">
-                <div class="hero-kicker"><span class="pulse-dot"></span>${t.eyebrow}</div>
-                <h1>${t.titleA}<br><span>${t.titleB}</span></h1>
-                <p class="hero-description">${t.desc}</p>
-                <div class="hero-actions"><button class="button button--primary button--large" data-beno-open="hero">${t.ctaPrimary}${icon('arrow', 19)}</button><a class="button button--ghost button--large" href="#how-it-works">${t.ctaSecondary}${icon('arrow', 17)}</a></div>
-                <div class="hero-note">${icon('check', 15)}<span>${t.note}</span></div>
-                <div class="hero-metrics"><div><strong>${icon('layers', 18)}</strong><span>${t.strip1}</span></div><div><strong>${icon('ruler', 18)}</strong><span>${t.strip2}</span></div><div><strong>${icon('shield', 18)}</strong><span>${t.strip3}</span></div></div>
-              </div>
-              <div class="hero-visual" aria-label="${t.visualCaption}">
-                <div class="visual-glow"></div>
-                <div class="estimate-window">
-                  <div class="estimate-window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>${t.visualCaption}</span><span class="sample-badge">DEMO</span></div>
-                  <div class="chat-preview-head"><span class="beno-avatar">B</span><span class="chat-preview-name"><strong>Beno</strong><small><i></i>${t.online}</small></span><span class="chat-head-icon">${icon('chat', 18)}</span></div>
-                  <div class="chat-preview-body"><div class="sample-message sample-message--user">${t.sampleUser}</div><div class="sample-message sample-message--beno"><span class="mini-b-avatar">B</span><span>${t.sampleBeno}</span></div></div>
-                  <div class="estimate-preview">
-                    <div class="estimate-preview-title"><span>${icon('calculator', 17)}${t.estimatePreview}</span><span class="preview-label">${isAr ? 'مثال' : 'SAMPLE'}</span></div>
-                    ${[['stage1','01'],['stage2','02'],['stage3','03'],['stage4','04']].map(([key,num]) => `<div class="preview-row"><span class="preview-number">${num}</span><strong>${t[key]}</strong><small>${t.statusData}</small><span class="preview-check">${icon('arrow', 14)}</span></div>`).join('')}
-                    <button class="preview-cta" data-beno-open="preview">${t.previewCta}${icon('arrow', 16)}</button>
-                  </div>
-                </div>
-                <div class="floating-note floating-note--top"><span class="floating-note-icon">${icon('check', 17)}</span><span><strong>${isAr ? 'منظّم' : 'Organized'}</strong><small>${isAr ? 'بند رئيسي لكل شغلانة' : 'One work package at a time'}</small></span></div>
-                <div class="floating-note floating-note--bottom"><span class="floating-note-icon floating-note-icon--gold">${icon('shield', 17)}</span><span><strong>${isAr ? 'واضح' : 'Transparent'}</strong><small>${isAr ? 'النواقص مش مخفية' : 'Gaps are not hidden'}</small></span></div>
-              </div>
-            </div>
-          </section>
+        <section id="sectors" class="sectors-section section-padding section-anchor"><div class="container">${heading(t.sectorsEyebrow, t.sectorsTitle, t.sectorsTitleB, t.sectorsDesc)}<div class="sector-cards">
+          <article class="sector-card sector-card--engineering"><div class="sector-card-top"><span class="sector-index">01 / ENGINEERING</span><span class="sector-icon-large">${icon('draft', 33)}</span></div><h3>${t.engineering}</h3><p class="sector-card-subtitle">${t.engineeringShort}</p><p class="sector-card-description">${t.engineeringDesc}</p><div class="sector-tags"><span>${isAr ? 'رسومات' : 'Drawings'}</span><span>${isAr ? 'إشراف' : 'Supervision'}</span><span>${isAr ? 'تنفيذ' : 'Execution'}</span></div><button class="text-link" data-pick-sector="engineering">${t.explore}<span>${icon('arrow', 18)}</span></button><div class="sector-card-graphic engineering-graphic"><div class="plan-lines"></div><div class="building-outline"><i></i><i></i><i></i><i></i><b></b></div><span class="graphic-dot graphic-dot--a"></span><span class="graphic-dot graphic-dot--b"></span></div></article>
+          <article class="sector-card sector-card--technology"><div class="sector-card-top"><span class="sector-index">02 / TECHNOLOGY</span><span class="sector-icon-large">${icon('cpu', 34)}</span></div><h3>${t.technology}</h3><p class="sector-card-subtitle">${t.technologyShort}</p><p class="sector-card-description">${t.technologyDesc}</p><div class="sector-tags"><span>${isAr ? 'ويب وتطبيقات' : 'Web & apps'}</span><span>${isAr ? 'أنظمة أعمال' : 'Business systems'}</span><span>${isAr ? 'ذكاء اصطناعي' : 'AI'}</span></div><button class="text-link" data-pick-sector="technology">${t.explore}<span>${icon('arrow', 18)}</span></button><div class="sector-card-graphic technology-graphic"><div class="tech-orbit tech-orbit--one"></div><div class="tech-orbit tech-orbit--two"></div><div class="tech-center">${icon('workflow', 42)}</div><span class="tech-node tech-node--one">${icon('monitor', 18)}</span><span class="tech-node tech-node--two">${icon('bot', 18)}</span><span class="tech-node tech-node--three">${icon('cpu', 18)}</span></div></article>
+        </div><div class="sectors-bottom-note"><span>${icon('spark', 17)}</span><p>${isAr ? 'قيمة SKYPIEA الحقيقية في ربط التخصص المناسب بالاحتياج الصحيح.' : 'SKYPIEA connects the right discipline to the need that matters.'}</p></div></div></section>
 
-          <section class="promise-strip"><div class="container promise-grid"><div>${icon('check', 17)}<span>${t.strip1}</span></div><div>${icon('check', 17)}<span>${t.strip2}</span></div><div>${icon('check', 17)}<span>${t.strip3}</span></div><div>${icon('check', 17)}<span>${t.strip4}</span></div></div></section>
+        <section id="services" class="services-section section-padding section-anchor"><div class="container"><div class="services-heading-row">${heading(t.serviceEyebrow, t.serviceTitle, t.serviceTitleB, t.serviceDesc)}<div class="service-tabs" role="tablist" aria-label="${isAr ? 'اختيار القطاع' : 'Choose a sector'}"><button role="tab" aria-selected="${activeSector === 'engineering'}" class="${activeSector === 'engineering' ? 'active' : ''}" data-sector-tab="engineering">${icon('draft', 17)}${t.engineeringTab}</button><button role="tab" aria-selected="${activeSector === 'technology'}" class="${activeSector === 'technology' ? 'active' : ''}" data-sector-tab="technology">${icon('cpu', 17)}${t.technologyTab}</button></div></div><div class="service-grid" id="service-grid">${renderServiceCards(t)}</div><div class="services-bottom"><span class="bottom-line"></span><span>${isAr ? 'هل احتياجك يجمع القطاعين؟' : 'Does your project need both sectors?'}</span><button data-scroll="contact">${isAr ? 'احكِ لنا عن فكرتك' : 'Tell us about your idea'}${icon('arrowLeft', 16)}</button></div></div></section>
 
-          <section id="features" class="features-section section-padding section-anchor"><div class="container"><div class="section-heading"><span class="eyebrow">${t.featureEyebrow}</span><h2>${t.featureTitleA}<span>${t.featureTitleB}</span></h2><p>${t.featureDesc}</p></div>
-            <div class="feature-grid">
-              ${[{n:'01',i:'chat',title:t.f1Title,text:t.f1Text},{n:'02',i:'layers',title:t.f2Title,text:t.f2Text},{n:'03',i:'calculator',title:t.f3Title,text:t.f3Text},{n:'04',i:'shield',title:t.f4Title,text:t.f4Text}].map(item => `<article class="feature-card"><div class="feature-card-top"><span class="feature-icon">${icon(item.i,25)}</span><span class="feature-number">${item.n}</span></div><h3>${item.title}</h3><p>${item.text}</p><button class="inline-cta" data-beno-open="feature-${item.n}">${t.featureCta}${icon('arrow',15)}</button></article>`).join('')}
-            </div>
-          </div></section>
+        <section id="beno" class="beno-feature-section section-padding section-anchor"><div class="container beno-feature-grid">
+          <div class="beno-feature-copy"><span class="beno-feature-kicker"><span></span>${t.benoEyebrow}</span><span class="beno-product-badge">${icon('spark', 15)} ${t.benoBadge}</span><h2>${t.benoTitle}<br><span>${t.benoTitleB}</span></h2><p>${t.benoDesc}</p><ul class="beno-feature-list"><li>${icon('check', 17)}${t.benoPointOne}</li><li>${icon('check', 17)}${t.benoPointTwo}</li><li>${icon('check', 17)}${t.benoPointThree}</li></ul><div class="beno-feature-actions"><button class="button button--primary" data-beno-open="company-feature" data-beno-prompt="${language === 'ar' ? 'عايز أعرف إزاي Beno يقدر يساعدني في تقدير مشروع البناء' : 'I want to see how Beno can help estimate my construction project'}">${t.benoTry}${icon('arrowLeft', 18)}</button><button class="button button--secondary" data-scroll="services">${t.benoOtherServices}${icon('arrowDown', 17)}</button></div><small class="beno-feature-footnote">${t.disclaimer || (isAr ? 'التقدير مبدئي ويحتاج مراجعة هندسية.' : 'Estimates are preliminary and require engineering review.')}</small></div>
+          <div class="beno-feature-visual" aria-label="${t.benoPreviewCaption}"><div class="beno-demo-window"><div class="beno-demo-top"><span class="beno-demo-mark">B</span><span><strong>Beno</strong><small>${t.benoPreviewLabel}</small></span><i>${icon('spark', 16)}</i></div><div class="beno-demo-chat"><div class="beno-demo-message beno-demo-message--user">${t.benoPreviewUser}</div><div class="beno-demo-message beno-demo-message--assistant"><span class="beno-demo-avatar">B</span><p>${t.benoPreviewReply}</p></div></div><div class="beno-demo-checklist"><div><span>${icon('layers', 16)}</span><strong>${t.benoRowOne}</strong><i>${icon('check', 14)}</i></div><div><span>${icon('building', 16)}</span><strong>${t.benoRowTwo}</strong><i>${icon('check', 14)}</i></div><div><span>${icon('shieldcheck', 16)}</span><strong>${t.benoRowThree}</strong><i>${icon('check', 14)}</i></div></div><div class="beno-demo-caption">${icon('info', 14)}${t.benoPreviewCaption}</div></div><span class="beno-feature-orbit beno-feature-orbit--one"></span><span class="beno-feature-orbit beno-feature-orbit--two"></span></div>
+        </div></section>
 
-          <section id="example" class="try-section section-padding section-anchor"><div class="container"><div class="section-heading section-heading--center"><span class="eyebrow">${t.tryEyebrow}</span><h2>${t.tryTitleA}<span>${t.tryTitleB}</span></h2><p>${t.tryDesc}</p></div>
-            <div class="starter-grid">
-              <button class="starter-card starter-card--blue" data-beno-open="prompt-apartment" data-prompt="${isAr ? 'عايز أحسب تكلفة تشطيب شقة' : 'I want to estimate apartment finishing cost'}"><span class="starter-tag">${t.try1Tag}</span><span class="starter-icon">${icon('cube',27)}</span><strong>${t.try1Title}</strong><p>${t.try1Text}</p><span class="starter-action">${t.tryAction}${icon('arrow',16)}</span></button>
-              <button class="starter-card starter-card--dark" data-beno-open="prompt-building" data-prompt="${isAr ? 'عايز أقدّر تكلفة عمارة جديدة' : 'I want to estimate a new building'}"><span class="starter-tag">${t.try2Tag}</span><span class="starter-icon">${icon('layers',27)}</span><strong>${t.try2Title}</strong><p>${t.try2Text}</p><span class="starter-action">${t.tryAction}${icon('arrow',16)}</span></button>
-              <button class="starter-card starter-card--light" data-beno-open="prompt-price" data-prompt="${isAr ? 'عايز أعرف سعر خامة أو بند في البناء' : 'I want to look up a construction material or item price'}"><span class="starter-tag">${t.try3Tag}</span><span class="starter-icon">${icon('calculator',27)}</span><strong>${t.try3Title}</strong><p>${t.try3Text}</p><span class="starter-action">${t.tryAction}${icon('arrow',16)}</span></button>
-            </div>
-          </div></section>
+        <section class="difference-section section-padding"><div class="container difference-grid"><div class="difference-copy">${heading(t.differenceEyebrow, t.differenceTitle, t.differenceTitleB, t.differenceDesc)}<button class="button button--primary" data-scroll="contact">${t.ctaPrimary}${icon('arrowLeft', 18)}</button></div><div class="benefits-grid">
+          ${[{ n: '01', i: 'shield', h: t.benefitOneTitle, p: t.benefitOneText }, { n: '02', i: 'check', h: t.benefitTwoTitle, p: t.benefitTwoText }, { n: '03', i: 'workflow', h: t.benefitThreeTitle, p: t.benefitThreeText }, { n: '04', i: 'layers', h: t.benefitFourTitle, p: t.benefitFourText }].map(b => `<div class="benefit-item"><span class="benefit-icon">${icon(b.i, 21)}</span><div><span class="benefit-index">${b.n}</span><h3>${b.h}</h3><p>${b.p}</p></div></div>`).join('')}
+        </div></div></section>
 
-          <section id="how-it-works" class="how-section section-padding section-anchor"><div class="container"><div class="how-intro"><div><span class="eyebrow">${t.howEyebrow}</span><h2>${t.howTitleA}<br><span>${t.howTitleB}</span></h2></div><button class="button button--primary" data-beno-open="how">${t.ctaPrimary}${icon('arrow',17)}</button></div>
-            <div class="how-grid">${[{n:'01',i:'message',title:t.how1Title,text:t.how1Text},{n:'02',i:'spark',title:t.how2Title,text:t.how2Text},{n:'03',i:'ruler',title:t.how3Title,text:t.how3Text}].map(item => `<article class="how-card"><span class="how-number">${item.n}</span><span class="how-icon">${icon(item.i,24)}</span><h3>${item.title}</h3><p>${item.text}</p></article>`).join('')}</div>
-          </div></section>
+        <section id="approach" class="approach-section section-padding section-anchor"><div class="container">${heading(t.approachEyebrow, t.approachTitle, t.approachTitleB, '', 'center')}<div class="process-grid">
+          ${[{ n: '01', i: 'message', h: t.stepOne, p: t.stepOneText }, { n: '02', i: 'draft', h: t.stepTwo, p: t.stepTwoText }, { n: '03', i: 'zap', h: t.stepThree, p: t.stepThreeText }, { n: '04', i: 'check', h: t.stepFour, p: t.stepFourText }].map(s => `<article class="process-step"><div class="process-step-top"><span class="process-number">${s.n}</span><span class="process-icon">${icon(s.i, 23)}</span></div><h3>${s.h}</h3><p>${s.p}</p><span class="process-bottom-line"></span></article>`).join('')}
+        </div></div></section>
 
-          <section class="transparency-section section-padding"><div class="container transparency-panel"><div class="transparency-copy"><span class="eyebrow eyebrow--light">${t.transparencyEyebrow}</span><h2>${t.transparencyTitleA}<span>${t.transparencyTitleB}</span></h2><p>${t.transparencyText}</p><button class="button button--primary button--large" data-beno-open="transparency">${t.transparencyCta}${icon('arrow',17)}</button></div><div class="transparency-list">${[t.trans1,t.trans2,t.trans3,t.trans4].map((line,i)=>`<div class="transparency-item"><span>${icon('check',17)}</span><p>${line}</p><small>0${i+1}</small></div>`).join('')}<div class="transparency-footnote">${icon('shield',16)}<span>${t.disclaimer}</span></div></div></div></section>
+        <section id="about" class="about-section section-padding section-anchor"><div class="container about-grid"><div class="about-brand-card"><div class="about-card-orbit orbit-one"></div><div class="about-card-orbit orbit-two"></div>${brandMark(true)}<div class="about-card-bottom"><span>ENGINEERING</span><span>×</span><span>TECHNOLOGY</span></div><span class="about-card-spark">✳</span></div><div class="about-copy">${heading(t.aboutEyebrow, t.aboutTitle, t.aboutTitleB, t.aboutText)}<ul class="about-check-list"><li>${icon('check', 19)}${t.aboutPointOne}</li><li>${icon('check', 19)}${t.aboutPointTwo}</li><li>${icon('check', 19)}${t.aboutPointThree}</li></ul><button class="text-link about-link" data-scroll="contact">${t.nav.contact}<span>${icon('arrow', 18)}</span></button></div></div></section>
 
-          <section id="faq" class="faq-section section-padding section-anchor"><div class="container faq-grid"><div class="section-heading"><span class="eyebrow">${t.faqEyebrow}</span><h2>${t.faqTitleA} <span>${t.faqTitleB}؟</span></h2><p>${t.disclaimer}</p><button class="button button--secondary" data-beno-open="faq">${t.ctaPrimary}${icon('arrow',17)}</button></div><div class="faq-list">${[[t.q1,t.a1],[t.q2,t.a2],[t.q3,t.a3],[t.q4,t.a4]].map(([q,a],i)=>`<details class="faq-item" ${i===0?'open':''}><summary><span>${q}</span><i>${icon('plus',17)}</i></summary><p>${a}</p></details>`).join('')}</div></div></section>
-
-          <section class="final-section"><div class="final-decoration final-decoration--one"></div><div class="final-decoration final-decoration--two"></div><div class="container final-inner"><span class="eyebrow eyebrow--light">${t.finalEyebrow}</span><h2>${t.finalTitleA}<br><span>${t.finalTitleB}</span></h2><p>${t.finalText}</p><button class="button button--primary button--large" data-beno-open="final">${t.finalCta}${icon('arrow',18)}</button><div class="final-small-note">${icon('check',14)}${t.note}</div></div></section>
-        </main>
-
-        <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="footer-lockup" href="#home"><span class="brand-symbol">S</span><span><strong>SKYPIEA</strong><small>Beno · ENGINEERING COST ESTIMATION</small></span></a><p>${t.footerText}</p><div class="footer-disclaimer">${t.disclaimer}</div></div><div class="footer-links"><strong>${isAr ? 'استكشف' : 'Explore'}</strong><a href="#features">${t.navFeatures}</a><a href="#example">${t.navExample}</a><a href="#faq">${t.navFaq}</a></div><div class="footer-contact"><strong>${isAr ? 'عايز تبدأ؟' : 'Ready to start?'}</strong><button data-beno-open="footer">${t.tryAction}${icon('arrow',15)}</button><a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(isAr ? 'مرحبًا، أريد مراجعة تقدير مبدئي مع مهندس.' : 'Hello, I would like an engineer to review my preliminary estimate.') }" target="_blank" rel="noreferrer">${icon('message',16)} ${t.footerCall}</a><a href="tel:+${WHATSAPP_NUMBER}" dir="ltr">${icon('phone',15)} ${PHONE_DISPLAY}</a></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} SKYPIEA</span><span>${t.rights}</span><span class="footer-bottom-note">${t.disclaimer}</span></div></footer>
-      </div>`;
-
+        <section id="contact" class="contact-section section-anchor"><div class="container contact-container"><div class="contact-backdrop"><span></span><span></span><span></span></div><div class="contact-copy"><span class="eyebrow eyebrow--light"><span></span>${t.contactEyebrow}</span><h2>${t.contactTitle}<br><span>${t.contactTitleB}</span></h2><p>${t.contactDesc}</p><div class="contact-methods"><a href="tel:+${WHATSAPP_NUMBER}" class="contact-method"><span class="contact-method-icon">${icon('phone', 19)}</span><span><small>${t.callUs}</small><strong dir="ltr">${PHONE_DISPLAY}</strong></span>${icon('arrow', 17, 'contact-method-arrow')}</a><a href="${whatsappLink()}" target="_blank" rel="noreferrer" class="contact-method"><span class="contact-method-icon contact-method-icon--whatsapp">${icon('message', 19)}</span><span><small>${t.whatsappUs}</small><strong>WhatsApp</strong></span>${icon('arrow', 17, 'contact-method-arrow')}</a></div><div class="contact-label"><span class="live-dot"></span>${t.contactLabel}</div></div>
+          <form class="contact-form" id="contact-form"><div class="form-topline"><span>${isAr ? 'ابدأ المحادثة' : 'Start a conversation'}</span><span class="form-mark">${brandMark(false, true)}</span></div><div class="form-row"><label>${t.formName}<input required name="name" data-form="name" value="${escapeAttr(draft.name)}" placeholder="${t.formNamePlaceholder}"></label><label>${t.formPhone}<input name="phone" inputmode="tel" data-form="phone" value="${escapeAttr(draft.phone)}" placeholder="${t.formPhonePlaceholder}"></label></div><label>${t.formSector}<span class="select-wrap"><select required data-form="sector"><option value="">${t.selectService}</option><option value="engineering" ${draft.sector === 'engineering' ? 'selected' : ''}>${t.engineering}</option><option value="technology" ${draft.sector === 'technology' ? 'selected' : ''}>${t.technology}</option></select>${icon('arrowDown', 17)}</span></label><label>${t.formMessage}<textarea required rows="4" data-form="message" placeholder="${t.formMessagePlaceholder}">${escapeHtml(draft.message)}</textarea></label><button class="button button--primary form-submit" type="submit">${t.sendWhatsApp}${icon('arrowLeft', 18)}</button><p class="form-privacy">${icon('shieldcheck', 15)}${t.formHint}</p></form>
+        </div></section>
+      </main>
+      <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a href="#home" data-scroll="home" aria-label="SKYPIEA home">${brandMark(true)}</a><p>${t.footerDesc}</p><div class="footer-tagline">${t.finalLine}</div></div><div class="footer-links"><h3>${t.quickLinks}</h3>${navLinks.map(item => `<button data-scroll="${item.id}">${item.label}${icon('arrow', 13)}</button>`).join('')}</div><div class="footer-links footer-sector-links"><h3>${t.sectorsFooter}</h3><button data-pick-sector="engineering">${t.engineering}${icon('arrow', 13)}</button><button data-pick-sector="technology">${t.technology}${icon('arrow', 13)}</button><a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${icon('arrow', 13)}</a></div><div class="footer-contact"><span class="footer-contact-title">${t.contactLabel}</span><a href="tel:+${WHATSAPP_NUMBER}" dir="ltr">${icon('phone', 15)}${PHONE_DISPLAY}</a><a href="${whatsappLink()}" target="_blank" rel="noreferrer">${icon('message', 15)}${t.whatsappUs}</a><button data-language>${icon('globe', 15)}${isAr ? 'English' : 'العربية'}</button></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} SKYPIEA. ${t.rights}</span><span class="footer-bottom-line"></span><span>${isAr ? 'الهندسة × التكنولوجيا' : 'Engineering × Technology'}</span></div></footer>
+      <a class="whatsapp-float" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="${t.whatsappUs}">${icon('message', 23)}<span>${isAr ? 'تواصل معنا' : 'Let’s talk'}</span></a>
+    </div>`;
     attachEvents();
   }
 
+  function escapeAttr(value) { return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function escapeHtml(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function saveDraft() {
+    document.querySelectorAll('[data-form]').forEach((node) => { draft[node.dataset.form] = node.value; });
+  }
+  function updateServiceTabs() {
+    const t = copy[language];
+    document.querySelectorAll('[data-sector-tab]').forEach((button) => {
+      const active = button.dataset.sectorTab === activeSector;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-selected', String(active));
+    });
+    const grid = document.getElementById('service-grid');
+    if (grid) { grid.innerHTML = renderServiceCards(t); wireDiscussionButtons(); wireBenoButtons(); }
+  }
+  function scrollToSection(id) {
+    mobileMenuOpen = false;
+    const navEl = document.querySelector('.main-nav');
+    const menuBtn = document.querySelector('[data-menu]');
+    if (navEl) navEl.classList.remove('main-nav--open');
+    if (menuBtn) menuBtn.innerHTML = icon('menu', 22);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function pickSector(value) {
+    activeSector = value;
+    updateServiceTabs();
+    scrollToSection('services');
+  }
+  function wireDiscussionButtons() {
+    document.querySelectorAll('[data-discuss-sector]').forEach((button) => button.addEventListener('click', () => {
+      saveDraft(); draft.sector = button.dataset.discussSector || activeSector;
+      const sectorSelect = document.querySelector('[data-form="sector"]');
+      if (sectorSelect) sectorSelect.value = draft.sector;
+      scrollToSection('contact');
+    }));
+  }
   function openBeno(source, prompt = '') {
     if (window.BenoChat && typeof window.BenoChat.open === 'function') {
-      window.BenoChat.open(prompt ? `prompt:${prompt}` : source || 'landing-cta');
+      window.BenoChat.open(prompt ? `prompt:${prompt}` : source || 'company-landing-cta');
       return;
     }
     const launcher = document.querySelector('button.beno-launcher');
     if (launcher) launcher.click();
     else window.setTimeout(() => openBeno(source, prompt), 250);
   }
-
-  function attachEvents() {
-    document.querySelectorAll('[data-beno-open]').forEach((button) => button.addEventListener('click', () => {
-      openBeno(button.dataset.benoOpen, button.dataset.prompt || '');
-    }));
-
-    document.querySelectorAll('[data-language]').forEach((button) => button.addEventListener('click', () => {
-      language = language === 'ar' ? 'en' : 'ar';
-      render();
-    }));
-
-    document.querySelectorAll('[data-menu]').forEach((button) => button.addEventListener('click', () => {
-      document.getElementById('mobile-nav')?.classList.toggle('mobile-nav--open');
-    }));
-
-    document.querySelectorAll('.mobile-nav a').forEach((link) => link.addEventListener('click', () => {
-      document.getElementById('mobile-nav')?.classList.remove('mobile-nav--open');
-    }));
-
-    document.querySelectorAll('.faq-item').forEach((item) => item.addEventListener('toggle', () => {
-      const iconNode = item.querySelector('summary i');
-      if (iconNode) iconNode.innerHTML = icon(item.open ? 'close' : 'plus', 17);
-    }));
+  function wireBenoButtons() {
+    document.querySelectorAll('[data-beno-open]:not([data-beno-bound])').forEach((button) => {
+      button.dataset.benoBound = 'true';
+      button.addEventListener('click', () => openBeno(button.dataset.benoOpen, button.dataset.benoPrompt || ''));
+    });
   }
+  function attachEvents() {
+    wireBenoButtons();
+    document.querySelectorAll('[data-language]').forEach((button) => button.addEventListener('click', () => {
+      saveDraft(); language = language === 'ar' ? 'en' : 'ar'; render();
+    }));
+    document.querySelectorAll('[data-scroll]').forEach((button) => button.addEventListener('click', (event) => {
+      event.preventDefault(); scrollToSection(button.dataset.scroll);
+    }));
+    document.querySelectorAll('[data-menu]').forEach((button) => button.addEventListener('click', () => {
+      mobileMenuOpen = !mobileMenuOpen;
+      document.querySelector('.main-nav')?.classList.toggle('main-nav--open', mobileMenuOpen);
+      button.innerHTML = icon(mobileMenuOpen ? 'close' : 'menu', 22);
+    }));
+    document.querySelectorAll('[data-sector-tab]').forEach((button) => button.addEventListener('click', () => {
+      activeSector = button.dataset.sectorTab; updateServiceTabs();
+    }));
+    document.querySelectorAll('[data-pick-sector]').forEach((button) => button.addEventListener('click', () => pickSector(button.dataset.pickSector)));
+    wireDiscussionButtons();
+    document.querySelectorAll('[data-form]').forEach((node) => node.addEventListener('input', () => { draft[node.dataset.form] = node.value; }));
+    document.querySelectorAll('[data-form="sector"]').forEach((node) => node.addEventListener('change', () => { draft.sector = node.value; }));
+    document.getElementById('contact-form')?.addEventListener('submit', (event) => {
+      event.preventDefault(); saveDraft();
+      const t = copy[language];
+      const selectedSector = draft.sector === 'engineering' ? t.engineering : draft.sector === 'technology' ? t.technology : t.selectService;
+      const message = language === 'ar'
+        ? `مرحبًا SKYPIEA، أرغب في مناقشة خدمة جديدة.\n\nالاسم: ${draft.name.trim()}\nرقم التواصل: ${draft.phone.trim() || 'لم يُذكر'}\nالقطاع: ${selectedSector}\nتفاصيل المشروع: ${draft.message.trim()}`
+        : `Hello SKYPIEA, I would like to discuss a new service.\n\nName: ${draft.name.trim()}\nContact number: ${draft.phone.trim() || 'Not provided'}\nSector: ${selectedSector}\nProject details: ${draft.message.trim()}`;
+      window.open(whatsappLink(message), '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    if (header) header.classList.toggle('site-header--scrolled', window.scrollY > 18);
+  }, { passive: true });
 
   render();
 })();

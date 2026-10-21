@@ -1,0 +1,37 @@
+{
+  "viewports": {
+    "mobile": {
+      "title": "SKYPIEA | حلول هندسية وتكنولوجية متكاملة",
+      "companySectionsRetained": true,
+      "serviceCardCountTechnology": 4,
+      "benoCtaCount": 2,
+      "horizontalOverflow": false,
+      "chatInitiallyClosed": true,
+      "promptPrefillWorks": true,
+      "welcomeMessageWorks": true,
+      "welcomeToastDoesNotAutoOpenPanel": true,
+      "pageErrors": []
+    },
+    "desktop": {
+      "title": "SKYPIEA | حلول هندسية وتكنولوجية متكاملة",
+      "companySectionsRetained": true,
+      "serviceCardCountTechnology": 4,
+      "benoCtaCount": 2,
+      "horizontalOverflow": false,
+      "chatInitiallyClosed": true,
+      "promptPrefillWorks": true,
+      "welcomeMessageWorks": true,
+      "welcomeToastDoesNotAutoOpenPanel": true,
+      "pageErrors": []
+    }
+  },
+  "consoleErrors": [],
+  "companySectionsRetained": true,
+  "benoFeaturedAsProduct": true,
+  "chatUsesBenoBrand": true,
+  "promptPrefillWorks": true,
+  "autoOpenDisabled": true,
+  "welcomeMessageWorks": true,
+  "welcomeCanBeDismissed": true,
+  "welcomeStartOpensChat": true
+}

@@ -1,7 +1,7 @@
 {
   "loader": {
-    "bytes": 6646,
-    "gzipBytes": 2805
+    "bytes": 16243,
+    "gzipBytes": 5201
   },
   "chunk": {
     "bytes": 134050,

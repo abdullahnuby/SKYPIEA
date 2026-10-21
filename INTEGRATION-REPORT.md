@@ -2,11 +2,13 @@
 
 ## Current release
 
-- Release: `1.0.0-alpha.10` (engineer-controlled BOQ methodology archive).
+- Release: `1.0.0-alpha.13` (SKYPIEA company landing page + redesigned Beno widget welcome).
 - Operational core catalog: `api/_data/price-book.v8.json`; 183 active rows (165 priced, 18 explicit gaps). The 291 unused January-bulletin variants are preserved in `api/_data/price-book-extended.v1.json` and excluded from default matching.
 - Numeric price coverage: 165/183 core active rows (90.2%). This checks only for a positive average, not freshness, locality, supplier verification, transport inclusion, valid quantities or engineering approval. The core book has 37 stale/undated prices; the extended archive retains 291 rows not currently used by BOQ/takeoff rules.
 - Price-quality review found 37 active core rows older than 90 days or undated and 18 explicit open price gaps; the unused 291 January-bulletin variants are retained in a separate non-searchable archive. Twelve duplicate/conflicting catalog rows were deactivated with reason/canonical references retained. The estimate API now withholds the prominent total when a required price or quantity gap exists.
 
+- Alpha.12: استُعيدت صفحة SKYPIEA بوصفها صفحة شركة هندسية وتكنولوجية متكاملة. عادت قطاعات الشركة وخدماتها ومنهجية العمل وقسم التعريف بالشركة ونموذج التواصل، وأُبقي Beno منتجًا متخصصًا داخل قطاع التكنولوجيا وبقسم مميز منفصل يفتح نفس تجربة الشات. عنوان الصفحة ووصف المشاركة الاجتماعية يخصان SKYPIEA، واختبارات القبول تتحقق من وجود جميع الأقسام في اللغتين العربية والإنجليزية على الموبايل والكمبيوتر.
+- Alpha.13: أُعيد تصميم الويجت العائمة نفسها، مع علامة Beno وحالة مرئية، ورسالة ترحيب تظهر تلقائيًا بعد نحو 1.9 ثانية وتشرح للزائر دور المساعد. «جرّب Beno» تفتح مساحة العمل، و«مش دلوقتي» تخفي الرسالة؛ لا تُفتح لوحة المحادثة تلقائيًا على صفحة الشركة، ويُمنع تكرار الترحيب في جلسة التصفح نفسها. يمكن التحكم فيه عبر `data-welcome`. اختبارات القبول تغطي ظهور الترحيب على الموبايل والكمبيوتر دون تمرير أفقي أو أخطاء.
 - Alpha.10: أعيد بناء واجهة محادثة Beno كمساحة عمل هندسية واسعة، مع ترحيب تفاعلي، ملف مشروع ومؤشرات تغطية متصلة بالحالة الفعلية، أزرار للمقايسة والنواقص والافتراضات، نسخ ردود، مؤشر نشاط للشبكة، ومحرر متعدد الأسطر. أضيفت اختبارات متصفح مخصصة لمساحة العمل.
 
 - One repository root and one Vercel project: static output from `dist/` and serverless endpoints under `api/`.
@@ -17,6 +19,13 @@
 - Calculation and conversation logic lives in `engines/` and `api/_lib/`; no LLM API is needed for the current deterministic dialogue or estimate paths.
 - Price administration stores releases locally for development or in private Supabase tables for production.
 - The active agent data now includes `api/_data/boq-knowledge.v1.json` (work scopes, includes/excludes, waste rules and domain synonyms), canonical catalog metadata (`workPackage`, `itemKind`, `priceScope`, `engineerReview`), and centralized rate defaults in `engines/miyar-rates.js`. The migration preserves old row IDs and `sourceCategory`, and deactivated duplicates remain in the file for audit but are excluded from active matching.
+
+## Alpha.13 — redesigned floating widget and automatic welcome
+
+- The launcher now has a distinctive Beno identity, engineering role, and online status.
+- A compact welcome message appears after about 1.9 seconds, introduces Beno, and offers “Try Beno” or “Not now”; it does not automatically open the full chat on the company landing page. The message is dismissed when the visitor starts or closes it and is shown only once per browser tab session.
+- `data-welcome="false"` disables the welcome message; `data-autoopen="false" data-welcome="true"` keeps the welcome visible without opening the full chat automatically.
+- `npm run test:landing`: passed on mobile/desktop with welcome flow enabled; no horizontal overflow, no JavaScript errors, welcome CTA opens the chat, and the full chat remains closed until clicked.
 
 ## Alpha.10 — expanded Beno engineering workspace
 

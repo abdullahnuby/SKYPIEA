@@ -46,14 +46,14 @@ def main():
             launcher.click()
             panel = page.locator('.beno-panel')
             panel.wait_for(state='visible', timeout=5000)
-            page.locator('.beno-welcome-title').wait_for(state='visible', timeout=3000)
+            page.locator('.beno-panel .beno-welcome-title').wait_for(state='visible', timeout=3000)
             page.wait_for_timeout(280)  # allow the workspace entrance animation to settle before layout assertions
-            assert page.locator('.beno-welcome-title').inner_text() == 'خلّينا نحسبها هندسيًا.'
+            assert page.locator('.beno-panel .beno-welcome-title').inner_text() == 'خلّينا نحسبها هندسيًا.'
             showcase = page.locator('.beno-welcome-showcase')
             assert showcase.is_visible(), 'engineering sample panel should appear in the welcome experience'
             assert 'بلا أسعار افتراضية' in showcase.inner_text(), 'the sample must be labeled as illustrative, not a real estimate'
             assert page.locator('.beno-sample-row[role=row]').count() == 4, 'sample needs a header and three example work packages'
-            welcome_rect = page.locator('.beno-welcome-title').bounding_box()
+            welcome_rect = page.locator('.beno-panel .beno-welcome-title').bounding_box()
             panel_rect_for_welcome = page.locator('.beno-panel').bounding_box()
             assert welcome_rect and panel_rect_for_welcome and welcome_rect['y'] < panel_rect_for_welcome['y'] + panel_rect_for_welcome['height'] * 0.4, 'welcome heading should remain near the top instead of being pushed out of view by auto-scroll'
             card_bg = page.locator('.beno-start-card').first.evaluate('(e) => getComputedStyle(e).backgroundImage')

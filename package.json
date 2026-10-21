@@ -1,6 +1,6 @@
 {
   "name": "skypiea-beno-platform",
-  "version": "1.0.0-alpha.11",
+  "version": "1.0.0-alpha.13",
   "private": true,
   "type": "commonjs",
   "description": "SKYPIEA landing page with the integrated Beno construction cost-estimation assistant.",
