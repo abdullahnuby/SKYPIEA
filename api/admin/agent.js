@@ -145,6 +145,6 @@ module.exports = async function adminAgent(req, res) {
   } catch (error) {
     const status = error.status || 503;
     if (status >= 500) process.stderr.write(`[beno-admin-agent] ${id} storage failure\n`);
-    return send(res, status, { ok: false, error: status >= 500 ? 'تعذر الوصول لقاعدة بيانات التعلم. راجع إعداد Supabase وترحيل 20261022_beno_agent_learning.sql و20261023_beno_pricing_memory.sql.' : String(error.message || 'طلب غير صالح.').slice(0, 300), requestId: id });
+    return send(res, status, { ok: false, error: status >= 500 ? 'تعذر الوصول لقاعدة بيانات التعلم. راجع إعداد Neon (DATABASE_URL) وتشغيل neon/schema.sql.' : String(error.message || 'طلب غير صالح.').slice(0, 300), requestId: id });
   }
 };

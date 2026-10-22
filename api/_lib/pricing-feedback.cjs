@@ -2,12 +2,13 @@
 const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
+const db = require('./db.cjs');
 
 // Durable pricing evidence ledger (server-only).
 //
 // Two backends, same shape:
 //   - local JSON file (development/tests and BENO_LOCAL_DEMO),
-//   - Supabase REST (production) once the pricing-memory migration is applied.
+//   - Neon Postgres (production) once neon/schema.sql is applied.
 //
 // Rows are observations, not published prices. Chat/customer mentions default to
 // unverified; only verified rows can influence confidence or suggestions.
@@ -30,10 +31,8 @@ const ALIASES = {
 };
 
 function dbConfig() {
-  const url = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key) return null;
-  return { url, key };
+  if (!db.configured()) return null;
+  return { driver: 'neon' };
 }
 
 function localEnabled() {
@@ -180,34 +179,38 @@ function restToRow(row) {
   };
 }
 
-async function dbRequest(pathname, options = {}) {
-  const cfg = dbConfig();
-  if (!cfg) throw Object.assign(new Error('Supabase is not configured for pricing feedback.'), { status: 503 });
-  const response = await fetch(`${cfg.url}${pathname}`, {
-    ...options,
-    headers: { apikey: cfg.key, Authorization: `Bearer ${cfg.key}`, 'Content-Type': 'application/json', ...(options.headers || {}) }
-  });
-  if (!response.ok) {
-    const detail = (await response.text()).slice(0, 250);
-    const error = new Error(`Pricing feedback storage returned ${response.status}: ${detail}`);
-    error.status = response.status === 404 || response.status === 400 ? 503 : 502;
-    throw error;
-  }
-  if (response.status === 204) return null;
-  const text = await response.text();
-  return text ? JSON.parse(text) : null;
-}
-
 async function recordRows(rows, opts = {}) {
   const list = (Array.isArray(rows) ? rows : []).map(row => normalizeRow(row, opts));
   if (!list.length) return { inserted: 0, available: true };
   const cfg = dbConfig();
   if (cfg && !localEnabled()) {
-    await dbRequest('/rest/v1/beno_pricing_feedback', {
-      method: 'POST',
-      headers: { Prefer: 'return=minimal' },
-      body: JSON.stringify(list.map(rowToRest))
-    });
+    try {
+      await db.query(
+        `insert into public.beno_pricing_feedback
+           (price_id, price_name, kind, value, low, high, unit, observed_at, source, source_type, verified, note, estimate_id, outcome, actor)
+         select * from unnest($1::text[], $2::text[], $3::text[], $4::numeric[], $5::numeric[], $6::numeric[], $7::text[],
+                             $8::date[], $9::text[], $10::text[], $11::boolean[], $12::text[], $13::text[], $14::text[], $15::text[])`,
+        [
+          list.map(r => r.priceId),
+          list.map(r => r.priceName),
+          list.map(r => r.kind),
+          list.map(r => r.value),
+          list.map(r => r.low),
+          list.map(r => r.high),
+          list.map(r => r.unit),
+          list.map(r => r.observedAt),
+          list.map(r => r.source),
+          list.map(r => r.sourceType),
+          list.map(r => r.verified),
+          list.map(r => r.note),
+          list.map(r => r.estimateId),
+          list.map(r => r.outcome),
+          list.map(r => r.actor)
+        ]
+      );
+    } catch (error) {
+      throw Object.assign(new Error(`Pricing feedback storage failed: ${String(error.message || 'database error').slice(0, 250)}`), { status: 503 });
+    }
     return { inserted: list.length, available: true };
   }
   if (!localEnabled() && !cfg) throw Object.assign(new Error('Pricing feedback storage is not configured.'), { status: 503 });
@@ -230,8 +233,9 @@ async function listRows(opts = {}) {
   const priceId = cleanText(opts.priceId || '', 60);
   const cfg = dbConfig();
   if (cfg && !localEnabled()) {
-    const filter = priceId ? `&price_id=eq.${encodeURIComponent(priceId)}` : '';
-    const rows = await dbRequest(`/rest/v1/beno_pricing_feedback?select=*${filter}&order=created_at.desc&limit=${limit}`);
+    const rows = priceId
+      ? await db.query('select * from public.beno_pricing_feedback where price_id = $1 order by created_at desc limit $2', [priceId, limit])
+      : await db.query('select * from public.beno_pricing_feedback order by created_at desc limit $1', [limit]);
     return { available: true, rows: (Array.isArray(rows) ? rows : []).map(restToRow) };
   }
   if (!localEnabled()) return { available: false, rows: [] };
@@ -246,11 +250,10 @@ async function verifyRows(ids, verified, actor = 'admin') {
   if (!list.length) throw Object.assign(new Error('ids are required.'), { status: 400 });
   const cfg = dbConfig();
   if (cfg && !localEnabled()) {
-    await dbRequest(`/rest/v1/beno_pricing_feedback?id=in.(${list.map(encodeURIComponent).join(',')})`, {
-      method: 'PATCH',
-      headers: { Prefer: 'return=minimal' },
-      body: JSON.stringify({ verified: verified === true, actor: cleanText(actor, 100) })
-    });
+    await db.query(
+      'update public.beno_pricing_feedback set verified = $1, actor = $2 where id::text = any($3::text[])',
+      [verified === true, cleanText(actor, 100), list]
+    );
     return { updated: list.length, available: true };
   }
   if (!localEnabled() && !cfg) throw Object.assign(new Error('Pricing feedback storage is not configured.'), { status: 503 });

@@ -50,17 +50,19 @@ npm run test:browser
 1. ارفع **محتويات هذا المجلد** إلى ريبو SKYPIEA نفسه؛ `index.html` و`package.json` و`vercel.json` يجب أن يكونوا في جذر الريبو.
 2. استورد هذا الريبو إلى مشروع Vercel الحالي. استخدم Build Command: `npm run build` وOutput Directory: `dist`.
 3. تضبط إعدادات السيرفر في Vercel Environment Variables، ولا تُكتب داخل HTML أو ملفات `dist`:
+   - `DATABASE_URL` — رابط Neon Postgres المجمّع (من `neon deploy` أو `.env.local`).
+   - `DATABASE_URL_UNPOOLED` — الرابط المباشر للترحيلات و`psql` فقط.
    - `BENO_MARGIN_PCT` — نسبة الهامش داخل الخادم فقط.
    - `BENO_MARGIN_MODE` — مثل `comprehensive` أو `supervision`.
    - `BENO_MIN_COVERAGE` — الافتراضي `0.70`.
    - `ALLOWED_ORIGINS` — نطاق SKYPIEA الإنتاجي، مع `www` إن استُخدم.
-   - `SUPABASE_URL` و`SUPABASE_SERVICE_ROLE_KEY` — أسرار خادم فقط.
-   - `BENO_DURABLE_RATE_LIMIT=1` عند تجهيز RPC الخاصة بتحديد المعدل في Supabase.
+   - `BENO_DURABLE_RATE_LIMIT=1` لتشغيل حدّ المعدل المخزّن في Postgres.
    - `BENO_ADMIN_PASSWORD` كلمة مرور المدير (12 حرفًا على الأقل) و`BENO_ADMIN_SESSION_SECRET` سر جلسة عشوائي (32 حرفًا على الأقل). لا تعِد استخدام كلمة مرور التطوير.
    - `OWNER_WEBHOOK_URL` اختياري.
-4. طبّق `supabase/migrations/20261021_admin_price-control.sql` على قاعدة Beno الحالية. إذا كانت القاعدة ما زالت تستخدم أسماء MIYAR القديمة، طبّق `supabase/migrations/20261021_rebrand_rate_limit.sql` أولًا. لقاعدة جديدة استخدم `supabase/schema.sql`. هذا يضيف تخزين المسودات والإصدارات ووظيفة النشر الذرّية ويحدّث نطاق تسجيل محاولات الدخول.
-5. لا تضبط `BENO_LOCAL_DEMO=1` في الإنتاج. يلزم وجود `SUPABASE_URL` و`SUPABASE_SERVICE_ROLE_KEY` لأن حفظ الأسعار المنشورة يتم في قاعدة البيانات، لا على نظام ملفات Vercel المؤقت.
-6. لا يتم نشر ملفات الاختبار أو الـ fixture الاصطناعي؛ `tests/fixtures/price-book.complete.TEST-ONLY.json` للاختبارات فقط.
+4. طبّق مخطط Neon: `npm run db:schema` ثم تحقق بـ`npm run db:check`. المخطط في `neon/schema.sql` ويشمل الطلبات، وقائمة التعلم، والمعجم الموثّق، ومحدّد المعدل، وحالة كتالوج الأسعار وإصداراته، وسجل أدلة التسعير.
+5. لا تضبط `BENO_LOCAL_DEMO=1` في الإنتاج. يلزم وجود `DATABASE_URL` لأن حفظ الطلبات والأسعار المنشورة يتم في Postgres، لا على نظام ملفات Vercel المؤقت.
+6. اختبار التكامل الكامل مع Neon: `npm run test:neon` (يشغّل الخادم ويختبر كل خدمة عبر HTTP ثم يتحقق من الصفوف في القاعدة). ولتنظيف بيانات الاختبار: `node scripts/neon-clean-test-data.cjs`.
+7. لا يتم نشر ملفات الاختبار أو الـ fixture الاصطناعي؛ `tests/fixtures/price-book.complete.TEST-ONLY.json` للاختبارات فقط.
 
 ## لوحة إدارة Beno
 
@@ -77,7 +79,7 @@ npm start
 
 ### تجهيز لوحة الإدارة على Vercel
 
-في Project Settings → Environment Variables أضف `BENO_ADMIN_PASSWORD` بطول 12 حرفًا على الأقل، و`BENO_ADMIN_SESSION_SECRET` بسر عشوائي لا يقل عن 32 حرفًا، بالإضافة إلى `SUPABASE_URL` و`SUPABASE_SERVICE_ROLE_KEY`. طبّق ترحيل SQL أعلاه ثم أعد النشر وافتح `https://نطاق-الموقع/admin`. استخدم كلمة مرور مستقلة عن نسخة التطوير. مفاتيح Supabase لا تُرسل إلى المتصفح.
+في Project Settings → Environment Variables أضف `BENO_ADMIN_PASSWORD` بطول 12 حرفًا على الأقل، و`BENO_ADMIN_SESSION_SECRET` بسر عشوائي لا يقل عن 32 حرفًا، بالإضافة إلى `DATABASE_URL` (والأفضل `DATABASE_URL_UNPOOLED` للترحيلات). طبّق `npm run db:schema` ثم أعد النشر وافتح `https://نطاق-الموقع/admin`. استخدم كلمة مرور مستقلة عن نسخة التطوير. رابط قاعدة البيانات لا يُرسل إلى المتصفح.
 
 **قواعد النشر:** تستطيع حفظ أسعار ناقصة كمسودة، لكن النشر يُرفض إذا كانت تغطية أسعار البنود النشطة أقل من حد التغطية المحدد في إعدادات Beno. تغيير الحد إلى قيمة أقل قرار إداري صريح ولا يُنصح به من أجل إظهار رقم رئيسي غير مدعوم ببيانات كافية. البنود الجديدة تُضاف للكتالوج، لكنها لا تدخل في حصر الكميات تلقائيًا ما لم تكن مرتبطة بمنطق المحركات الأصلي.
 
@@ -99,7 +101,7 @@ npm start
 - يحتوي الكتالوج التشغيلي v8 على 18 فجوة سعر، و37 سعرًا قديمًا أو بلا تاريخ حديث وفق حد 90 يومًا؛ أما 291 صفًا موسعًا من النشرة فمحفوظة خارج البحث النشط؛ يجب مراجعة المصادر محليًا قبل استخدام الأرقام في ميزانية تنفيذ.
 - لا تُعرض قيمة إجمالية رئيسية عند بقاء فجوة سعر أو كمية مطلوبة؛ تغطية السعر الرقمي وحدها لا تكفي.
 - لا تستخدم fixture الاختبار ككتالوج إنتاج.
-- لم يُثبت النشر الحي على مشروع Vercel/Supabase الهدف ضمن هذه الحزمة.
-- يجب التحقق من قاعدة البيانات وسياسة RLS ومعدل الطلبات الدائم بعد إضافة متغيرات البيئة.
+- تم التحقق من تكامل Neon وقاعدة البيانات محليًا عبر `npm run test:neon`؛ لم يُثبت النشر الحي على مشروع Vercel الهدف بعد ربط متغيرات البيئة.
+- يجب التحقق من متغيرات البيئة على Vercel (`DATABASE_URL`) وحدّ المعدل المخزّن في Postgres بعد النشر.
 - يجب إجراء اختبار قبول أخير على النطاق الإنتاجي، ويشمل إنشاء lead فعليًا والتحويل إلى WhatsApp.
 - هذا إصدار Alpha وليس إعلان جاهزية للإنتاج أو مراجعة هندسية بشرية.

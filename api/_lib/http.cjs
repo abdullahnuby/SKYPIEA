@@ -1,5 +1,6 @@
 'use strict';
 const crypto = require('node:crypto');
+const db = require('./db.cjs');
 const buckets = new Map();
 function getHeader(req,name){const v=req.headers?.[name.toLowerCase()];return Array.isArray(v)?v[0]:v;}
 function allowedOrigin(req){
@@ -25,30 +26,22 @@ function cors(req,res){
 async function rateLimit(req,scope='tool',limit=40,windowMs=60000){
   const ip=String(getHeader(req,'x-forwarded-for')||req.socket?.remoteAddress||'unknown').split(',')[0].trim();
   const session=String(getHeader(req,'x-beno-session')||'').slice(0,100);
-  const url=String(process.env.SUPABASE_URL||'').replace(/\/$/,'');
-  const serviceKey=process.env.SUPABASE_SERVICE_ROLE_KEY||process.env.SUPABASE_SECRET_KEY;
   const productionRuntime = process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
-  if (productionRuntime && (process.env.BENO_LOCAL_DEMO === '1' || !url || !serviceKey || process.env.BENO_DURABLE_RATE_LIMIT === '0')) {
+  const durable = db.configured() && process.env.BENO_LOCAL_DEMO !== '1' && process.env.BENO_DURABLE_RATE_LIMIT !== '0';
+  const windowSeconds = Math.max(1, Math.ceil(windowMs/1000));
+  if (productionRuntime && !durable) {
     process.stderr.write('[beno-rate-limit] production durable limiter is not configured; rejecting request\n');
     return {ok:false,retryAfter:60,unavailable:true};
   }
-  if(url&&serviceKey&&process.env.BENO_LOCAL_DEMO!=='1'&&process.env.BENO_DURABLE_RATE_LIMIT!=='0'){
+  if (durable) {
     // Only a hash is sent to Postgres; the raw IP and session never leave the request process.
     const key=crypto.createHash('sha256').update(`${scope}|${ip}|${session}`).digest('hex');
     try{
-      const response=await fetch(`${url}/rest/v1/rpc/beno_consume_rate_limit`,{
-        method:'POST',headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,'Content-Type':'application/json'},
-        body:JSON.stringify({p_key:key,p_scope:scope,p_limit:limit,p_window_seconds:Math.max(1,Math.ceil(windowMs/1000))})
-      });
-      if(!response.ok){
-        process.stderr.write(`[beno-rate-limit] durable gate returned ${response.status}; rejecting request\n`);
-        return {ok:false,retryAfter:60,unavailable:true};
-      }
-      const allowed=await response.json();
-      const isAllowed=allowed===true || (Array.isArray(allowed)&&allowed[0]===true) || (allowed&&allowed.allowed===true);
-      return {ok:isAllowed,retryAfter:Math.max(1,Math.ceil(windowMs/1000))};
-    }catch(_){
-      process.stderr.write('[beno-rate-limit] durable gate unavailable; rejecting request\n');
+      const rows=await db.query('select public.beno_consume_rate_limit($1,$2,$3,$4) as allowed',[key,scope,limit,windowSeconds]);
+      const allowed=rows[0]?.allowed === true;
+      return {ok:allowed,retryAfter:windowSeconds};
+    }catch(error){
+      process.stderr.write(`[beno-rate-limit] durable gate failed (${String(error.message||'error').slice(0,120)}); rejecting request\n`);
       return {ok:false,retryAfter:60,unavailable:true};
     }
   }

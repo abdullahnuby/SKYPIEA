@@ -1,6 +1,7 @@
 'use strict';
 const crypto = require('node:crypto');
 const nlu = require('../../engines/beno-nlu.js');
+const db = require('./db.cjs');
 
 // Continuous-learning loop for BENO (no LLM): the unmatched-message store is
 // clustered by normalized-token similarity; a supervisor (admin) reviews the
@@ -79,47 +80,50 @@ function toLexiconAdditions(rows) {
   return additions;
 }
 
-// --- runtime helpers (Supabase REST, guarded) ---------------------------------
-function envBackend() {
-  const url = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key) return null;
-  return { url, headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' } };
+// --- runtime helpers (Neon Postgres, guarded) ---------------------------------
+function backendAvailable() {
+  return db.configured();
 }
 
 async function fetchUnmatched(limit = 200) {
-  const backend = envBackend();
-  if (!backend) return { available: false, rows: [] };
+  if (!backendAvailable()) return { available: false, rows: [] };
   const capped = Math.min(Math.max(1, Number(limit) || 200), 500);
-  const response = await fetch(`${backend.url}/rest/v1/unmatched_messages?select=normalized_text,intent,created_at&order=created_at.desc&limit=${capped}`, { headers: backend.headers });
-  if (!response.ok) throw Object.assign(new Error(`unmatched fetch failed (${response.status})`), { status: 503 });
-  const rows = await response.json();
+  const rows = await db.query(
+    `select normalized_text, intent, created_at from public.unmatched_messages
+      order by created_at desc limit $1`,
+    [capped]
+  );
   return { available: true, rows: Array.isArray(rows) ? rows : [] };
 }
 
 async function fetchVerifiedLexicon() {
-  const backend = envBackend();
-  if (!backend) return { available: false, rows: [] };
-  const response = await fetch(`${backend.url}/rest/v1/beno_lexicon?select=kind,key,value&verified=eq.true&order=created_at.desc&limit=300`, { headers: backend.headers });
-  if (!response.ok) throw Object.assign(new Error(`lexicon fetch failed (${response.status})`), { status: 503 });
-  const rows = await response.json();
+  if (!backendAvailable()) return { available: false, rows: [] };
+  const rows = await db.query(
+    `select kind, key, value from public.beno_lexicon
+      where verified = true order by created_at desc limit 300`
+  );
   return { available: true, rows: Array.isArray(rows) ? rows : [] };
 }
 
 async function insertLexiconRows(entries) {
-  const backend = envBackend();
-  if (!backend) throw Object.assign(new Error('Supabase is not configured.'), { status: 503 });
+  if (!backendAvailable()) throw Object.assign(new Error('Neon Postgres is not configured.'), { status: 503 });
   const allowedIntents = new Set(nlu.getIntentKeys());
   const rows = (Array.isArray(entries) ? entries : []).map(e => ({
     kind: String(e.kind || ''), key: String(e.key || ''), value: String(e.value || ''),
     verified: e.verified !== false, source: String(e.source || 'admin').slice(0, 40)
   })).filter(r => r.kind && r.value && r.value.length <= 80 && (r.kind !== 'intents' || allowedIntents.has(r.key)));
   if (!rows.length) throw new Error('No valid lexicon rows to insert.');
-  const response = await fetch(`${backend.url}/rest/v1/beno_lexicon`, {
-    method: 'POST', headers: { ...backend.headers, Prefer: 'return=minimal' },
-    body: JSON.stringify(rows)
-  });
-  if (!response.ok) throw Object.assign(new Error(`lexicon insert failed (${response.status})`), { status: 503 });
+  await db.query(
+    `insert into public.beno_lexicon (kind, key, value, verified, source)
+     select * from unnest($1::text[], $2::text[], $3::text[], $4::boolean[], $5::text[])`,
+    [
+      rows.map(r => r.kind),
+      rows.map(r => r.key),
+      rows.map(r => r.value),
+      rows.map(r => r.verified),
+      rows.map(r => r.source)
+    ]
+  );
   return { inserted: rows.length };
 }
 

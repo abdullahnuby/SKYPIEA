@@ -1,5 +1,6 @@
 'use strict';
 const crypto = require('node:crypto');
+const db = require('./db.cjs');
 const { normalizeArabic } = require('../../engines/miyar-engine.js');
 function redact(text) {
   let value = String(text || '').slice(0, 2000);
@@ -11,18 +12,15 @@ function redact(text) {
 }
 async function recordUnmatched(message, intent) {
   if (process.env.BENO_LOG_UNMATCHED !== '1') return false;
-  const url = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key) return false;
+  if (!db.configured()) return false;
   const text = redact(message);
   if (!text) return false;
   const textHash = crypto.createHash('sha256').update(normalizeArabic(text)).digest('hex');
-  const response = await fetch(`${url}/rest/v1/unmatched_messages`, {
-    method: 'POST',
-    headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-    body: JSON.stringify({ normalized_text: text, text_hash: textHash, intent: String(intent || 'unknown').slice(0, 60) })
-  });
-  if (!response.ok) throw new Error(`unmatched-log failed (${response.status})`);
+  await db.query(
+    `insert into public.unmatched_messages (normalized_text, text_hash, intent)
+     values ($1, $2, $3)`,
+    [text, textHash, String(intent || 'unknown').slice(0, 60)]
+  );
   return true;
 }
 module.exports = { redact, recordUnmatched };

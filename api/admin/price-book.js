@@ -29,6 +29,6 @@ module.exports = async function adminPriceBook(req, res) {
   } catch (error) {
     const status = error.status || 503;
     if (status >= 500) process.stderr.write(`[beno-admin-price-book] ${id} storage failure\n`);
-    return send(res, status, { ok: false, error: status >= 500 ? 'تعذر الوصول لتخزين الأسعار. تأكد من إعداد Supabase وتشغيل schema.sql.' : String(error.message || 'ملف الأسعار غير صالح.').slice(0, 500), requestId: id });
+    return send(res, status, { ok: false, error: status >= 500 ? 'تعذر الوصول لتخزين الأسعار. تأكد من إعداد Neon (DATABASE_URL) وتشغيل neon/schema.sql.' : String(error.message || 'ملف الأسعار غير صالح.').slice(0, 500), requestId: id });
   }
 };

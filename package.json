@@ -9,6 +9,9 @@
   },
   "scripts": {
     "build": "node scripts/audit-price-book.cjs --check && node scripts/audit-agent-knowledge.cjs --check && node scripts/build.cjs && node build.mjs",
+    "db:schema": "node scripts/db-schema.cjs",
+    "db:check": "node scripts/db-check.cjs",
+    "test:neon": "node scripts/e2e-neon.cjs",
     "test": "node tests/run.cjs",
     "test:api": "node tests/api.test.cjs",
     "test:browser": "python3 tests/browser-smoke.py",
@@ -27,5 +30,10 @@
     "audit:knowledge": "node scripts/audit-agent-knowledge.cjs",
     "audit:prices:all": "node scripts/audit-price-book.cjs --check && node scripts/audit-agent-knowledge.cjs --check",
     "test:workspace": "python3 tests/beno-workspace-smoke.py"
+  },
+  "dependencies": {
+    "@neon/config": "^1.9.3",
+    "@neon/env": "^1.6.4",
+    "@neondatabase/serverless": "^1.2.0"
   }
 }

@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const engine = require('./engine.cjs');
+const db = require('./db.cjs');
 const ROOT = path.resolve(__dirname, '../..');
 const BOOK_DIR = path.join(ROOT, 'api', '_data');
 const LOCAL_FILE = process.env.BENO_ADMIN_STATE_FILE ? path.resolve(process.env.BENO_ADMIN_STATE_FILE) : path.join(ROOT, '.local', 'beno-price-book-state.json');
@@ -13,10 +14,8 @@ function bookVersionNumber(book) {
   return match ? Number(match[1]) : 1;
 }
 function dbConfig() {
-  const url = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
-  if (!url || !key || localStorageEnabled()) return null;
-  return { url, key };
+  if (!db.configured() || localStorageEnabled()) return null;
+  return { driver: 'neon' };
 }
 function initialBook() {
   const doc = JSON.parse(JSON.stringify(engine.loadBook().doc));
@@ -75,37 +74,29 @@ function writeLocalState(state) {
   fs.renameSync(tmp, LOCAL_FILE);
   return normalizeState(state);
 }
-async function dbRequest(pathname, options = {}) {
-  const cfg = dbConfig();
-  if (!cfg) throw Object.assign(new Error('Supabase is not configured for persistent BENO admin storage.'), { status: 503 });
-  const response = await fetch(`${cfg.url}${pathname}`, {
-    ...options,
-    headers: { apikey: cfg.key, Authorization: `Bearer ${cfg.key}`, 'Content-Type': 'application/json', ...(options.headers || {}) }
-  });
-  if (!response.ok) {
-    const detail = (await response.text()).slice(0, 250);
-    const error = new Error(`Admin storage returned ${response.status}: ${detail}`);
-    error.status = response.status === 404 || response.status === 400 ? 503 : 502;
-    throw error;
-  }
-  if (response.status === 204) return null;
-  const text = await response.text();
-  return text ? JSON.parse(text) : null;
-}
 async function getDbState() {
-  const rows = await dbRequest('/rest/v1/beno_price_book_state?id=eq.current&select=*');
-  if (Array.isArray(rows) && rows[0]) return normalizeState(rows[0]);
+  const rows = await db.query('select * from public.beno_price_book_state where id = $1', ['current']);
+  if (rows[0]) return normalizeState(rows[0]);
   const book = initialBook(), now = new Date().toISOString();
-  await dbRequest('/rest/v1/beno_price_book_state?on_conflict=id', { method: 'POST', headers: { Prefer: 'resolution=ignore-duplicates,return=minimal' }, body: JSON.stringify({ id: 'current', draft_book: book, published_book: book, version: bookVersionNumber(book), updated_at: now, updated_by: 'system-initialization', published_at: now, published_by: 'system-initialization' }) });
-  const retry = await dbRequest('/rest/v1/beno_price_book_state?id=eq.current&select=*');
-  if (!Array.isArray(retry) || !retry[0]) throw Object.assign(new Error('Could not initialize BENO price-book state. Apply supabase/schema.sql first.'), { status: 503 });
+  await db.query(
+    `insert into public.beno_price_book_state
+       (id, draft_book, published_book, version, updated_at, updated_by, published_at, published_by)
+     values ('current', $1::jsonb, $1::jsonb, $2, $3, 'system-initialization', $3, 'system-initialization')
+     on conflict (id) do nothing`,
+    [JSON.stringify(book), bookVersionNumber(book), now]
+  );
+  const retry = await db.query('select * from public.beno_price_book_state where id = $1', ['current']);
+  if (!retry[0]) throw Object.assign(new Error('Could not initialize BENO price-book state. Apply neon/schema.sql first.'), { status: 503 });
   return normalizeState(retry[0]);
 }
 async function getAdminState() {
-  if (!dbConfig() && !localStorageEnabled()) throw Object.assign(new Error('إعداد تخزين الأسعار غير مكتمل. اضبط Supabase وطبّق supabase/schema.sql.'), { status: 503 });
+  if (!dbConfig() && !localStorageEnabled()) throw Object.assign(new Error('إعداد تخزين الأسعار غير مكتمل. اضبط DATABASE_URL على Neon وطبّق neon/schema.sql.'), { status: 503 });
   const state = dbConfig() ? await getDbState() : readLocalState();
   if (dbConfig()) {
-    const history = await dbRequest('/rest/v1/beno_price_book_versions?select=version,published_at,published_by,coverage_percent,active_items,priced_items&order=published_at.desc&limit=12');
+    const history = await db.query(
+      `select version, published_at, published_by, coverage_percent::float8 as coverage_percent, active_items, priced_items
+         from public.beno_price_book_versions order by published_at desc limit 12`
+    );
     state.versions = Array.isArray(history) ? history : [];
   }
   return state;
@@ -117,8 +108,13 @@ async function saveDraft(book, actor = 'admin') {
     state.draft_book = book; state.updated_at = new Date().toISOString(); state.updated_by = actor;
     return writeLocalState(state);
   }
-  const state = await getDbState();
-  await dbRequest('/rest/v1/beno_price_book_state?id=eq.current', { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify({ draft_book: book, updated_at: new Date().toISOString(), updated_by: actor }) });
+  await getDbState();
+  await db.query(
+    `update public.beno_price_book_state
+        set draft_book = $1::jsonb, updated_at = now(), updated_by = $2
+      where id = 'current'`,
+    [JSON.stringify(book), actor]
+  );
   return getDbState();
 }
 async function publishBook(book, stats, actor = 'admin') {
@@ -131,7 +127,7 @@ async function publishBook(book, stats, actor = 'admin') {
     writeLocalState(state); return state;
   }
   await getDbState();
-  await dbRequest('/rest/v1/rpc/beno_publish_price_book', { method: 'POST', body: JSON.stringify({ p_book: book, p_coverage: stats.coveragePercent, p_actor: actor }) });
+  await db.query('select public.beno_publish_price_book($1::jsonb, $2::numeric, $3::text)', [JSON.stringify(book), Number(stats.coveragePercent) || 0, actor]);
   return getDbState();
 }
 async function getPublishedBook() {
@@ -140,8 +136,8 @@ async function getPublishedBook() {
     if (process.env.NODE_ENV === 'production') throw Object.assign(new Error('Persistent price-book storage is not configured.'), { status: 503 });
     return null;
   }
-  const rows = await dbRequest('/rest/v1/beno_price_book_state?id=eq.current&select=published_book,version');
-  if (Array.isArray(rows) && rows[0]?.published_book) return rows[0].published_book;
+  const rows = await db.query('select published_book, version from public.beno_price_book_state where id = $1', ['current']);
+  if (rows[0]?.published_book) return rows[0].published_book;
   return null;
 }
 
@@ -174,7 +170,11 @@ async function getPriceBookHistory(limit = 24) {
   for (const entry of dataBookHistory()) if (entry.version) byVersion.set(entry.version, entry);
   if (dbConfig()) {
     try {
-      const rows = await dbRequest(`/rest/v1/beno_price_book_versions?select=version,price_book,published_at&order=published_at.asc&limit=${cap}`);
+      const rows = await db.query(
+        `select version, price_book, published_at from public.beno_price_book_versions
+          order by published_at asc limit $1`,
+        [cap]
+      );
       for (const row of (Array.isArray(rows) ? rows : [])) {
         const book = row.price_book;
         if (!book || !Array.isArray(book.prices)) continue;
