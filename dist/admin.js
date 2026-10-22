@@ -14,12 +14,91 @@
   const api = async (url, options = {}) => {
     const response = await fetch(url, { credentials: 'same-origin', cache: 'no-store', ...options, headers: { ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...(options.headers || {}) } });
     let body; try { body = await response.json(); } catch { body = { ok: false, error: 'استجابة غير مفهومة من الخادم.' }; }
+    // An expired session must send the supervisor back to the password form
+    // instead of leaving a dashboard where every button silently fails.
+    if (response.status === 401 && !url.endsWith('/api/admin/session')) {
+      state.book = null; state.dirty = false; showLogin(true, false);
+    }
     if (!response.ok || body.ok === false) { const error = new Error(body.error || `HTTP ${response.status}`); error.status = response.status; error.payload = body; throw error; }
     return body;
   };
   const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const numInput = value => value == null ? '' : esc(String(value));
   const isPriced = p => p && p.active !== false && p.status !== 'missing' && p.avg != null && p.avg !== '' && Number.isFinite(Number(p.avg)) && Number(p.avg) > 0;
+  const priceNumber = value => value === '' || value == null || !Number.isFinite(Number(value)) ? null : Number(value);
+  // The server rejects any row where low > avg or avg > high. Editing only the
+  // average used to make the save fail with a toast the supervisor could miss,
+  // so the range is widened around the field the supervisor actually edited.
+  function normalizePriceRange(p, anchor) {
+    const changed = new Set();
+    let low = priceNumber(p.low), avg = priceNumber(p.avg), high = priceNumber(p.high);
+    const assign = (field, value) => { if (p[field] !== value) { p[field] = value; changed.add(field); } };
+    if (anchor === 'low') {
+      if (low != null) {
+        if (high != null && high < low) { high = low; assign('high', high); }
+        if (avg != null && avg < low) { avg = low; assign('avg', avg); }
+      }
+    } else if (anchor === 'high') {
+      if (high != null) {
+        if (low != null && low > high) { low = high; assign('low', low); }
+        if (avg != null && avg > high) { avg = high; assign('avg', avg); }
+      }
+    } else {
+      if (avg != null) {
+        if (low != null && low > avg) { low = avg; assign('low', low); }
+        if (high != null && high < avg) { high = avg; assign('high', high); }
+      } else if (low != null && high != null && low > high) {
+        [low, high] = [high, low]; assign('low', low); assign('high', high);
+      }
+    }
+    return [...changed];
+  }
+  function syncPriceInputs(card, p, fields) {
+    if (!card) return;
+    for (const field of fields) {
+      const input = card.querySelector(`[data-field="${field}"]`);
+      if (input && input.value !== String(p[field] ?? '')) input.value = numInput(p[field]);
+    }
+    const foot = card.querySelector('.price-card-footer small');
+    if (foot) foot.textContent = isPriced(p) ? 'يُحتسب ضمن التغطية' : 'لن يُحتسب كسعر مسعّر';
+  }
+  function rangeSummary(p) {
+    return `أقل ${p.low ?? '—'} · متوسط ${p.avg ?? '—'} · أعلى ${p.high ?? '—'}`;
+  }
+  // Same idea for the shared consumption rates: raising the central value above
+  // the recorded high was rejected at save time instead of widening the range.
+  function normalizeRate(key, anchor) {
+    const settings = state.book.settings || (state.book.settings = {});
+    const item = settings.resourceRates?.[key];
+    if (!item) return [];
+    const changed = new Set();
+    let low = priceNumber(item.low), value = priceNumber(item.value), high = priceNumber(item.high);
+    const assign = (field, next) => { if (item[field] !== next) { item[field] = next; changed.add(field); } };
+    if (anchor === 'value') {
+      if (value != null) {
+        if (low != null && value < low) { low = value; assign('low', low); }
+        if (high != null && value > high) { high = value; assign('high', high); }
+      }
+    } else if (anchor === 'low') {
+      if (low != null) {
+        if (value != null && value < low) { value = low; assign('value', value); }
+        if (high != null && high < low) { high = low; assign('high', high); }
+      }
+    } else if (anchor === 'high') {
+      if (high != null) {
+        if (value != null && value > high) { value = high; assign('value', value); }
+        if (low != null && low > high) { low = high; assign('low', low); }
+      }
+    }
+    return [...changed];
+  }
+  function syncRateInputs(card, item, fields) {
+    if (!card) return;
+    for (const field of fields) {
+      const input = card.querySelector(`[data-rate-field="${field}"]`);
+      if (input) input.value = numInput(item[field]);
+    }
+  }
   function stats(book = state.book) {
     if (!book?.prices) return { active:0, priced:0, missing:0, percent:0, local:0, national:0, estimate:0, stale:0 };
     const active = book.prices.filter(p => p.active !== false), priced = active.filter(isPriced);
@@ -38,10 +117,13 @@
       stale
     };
   }
-  function showToast(message, type = 'success') {
+  function showToast(message, type = 'success', duration = 0) {
     ui.toast.textContent = message; ui.toast.className = `toast ${type}`;
     if (state.toastTimer) clearTimeout(state.toastTimer);
-    state.toastTimer = setTimeout(() => ui.toast.classList.add('hidden'), 6000);
+    // Errors stay long enough to be read: an auto-hidden error was the main way
+    // a rejected save looked like "nothing happened".
+    const lifetime = duration || (type === 'error' ? 20000 : 6000);
+    state.toastTimer = setTimeout(() => { ui.toast.classList.add('hidden'); state.toastTimer = null; }, lifetime);
   }
   function markDirty() {
     state.dirty = true;
@@ -104,6 +186,8 @@
     let value;
     if (item.value == null || item.value === '') value = low === high ? low : (Number(def.value) >= low && Number(def.value) <= high ? Number(def.value) : (low + high) / 2);
     else value = Number(item.value);
+    if (!Number.isFinite(value)) value = (low + high) / 2;
+    value = Math.min(high, Math.max(low, value));
     settings.modelRates ||= {};
     const normalized = { low, value, high };
     settings.modelRates[key] = { ...normalized };
@@ -182,6 +266,75 @@
     renderRates();
     markDirty();
   }
+  // Client-side mirror of api/_lib/admin-price.cjs. It never replaces server
+  // validation; it just points at the exact field instead of failing blind.
+  function validationIssue() {
+    if (!state.book || !Array.isArray(state.book.prices) || !state.book.prices.length) return { message: 'الكتالوج فارغ؛ أضف بندًا واحدًا على الأقل قبل الحفظ.' };
+    for (const [id, key, min, max, label] of [
+      ['settingMargin', 'margin', 0, 100, 'هامش التسعير'],
+      ['settingCoverage', 'minCoverage', 0, 100, 'أقل تغطية للنشر'],
+      ['settingStaleDays', 'staleDays', 1, 3650, 'اعتبار السعر قديمًا']
+    ]) {
+      const raw = $(`#${id}`).value;
+      if (raw === '') continue;
+      const value = Number(raw);
+      if (!Number.isFinite(value) || value < min || value > max) return { message: `${label} يجب أن يكون بين ${min} و${max}.`, focusId: id };
+    }
+    for (let index = 0; index < state.book.prices.length; index++) {
+      const p = state.book.prices[index];
+      if (!String(p.name || '').trim()) return { message: `البند ${index + 1} بدون اسم.`, priceIndex: index, field: 'name' };
+      if (!String(p.unit || '').trim()) return { message: `${p.name}: الوحدة مطلوبة.`, priceIndex: index, field: 'unit' };
+      if (!String(p.category || '').trim()) return { message: `${p.name}: التصنيف مطلوب.`, priceIndex: index, field: 'category' };
+      const low = priceNumber(p.low), avg = priceNumber(p.avg), high = priceNumber(p.high);
+      for (const [value, field, label] of [[low, 'low', 'أقل سعر'], [avg, 'avg', 'متوسط السعر'], [high, 'high', 'أعلى سعر']]) {
+        if (value != null && !(value > 0)) return { message: `${p.name}: ${label} لازم يكون رقمًا موجبًا.`, priceIndex: index, field };
+      }
+      if (low != null && avg != null && low > avg) return { message: `${p.name}: أقل سعر أكبر من المتوسط.`, priceIndex: index, field: 'low' };
+      if (avg != null && high != null && avg > high) return { message: `${p.name}: المتوسط أكبر من أعلى سعر.`, priceIndex: index, field: 'avg' };
+      if (low != null && high != null && low > high) return { message: `${p.name}: أقل سعر أكبر من أعلى سعر.`, priceIndex: index, field: 'high' };
+      if (p.status !== 'missing') {
+        if (avg == null) return { message: `${p.name}: البند مصنّف «${p.status}» بدون متوسط سعر. املأ السعر أو أرجعه إلى «ناقص».`, priceIndex: index, field: 'avg' };
+        if (!String(p.source || '').trim()) return { message: `${p.name}: البند مصنّف «${p.status}» بدون مصدر سعر. اكتب المصدر أو أرجعه إلى «ناقص».`, priceIndex: index, field: 'source' };
+      }
+    }
+    for (const [key, item] of Object.entries(state.book.settings?.resourceRates || {})) {
+      const low = priceNumber(item?.low), value = priceNumber(item?.value), high = priceNumber(item?.high);
+      if (low != null && high != null && low > high) return { message: `المعدل ${key}: الحد الأدنى أكبر من الحد الأعلى.`, rateKey: key, rateField: 'low' };
+      if (value != null && low != null && value < low) return { message: `المعدل ${key}: القيمة المركزية أقل من الحد الأدنى.`, rateKey: key, rateField: 'value' };
+      if (value != null && high != null && value > high) return { message: `المعدل ${key}: القيمة المركزية أعلى من الحد الأعلى.`, rateKey: key, rateField: 'value' };
+    }
+    return null;
+  }
+  function focusValidation(issue) {
+    if (!issue) return;
+    if (issue.focusId) {
+      const input = $(`#${issue.focusId}`);
+      if (input) { input.classList.add('field-invalid'); input.focus({ preventScroll: false }); input.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+      return;
+    }
+    if (issue.priceIndex != null) {
+      const row = state.book.prices[issue.priceIndex];
+      ui.search.value = String(row?.name || row?.id || '');
+      ui.category.value = ''; ui.status.value = ''; if (ui.missingOnly) ui.missingOnly.checked = false;
+      state.page = 0; renderCatalog();
+      const card = document.querySelector(`.price-card[data-card-index="${issue.priceIndex}"]`);
+      if (!card) return;
+      card.classList.add('is-invalid');
+      card.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      const input = card.querySelector(`[data-field="${issue.field}"]`);
+      if (input) { input.classList.add('field-invalid'); input.focus({ preventScroll: true }); }
+      return;
+    }
+    if (issue.rateKey) {
+      ui.rateSearch.value = issue.rateKey; renderRates();
+      const card = document.querySelector(`[data-rate-key="${issue.rateKey}"]`)?.closest('.rate-card');
+      if (!card) return;
+      card.classList.add('is-invalid');
+      card.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      const input = card.querySelector(`[data-rate-field="${issue.rateField || 'value'}"]`);
+      if (input) { input.classList.add('field-invalid'); input.focus({ preventScroll: true }); }
+    }
+  }
   function selectedItems() {
     const q = ui.search.value.trim().toLocaleLowerCase('ar');
     const category = ui.category.value, status = ui.status.value;
@@ -226,13 +379,19 @@
     state.page = Math.min(state.page, maxPage);
     const view = rows.slice(state.page * state.pageSize, (state.page + 1) * state.pageSize);
     ui.priceList.innerHTML = view.length ? view.map(({p,index}) => priceCard(p,index)).join('') : '<div class="empty-state">لا توجد بنود مطابقة. جرّب تغيير البحث أو الفلاتر.</div>';
-    $('#resultsCount').textContent = `${rows.length.toLocaleString('en-US')} بند مطابق`;
+    $('#resultsCount').textContent = `${rows.length.toLocaleString('en-US')} بند مطابق · ${rows.filter(({ p }) => p.active !== false).length.toLocaleString('en-US')} نشط`;
     $('#pageLabel').textContent = `صفحة ${state.page + 1} من ${maxPage + 1}`;
     $('#prevPage').disabled = state.page <= 0;
     $('#nextPage').disabled = state.page >= maxPage;
   }
   function renderHistory() {
-    const list = state.versions || [];
+    const list = [...(state.versions || [])];
+    // A freshly initialized branch is published at the committed seed version
+    // without a version row; show it instead of "no releases yet".
+    const published = state.published;
+    if (published?.version && !list.some(v => String(v.version) === String(published.version))) {
+      list.unshift({ version: published.version, published_at: published.publishedAt, published_by: published.publishedBy || 'system', coverage_percent: published.stats?.coveragePercent ?? null, active_items: published.stats?.active ?? null, priced_items: published.stats?.priced ?? null });
+    }
     if (!list.length) { ui.history.innerHTML = '<tr><td colspan="5" class="muted">لا توجد إصدارات مسجلة بعد. يظهر الإصدار الحالي في أعلى الصفحة.</td></tr>'; return; }
     ui.history.innerHTML = list.map(v => `<tr><td><b dir="ltr">${esc(v.version)}</b></td><td>${esc(v.published_at ? new Date(v.published_at).toLocaleString('ar-EG') : '—')}</td><td>${esc(v.published_by || '—')}</td><td>${v.coverage_percent == null ? '—' : `${Number(v.coverage_percent).toFixed(1)}%`}</td><td>${v.priced_items == null ? '—' : `${v.priced_items} / ${v.active_items}`}</td></tr>`).join('');
   }
@@ -253,11 +412,18 @@
   async function saveDraft(silent = false) {
     if (state.busy) return false;
     readSettingInputs();
+    $$('.field-invalid').forEach(el => el.classList.remove('field-invalid'));
+    $$('.price-card.is-invalid, .rate-card.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    const issue = validationIssue();
+    if (issue) { showToast(issue.message, 'error'); focusValidation(issue); return false; }
     state.busy = true; ui.save.disabled = ui.publish.disabled = true;
     try {
       const data = await api('/api/admin/price-book', { method: 'PUT', body: JSON.stringify({ book: state.book }) });
+      // Adopt the validated copy returned by the server so the next save starts
+      // from exactly what is stored (no drift between UI state and Postgres).
+      if (data.draft) state.book = data.draft;
       state.dirty = false; setDraftLabel();
-      if (!silent) showToast(`تم حفظ المسودة. التغطية ${data.draftStats.coveragePercent}% — الأسعار المنشورة لم تتغير بعد.`, 'success');
+      if (!silent) showToast(`تم حفظ المسودة. التغطية ${data.draftStats.coveragePercent}% — اضغط «نشر إصدار الأسعار» لتظهر الأسعار للزوار.`, 'success');
       return true;
     } catch (e) { showToast(e.message, 'error'); return false; }
     finally { state.busy = false; updateStats(); }
@@ -291,7 +457,7 @@
       if (!window.confirm(`استيراد ${doc.prices.length} بندًا واستبدال المسودة الحالية؟ لن تتغير أسعار الزوار حتى النشر.`)) return;
       state.book = doc; state.book.settings ||= {};
       state.book.settings.minCoverage ??= .70; state.book.settings.marginMode ||= 'comprehensive';
-      state.page = 0; settingsToUI(); fillCategoryFilter(); renderCatalog(); renderRates(); markDirty(); showToast('تم تحميل الملف إلى المسودة. اضغط حفظ المسودة ثم انشر بعد المراجعة.', 'info');
+      state.page = 0; settingsToUI(); fillCategoryFilter(); renderCatalog(); renderRates(); renderWasteRates(); markDirty(); showToast('تم تحميل الملف إلى المسودة. اضغط حفظ المسودة ثم انشر بعد المراجعة.', 'info');
     } catch (e) { showToast(`تعذر الاستيراد: ${e.message}`, 'error'); }
     finally { ui.importFile.value = ''; }
   }
@@ -300,6 +466,7 @@
     const cleanNum = key => v[key] === '' ? null : Number(v[key]);
     const maxId = state.book.prices.reduce((n,p) => { const m = String(p.id || '').match(/^P(\d+)$/); return m ? Math.max(n, Number(m[1])) : n; }, 0);
     const item = { id:`ADM-${cryptoRandom()}`, name:v.name.trim(), category:v.category.trim(), unit:v.unit.trim(), low:cleanNum('low'), avg:cleanNum('avg'), high:cleanNum('high'), date:v.date || '', source:v.source.trim(), status:v.status || 'missing', confidence:'غير محددة', transport:'unknown', qtyMode:'manual', factor:0, calc:false, scope:'all', packages:['economic','semi','medium','luxury'], active:true, adminCatalogOnly:true };
+    normalizePriceRange(item, 'avg');
     if (item.status !== 'missing' && (!item.avg || !item.source)) { showToast('أدخل متوسط السعر ومصدرًا قبل تصنيف البند كمسعّر.', 'error'); return false; }
     if (item.low != null && item.avg != null && item.low > item.avg || item.avg != null && item.high != null && item.avg > item.high) { showToast('راجع ترتيب أقل سعر والمتوسط وأعلى سعر.', 'error'); return false; }
     state.book.prices.push(item); ui.dialog.close(); form.reset(); state.page = 0; fillCategoryFilter(); renderCatalog(); markDirty(); showToast('أُضيف البند للمسودة. البنود الجديدة لا تدخل في الحصر تلقائيًا حتى ربطها بمحرك الكميات.', 'info'); return true;
@@ -344,7 +511,7 @@
       const data = await api('/api/admin/agent');
       const learning = data.learning || {};
       $('#learningAdoptBtn').classList.toggle('hidden', !learning.available);
-      backendEl.textContent = learning.available ? 'المصدر: Supabase (متصل)' : 'المصدر: غير متاح — راجع ترحيل قاعدة البيانات';
+      backendEl.textContent = learning.available ? 'المصدر: Neon Postgres (متصل)' : 'المصدر: غير متاح — راجع اتصال Neon وطبّق neon/schema.sql';
       countsEl.textContent = learning.available ? `${learning.unmatchedCount || 0} رسالة غير مفهومة · ${learning.verifiedCount || 0} إضافة معتمدة` : '—';
       const clusters = learning.clusters || [];
       const intentKeys = Array.isArray(learning.availableIntents) ? learning.availableIntents : [];
@@ -424,7 +591,7 @@
     event.preventDefault(); const button = $('button[type="submit"]', ui.loginForm); button.disabled = true;
     try {
       const result = await api('/api/admin/session', { method: 'POST', body: JSON.stringify({ action:'login', password:ui.password.value }) });
-      ui.password.value = ''; showLogin(true, result.authenticated); showToast('تم تسجيل الدخول بنجاح.', 'success'); await loadBook();
+      ui.password.value = ''; showLogin(true, result.authenticated); showToast('تم تسجيل الدخول بنجاح.', 'success'); await loadBook(); await loadLearning();
     } catch (e) { showToast(e.message, 'error'); }
     finally { button.disabled = false; }
   });
@@ -441,6 +608,20 @@
   ui.search.addEventListener('input', () => { state.page = 0; renderCatalog(); });
   ui.rateSearch.addEventListener('input', renderRates);
   ui.rateList.addEventListener('input', event => updateRateFromInput(event.target));
+  ui.rateList.addEventListener('change', event => {
+    const target = event.target;
+    const key = target.dataset.rateKey, field = target.dataset.rateField;
+    if (!key || !['low','value','high'].includes(field) || !state.book) return;
+    const changed = normalizeRate(key, field);
+    const item = state.book.settings?.resourceRates?.[key];
+    const def = state.rateDefinitions.find(x => x.key === key);
+    if (item && def) applyRateCompatibility(key, item, def);
+    if (changed.length && item) {
+      syncRateInputs(target.closest('.rate-card'), item, changed);
+      showToast(`تم ضبط نطاق المعدل ${key} تلقائيًا حتى تظل القيمة المركزية داخل الحدين. اضغط حفظ المسودة.`, 'info');
+    }
+    markDirty();
+  });
   if (ui.wasteRateList) ui.wasteRateList.addEventListener('change', event => {
     const input = event.target.closest('[data-waste-key]'); if (!input || !state.book) return;
     const key = input.dataset.wasteKey; const value = input.value.trim() === '' ? null : Number(input.value);
@@ -456,11 +637,31 @@
   $('#nextPage').addEventListener('click', () => { state.page += 1; renderCatalog(); });
   ui.priceList.addEventListener('input', event => updatePriceFromInput(event.target));
   ui.priceList.addEventListener('change', event => {
-    const field = event.target.dataset.field;
-    updatePriceFromInput(event.target);
+    const target = event.target;
+    const field = target.dataset.field;
+    updatePriceFromInput(target);
+    if (['low', 'avg', 'high'].includes(field)) {
+      const index = Number(target.dataset.index);
+      const p = state.book?.prices?.[index];
+      if (p) {
+        const changed = normalizePriceRange(p, field);
+        if (changed.length) {
+          syncPriceInputs(target.closest('.price-card'), p, changed);
+          showToast(`تم ضبط النطاق تلقائيًا حتى يظل أقل سعر ≤ المتوسط ≤ أعلى سعر: ${rangeSummary(p)}. اضغط حفظ المسودة.`, 'info');
+          updateStats();
+        }
+      }
+    }
     if (['status','active','category'].includes(field)) queueMicrotask(() => { fillCategoryFilter(); renderCatalog(); });
   });
   ui.priceList.addEventListener('click', event => { const button = event.target.closest('[data-deactivate]'); if (!button) return; const i = Number(button.dataset.deactivate); if (state.book.prices[i]) { state.book.prices[i].active = false; markDirty(); renderCatalog(); } });
   ['settingMargin','settingCoverage','settingStaleDays','settingMode','settingSteelFactor','settingConcreteFactor','settingBasementSteelFactor','settingBasementConcreteFactor'].forEach(id => $(`#${id}`).addEventListener('input', readSettingInputs));
+  document.addEventListener('input', event => { if (event.target?.classList?.contains('field-invalid')) event.target.classList.remove('field-invalid'); });
+  ui.toast.addEventListener('click', () => { if (state.toastTimer) clearTimeout(state.toastTimer); ui.toast.classList.add('hidden'); });
+  window.addEventListener('beforeunload', event => {
+    if (!state.dirty) return;
+    event.preventDefault();
+    event.returnValue = '';
+  });
   boot();
 })();

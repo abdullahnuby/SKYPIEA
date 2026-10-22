@@ -44,6 +44,7 @@ async function json(url, options = {}) {
       plasterSurfaceM2PerM2Built: { low:2, value:2.3, high:2.5 }
     };
     const save = await json('/api/admin/price-book', { method:'PUT', headers:{cookie}, body:JSON.stringify({book:draft}) }); assert.equal(save.response.status, 200);
+    assert.ok(save.body.draft && Array.isArray(save.body.draft.prices), 'saving must return the normalized draft so the console can adopt server state');
     const normalized = await json('/api/admin/price-book', { headers:{cookie} }); assert.equal(normalized.response.status, 200);
     assert.equal(normalized.body.draft.settings.steelFactor, 0.082, 'frozen legacy steel factor should follow shared-rate edits');
     assert.equal(normalized.body.draft.settings.tileWastePercent, 8, 'frozen tile-waste setting should follow shared-rate edits');
@@ -54,12 +55,21 @@ async function json(url, options = {}) {
     const invalidWaste = JSON.parse(JSON.stringify(normalized.body.draft)); invalidWaste.settings.boqWastePercentages.tile = 101;
     const invalidSave = await json('/api/admin/price-book', { method:'PUT', headers:{cookie}, body:JSON.stringify({book:invalidWaste}) });
     assert.equal(invalidSave.response.status, 400, 'invalid waste percentages must be rejected by the server');
+    const outOfRange = JSON.parse(JSON.stringify(normalized.body.draft));
+    outOfRange.settings.resourceRates.steelKgPerM2 = { low:60, value:150, high:100 };
+    const outOfRangeSave = await json('/api/admin/price-book', { method:'PUT', headers:{cookie}, body:JSON.stringify({book:outOfRange}) });
+    assert.equal(outOfRangeSave.response.status, 400, 'a central rate above its own high bound must still be rejected by the API');
+    assert.match(String(outOfRangeSave.body.error), /steelKgPerM2/);
+    const badRange = JSON.parse(JSON.stringify(normalized.body.draft));
+    badRange.prices[0].avg = Number(badRange.prices[0].high) + 100;
+    const badRangeSave = await json('/api/admin/price-book', { method:'PUT', headers:{cookie}, body:JSON.stringify({book:badRange}) });
+    assert.equal(badRangeSave.response.status, 400, 'an average above the high price must still be rejected by the API');
     const publish = await json('/api/admin/publish', { method:'POST', headers:{cookie}, body:'{}' }); assert.equal(publish.response.status, 200, JSON.stringify(publish.body)); assert.equal(publish.body.version, nextVersion);
     const estimate = await json('/api/tool', { method:'POST', body:JSON.stringify({tool:'price-catalog.audit',state:{},args:{},sessionId:'admin-test'}) });
     assert.equal(estimate.response.status, 200); assert.equal(estimate.body.priceBookVersion, nextVersion);
     const noCookie = await json('/api/admin/price-book'); assert.equal(noCookie.response.status, 401);
     const logout = await json('/api/admin/session', { method:'POST', headers:{cookie}, body:JSON.stringify({action:'logout'}) }); assert.equal(logout.response.status, 200); assert.match(logout.response.headers.get('set-cookie'), /Max-Age=0/);
-    console.log(`BENO admin integration passed: login/session, unauthorized blocking, price-book read/save, shared-rate and waste synchronization/validation, coverage-gated publish, and active-engine adoption of ${nextVersion}.`);
+    console.log(`BENO admin integration passed: login/session, unauthorized blocking, price-book read/save, shared-rate and waste synchronization/validation, save-returns-draft contract, range rejection, coverage-gated publish, and active-engine adoption of ${nextVersion}.`);
   } catch (error) { console.error(error); console.error(logs); process.exitCode = 1; }
   finally { child.kill('SIGTERM'); await wait(250); fs.rmSync(temp, { recursive:true, force:true }); }
 })();

@@ -25,7 +25,7 @@ module.exports = async function adminPriceBook(req, res) {
     if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(k => !['book'].includes(k)) || !body.book) return send(res, 400, { ok: false, error: 'أرسل book فقط لحفظ المسودة.' });
     const book = validateBook(body.book);
     const state = await store.saveDraft(book, 'admin');
-    return send(res, 200, { ok: true, message: 'تم حفظ المسودة. لم تتغير أسعار الزوار بعد.', draftStats: coverage(state.draft_book), updatedAt: state.updated_at });
+    return send(res, 200, { ok: true, message: 'تم حفظ المسودة. لم تتغير أسعار الزوار بعد.', draft: state.draft_book, draftStats: coverage(state.draft_book), updatedAt: state.updated_at });
   } catch (error) {
     const status = error.status || 503;
     if (status >= 500) process.stderr.write(`[beno-admin-price-book] ${id} storage failure\n`);
